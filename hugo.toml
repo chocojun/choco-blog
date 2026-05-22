@@ -1,4 +1,4 @@
-baseURL = 'https://choco-blog.vercel.app/'
+baseURL = "https://choco-blog-20l.pages.dev/"
 languageCode = 'zh-cn'
 title = 'Choco Blog'
 theme = 'PaperMod'
