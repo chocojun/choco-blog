@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-labelledby="title desc">
+  <title id="title">Choco Blog avatar</title>
+  <desc id="desc">A minimal editorial wordmark avatar.</desc>
+  <rect width="240" height="240" rx="0" fill="#f8f7f4"/>
+  <path d="M32 32h176v176H32z" fill="none" stroke="#111" stroke-width="2"/>
+  <path d="M50 64h140M50 176h140" stroke="#111" stroke-width="2"/>
+  <text x="120" y="115" text-anchor="middle" font-family="Didot, Bodoni 72, Georgia, serif" font-size="52" font-weight="500" fill="#111">CB</text>
+  <text x="120" y="142" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="3" fill="#111">JOURNAL</text>
+</svg>

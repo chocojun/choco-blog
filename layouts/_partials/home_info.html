@@ -1,0 +1,24 @@
+{{- with site.Params.homeInfoParams }}
+<article class="first-entry home-info">
+    <div class="home-info-inner">
+        {{- with .ImageUrl }}
+        <div class="home-avatar-wrap">
+            <img class="home-avatar" src="{{ . | absURL }}" alt="{{ site.Params.homeInfoParams.ImageTitle | default site.Title }}">
+        </div>
+        {{- end }}
+        <div class="home-copy">
+            <header class="entry-header">
+                <p class="home-kicker">Writing / Poetry / Notes</p>
+                <h1>{{ .Title | markdownify }}</h1>
+            </header>
+            <div class="entry-content md-content">
+                {{ $opts := dict "display" "block" }}
+                {{ .Content | $.Page.RenderString $opts }}
+            </div>
+            <footer class="entry-footer">
+                {{ partial "social_icons.html" (dict "align" site.Params.homeInfoParams.AlignSocialIconsTo) }}
+            </footer>
+        </div>
+    </div>
+</article>
+{{- end -}}

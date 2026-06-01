@@ -1,7 +1,70 @@
 baseURL = "https://choco-blog-20l.pages.dev/"
-languageCode = 'zh-cn'
-title = 'Choco Blog'
-theme = 'PaperMod'
+languageCode = "zh-cn"
+title = "Floscas"
+theme = "PaperMod"
 
 [outputs]
 home = ["HTML", "RSS"]
+
+[params]
+env = "production"
+description = "A quiet place for essays, poems, notes, and becoming."
+author = "Floscas"
+defaultTheme = "light"
+mainSections = ["posts"]
+DateFormat = "2006-01-02"
+ShowReadingTime = true
+ShowWordCount = false
+ShowPostNavLinks = true
+ShowBreadCrumbs = false
+ShowCodeCopyButtons = true
+disableSpecial1stPost = true
+
+[params.label]
+text = "Floscas"
+
+[params.homeInfoParams]
+Title = "Floscas"
+Content = "Notes on life, memory, language, and becoming."
+ImageUrl = "/images/avatar.svg"
+ImageTitle = "Floscas"
+
+[[params.socialIcons]]
+name = "github"
+title = "GitHub"
+url = "https://github.com/chocojun"
+
+[[params.socialIcons]]
+name = "rss"
+title = "RSS"
+url = "/index.xml"
+
+[[menu.main]]
+identifier = "home"
+name = "Home"
+url = "/"
+weight = 5
+
+[[menu.main]]
+identifier = "posts"
+name = "Posts"
+url = "/posts/"
+weight = 10
+
+[[menu.main]]
+identifier = "essays"
+name = "Essays"
+url = "/essays/"
+weight = 20
+
+[[menu.main]]
+identifier = "about"
+name = "About"
+url = "/about/"
+weight = 30
+
+[[menu.main]]
+identifier = "gallery"
+name = "Gallery"
+url = "/gallery/"
+weight = 40

@@ -1,0 +1,27 @@
+{{- define "main" }}
+<script>document.body.classList.add('floscas-inner-page');</script>
+<div class="floscas-shell">
+  {{ partial "floscas_nav.html" . }}
+  {{ partial "floscas_decor.html" . }}
+
+  <article class="floscas-article floscas-glass">
+    <header class="floscas-article-header">
+      <a class="floscas-back" href="{{ if eq .Section "posts" }}{{ "posts/" | relURL }}{{ else }}{{ "" | relURL }}{{ end }}">← <span data-i18n="article.back">Back</span></a>
+      <p class="floscas-kicker">{{ with index .Params.categories 0 }}{{ . }}{{ else }}Floscas{{ end }}</p>
+      <h1 class="post-title">{{ .Title }}</h1>
+      {{- if not (.Param "hideMeta") }}
+      <div class="post-meta">
+        {{ .Date.Format "2006.01.02" }}
+        {{- if .ReadingTime }} · {{ .ReadingTime }} min read{{- end }}
+      </div>
+      {{- end }}
+    </header>
+
+    {{- if .Content }}
+    <div class="post-content md-content">
+      {{ .Content }}
+    </div>
+    {{- end }}
+  </article>
+</div>
+{{- end }}

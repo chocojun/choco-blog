@@ -1,0 +1,49 @@
+{{- define "main" }}
+<script>document.body.classList.add('floscas-inner-page');</script>
+<div class="floscas-shell">
+  {{ partial "floscas_nav.html" . }}
+  {{ partial "floscas_decor.html" . }}
+  <main class="floscas-archive">
+    <header class="floscas-page-hero floscas-glass">
+      <p class="floscas-kicker">{{ if eq .Section "posts" }}Journal{{ else }}Floscas{{ end }}</p>
+      <h1>{{ .Title | default "Writing" }}</h1>
+      {{- with .Description }}
+      <p>{{ . }}</p>
+      {{- else }}
+      <p data-i18n="archive.subtitle">A quiet shelf for notes, fragments, and becoming.</p>
+      {{- end }}
+    </header>
+
+    {{- if .Content }}
+    <section class="floscas-page-content floscas-glass">
+      {{ .Content }}
+    </section>
+    {{- end }}
+
+    {{- $pages := .RegularPages }}
+    {{- if .IsHome }}
+      {{- $pages = where site.RegularPages "Type" "in" site.Params.mainSections }}
+    {{- end }}
+    {{- if $pages }}
+    <section class="floscas-writing-list">
+      {{- range $pages }}
+      <article class="floscas-writing-item floscas-glass">
+        <a href="{{ .RelPermalink }}" aria-label="{{ .Title | plainify }}"></a>
+        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006.01.02" }}</time>
+        <h2>{{ .Title }}</h2>
+        <p>{{ .Summary | plainify | htmlUnescape | truncate 180 }}</p>
+        <footer>
+          <span>{{ with index .Params.categories 0 }}{{ . }}{{ else }}Notes{{ end }}</span>
+          {{- if .ReadingTime }}<em>{{ .ReadingTime }} min read</em>{{- end }}
+        </footer>
+      </article>
+      {{- end }}
+    </section>
+    {{- else }}
+    <section class="floscas-empty floscas-glass">
+      <p data-i18n="archive.empty">This room is still being arranged.</p>
+    </section>
+    {{- end }}
+  </main>
+</div>
+{{- end }}

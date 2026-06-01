@@ -1,0 +1,61 @@
+{{- define "main" }}
+<script>document.body.classList.add('floscas-home-page');</script>
+{{- $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
+{{- $pages = where $pages "Params.hiddenInHomeList" "!=" "true" }}
+
+<div class="floscas-home" data-floscas-home>
+  {{ partial "floscas_nav.html" . }}
+  {{ partial "floscas_decor.html" . }}
+
+  <section class="floscas-hero" aria-labelledby="floscas-title">
+    <img class="floscas-hero-art" src="{{ "images/floscas-hero.png" | relURL }}" alt="" aria-hidden="true">
+    <div class="floscas-ribbon" aria-hidden="true">
+      <svg viewBox="0 0 1200 520" preserveAspectRatio="none">
+        <path class="ribbon-line ribbon-blue" d="M-20 340 C 150 250, 240 315, 360 365 S 580 390, 710 300 S 910 185, 1220 260" />
+        <path class="ribbon-line ribbon-green" d="M-30 430 C 190 500, 330 455, 470 405 S 650 265, 810 315 S 1020 430, 1230 110" />
+        <path class="ribbon-line ribbon-cyan" d="M-40 240 C 170 185, 310 235, 430 330 S 620 465, 790 260 S 1010 95, 1230 160" />
+      </svg>
+    </div>
+    <div class="floscas-hero-copy">
+      <p class="floscas-kicker" data-i18n="hero.kicker">Writerly portfolio</p>
+      <h1 id="floscas-title">C'est La Vie.</h1>
+      <p class="floscas-subtitle" data-i18n="hero.subtitle">Notes on life, memory, language, and becoming.</p>
+    </div>
+  </section>
+
+  <aside class="floscas-social-rail" aria-label="Social links">
+    <a href="https://github.com/chocojun" target="_blank" rel="noreferrer">GitHub</a>
+    <a href="{{ "index.xml" | relURL }}">RSS</a>
+    <a href="mailto:chocojun05@outlook.com" data-i18n="side.contact">Contact</a>
+  </aside>
+
+  <section class="floscas-latest" aria-labelledby="floscas-latest-title">
+    <div class="floscas-section-head">
+      <h2 id="floscas-latest-title" data-i18n="latest.title">Latest Thoughts</h2>
+      <a href="{{ "posts/" | relURL }}">
+        <span data-i18n="latest.all">View all posts</span>
+        <span aria-hidden="true">-></span>
+      </a>
+    </div>
+
+    <div class="floscas-card-grid">
+      {{- range $index, $page := first 4 $pages }}
+      <article class="floscas-card">
+        <a class="floscas-card-link" href="{{ .RelPermalink }}" aria-label="{{ .Title | plainify }}"></a>
+        <div class="floscas-card-body">
+          <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 02, 2006" }}</time>
+          <h3>{{ .Title }}</h3>
+          <p>{{ .Summary | plainify | htmlUnescape | truncate 120 }}</p>
+          <footer>
+            <span>{{ with index .Params.categories 0 }}{{ . }}{{ else }}Notes{{ end }}</span>
+            {{- if .ReadingTime }}
+            <em>{{ .ReadingTime }} min read</em>
+            {{- end }}
+          </footer>
+        </div>
+      </article>
+      {{- end }}
+    </div>
+  </section>
+</div>
+{{- end }}
