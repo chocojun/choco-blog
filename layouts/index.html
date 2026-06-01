@@ -7,8 +7,7 @@
   {{ partial "floscas_nav.html" . }}
   {{ partial "floscas_decor.html" . }}
 
-  <section class="floscas-hero" aria-labelledby="floscas-title">
-    <img class="floscas-hero-art" src="{{ "images/floscas-hero.png" | relURL }}" alt="" aria-hidden="true">
+  <section class="floscas-hero floscas-editorial-hero" aria-labelledby="floscas-title">
     <div class="floscas-ribbon" aria-hidden="true">
       <svg viewBox="0 0 1200 520" preserveAspectRatio="none">
         <path class="ribbon-line ribbon-blue" d="M-20 340 C 150 250, 240 315, 360 365 S 580 390, 710 300 S 910 185, 1220 260" />
@@ -16,10 +15,15 @@
         <path class="ribbon-line ribbon-cyan" d="M-40 240 C 170 185, 310 235, 430 330 S 620 465, 790 260 S 1010 95, 1230 160" />
       </svg>
     </div>
-    <div class="floscas-hero-copy">
+    <div class="floscas-hero-copy floscas-glass">
       <p class="floscas-kicker" data-i18n="hero.kicker">Writerly portfolio</p>
       <h1 id="floscas-title">C'est La Vie.</h1>
       <p class="floscas-subtitle" data-i18n="hero.subtitle">Notes on life, memory, language, and becoming.</p>
+    </div>
+    <div class="floscas-hero-index floscas-glass">
+      <span>001</span>
+      <strong>Floscas</strong>
+      <p>Journal / Essays / Memory fragments</p>
     </div>
   </section>
 
@@ -38,14 +42,15 @@
       </a>
     </div>
 
-    <div class="floscas-card-grid">
-      {{- range $index, $page := first 4 $pages }}
-      <article class="floscas-card">
+    {{- $recent := first 5 $pages }}
+    <div class="floscas-reading-layout">
+      {{- with index $recent 0 }}
+      <article class="floscas-card floscas-card-featured">
         <a class="floscas-card-link" href="{{ .RelPermalink }}" aria-label="{{ .Title | plainify }}"></a>
         <div class="floscas-card-body">
           <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 02, 2006" }}</time>
           <h3>{{ .Title }}</h3>
-          <p>{{ .Summary | plainify | htmlUnescape | truncate 120 }}</p>
+          <p>{{ .Summary | plainify | htmlUnescape | truncate 220 }}</p>
           <footer>
             <span>{{ with index .Params.categories 0 }}{{ . }}{{ else }}Notes{{ end }}</span>
             {{- if .ReadingTime }}
@@ -55,6 +60,24 @@
         </div>
       </article>
       {{- end }}
+      <div class="floscas-card-stack">
+      {{- range after 1 $recent }}
+        <article class="floscas-card floscas-card-compact">
+          <a class="floscas-card-link" href="{{ .RelPermalink }}" aria-label="{{ .Title | plainify }}"></a>
+          <div class="floscas-card-body">
+            <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 02, 2006" }}</time>
+            <h3>{{ .Title }}</h3>
+            <p>{{ .Summary | plainify | htmlUnescape | truncate 110 }}</p>
+            <footer>
+              <span>{{ with index .Params.categories 0 }}{{ . }}{{ else }}Notes{{ end }}</span>
+              {{- if .ReadingTime }}
+              <em>{{ .ReadingTime }} min read</em>
+              {{- end }}
+            </footer>
+          </div>
+        </article>
+      {{- end }}
+      </div>
     </div>
   </section>
 </div>

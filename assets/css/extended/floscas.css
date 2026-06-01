@@ -63,9 +63,12 @@ body:has(.floscas-shell) .main {
   overflow: hidden;
   color: var(--floscas-ink);
   background:
-    radial-gradient(circle at 22% 16%, rgba(20, 104, 255, 0.08), transparent 26%),
-    radial-gradient(circle at 78% 20%, rgba(66, 200, 93, 0.08), transparent 28%),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.92), var(--floscas-paper));
+    linear-gradient(90deg, rgba(8, 22, 50, 0.035) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(8, 22, 50, 0.025) 1px, transparent 1px),
+    radial-gradient(circle at 18% 16%, rgba(20, 104, 255, 0.1), transparent 24%),
+    radial-gradient(circle at 78% 18%, rgba(66, 200, 93, 0.1), transparent 28%),
+    linear-gradient(180deg, #fbfcff 0%, #f6faf7 52%, var(--floscas-paper) 100%);
+  background-size: 56px 56px, 56px 56px, auto, auto, auto;
   font-family: var(--floscas-sans);
   animation: floscas-fade 700ms ease both;
 }
@@ -90,7 +93,8 @@ body:has(.floscas-shell) .main {
 }
 
 .floscas-glass {
-  border: 1px solid color-mix(in srgb, var(--floscas-line) 70%, rgba(255, 255, 255, 0.58));
+  position: relative;
+  border: 1px solid color-mix(in srgb, var(--floscas-line) 74%, rgba(255, 255, 255, 0.52));
   background:
     linear-gradient(135deg, rgba(255, 255, 255, 0.78), rgba(255, 255, 255, 0.32) 46%, rgba(255, 255, 255, 0.18)),
     color-mix(in srgb, var(--floscas-white) 78%, transparent);
@@ -101,6 +105,18 @@ body:has(.floscas-shell) .main {
     0 32px 90px rgba(7, 18, 44, 0.12);
   backdrop-filter: blur(30px) saturate(1.62) contrast(1.04);
   -webkit-backdrop-filter: blur(30px) saturate(1.62) contrast(1.04);
+}
+
+.floscas-glass::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  background:
+    linear-gradient(120deg, rgba(255, 255, 255, 0.48), transparent 32%),
+    radial-gradient(circle at 20% 0%, rgba(255, 255, 255, 0.38), transparent 34%);
+  opacity: 0.72;
 }
 
 [data-theme="dark"] .floscas-glass {
@@ -292,18 +308,27 @@ body:has(.floscas-shell) .main {
 .floscas-hero {
   position: relative;
   display: grid;
-  place-items: center;
-  min-height: clamp(560px, 72vh, 820px);
-  padding: clamp(90px, 12vw, 150px) 24px clamp(88px, 10vw, 140px);
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 360px);
+  align-items: end;
+  gap: clamp(24px, 4vw, 62px);
+  max-width: 1440px;
+  min-height: clamp(580px, 72vh, 780px);
+  margin: 0 auto;
+  padding: clamp(110px, 13vw, 170px) clamp(30px, 5.5vw, 92px) clamp(70px, 8vw, 116px);
 }
 
 .floscas-hero::before {
   content: "";
   position: absolute;
-  inset: 7% 2% 0;
+  inset: 86px clamp(18px, 4vw, 72px) 32px;
   z-index: 1;
   border: 1px solid rgba(8, 22, 50, 0.06);
-  background: rgba(255, 255, 255, 0.22);
+  border-radius: 34px;
+  background:
+    linear-gradient(135deg, rgba(255,255,255,0.42), rgba(255,255,255,0.08)),
+    rgba(255,255,255,0.14);
+  backdrop-filter: blur(18px) saturate(1.18);
+  -webkit-backdrop-filter: blur(18px) saturate(1.18);
   pointer-events: none;
 }
 
@@ -312,23 +337,12 @@ body:has(.floscas-shell) .main {
   box-shadow: 0 36px 120px rgba(0, 0, 0, 0.42);
 }
 
-.floscas-hero-art {
-  position: absolute;
-  inset: 4% -3% auto -3%;
-  width: 106%;
-  height: min(760px, 78vh);
-  object-fit: cover;
-  opacity: 0.95;
-  pointer-events: none;
-  animation: floscas-drift 16s ease-in-out infinite alternate;
-}
-
 .floscas-ribbon {
   position: absolute;
-  inset: 12% 0 12%;
+  inset: 16% -4% 18%;
   z-index: 2;
   pointer-events: none;
-  opacity: 0.72;
+  opacity: 0.56;
   transform: translate3d(var(--floscas-mx, 0), var(--floscas-my, 0), 0);
   transition: transform 280ms ease-out;
 }
@@ -363,8 +377,10 @@ body:has(.floscas-shell) .main {
 .floscas-hero-copy {
   position: relative;
   z-index: 3;
-  max-width: 920px;
-  text-align: center;
+  max-width: 980px;
+  padding: clamp(34px, 5vw, 70px);
+  border-radius: 34px;
+  text-align: left;
 }
 
 .floscas-kicker {
@@ -380,7 +396,7 @@ body:has(.floscas-shell) .main {
   margin: 0;
   color: #081632;
   font-family: var(--floscas-serif);
-  font-size: clamp(4.6rem, 10vw, 11rem);
+  font-size: clamp(4.8rem, 11vw, 12.5rem);
   font-weight: 400;
   line-height: 0.9;
   letter-spacing: 0;
@@ -392,10 +408,43 @@ body:has(.floscas-shell) .main {
 }
 
 .floscas-subtitle {
-  max-width: 560px;
-  margin: 22px auto 0;
+  max-width: 620px;
+  margin: 24px 0 0;
   color: var(--floscas-muted);
   font-size: clamp(1rem, 1.4vw, 1.22rem);
+  line-height: 1.7;
+}
+
+.floscas-hero-index {
+  position: relative;
+  z-index: 3;
+  align-self: stretch;
+  display: grid;
+  align-content: end;
+  gap: 12px;
+  min-height: 280px;
+  padding: 28px;
+  border-radius: 28px;
+}
+
+.floscas-hero-index span {
+  color: var(--floscas-blue);
+  font-size: 0.78rem;
+  letter-spacing: 0.22em;
+}
+
+.floscas-hero-index strong {
+  font-family: var(--floscas-serif);
+  font-size: clamp(2rem, 4vw, 3.4rem);
+  font-weight: 400;
+  line-height: 1;
+}
+
+.floscas-hero-index p {
+  max-width: 240px;
+  margin: 0;
+  color: var(--floscas-muted);
+  font-size: 0.92rem;
   line-height: 1.7;
 }
 
@@ -454,43 +503,41 @@ body:has(.floscas-shell) .main {
   animation-delay: -4s;
 }
 
-.floscas-dream-flower {
+.floscas-linefield {
   position: absolute;
-  z-index: 2;
-  width: clamp(280px, 38vw, 620px);
-  opacity: 0.5;
-  filter: drop-shadow(0 28px 45px rgba(6, 24, 51, 0.14)) saturate(1.08);
-  mix-blend-mode: multiply;
-  animation: floscas-flower-dream 16s ease-in-out infinite alternate;
+  inset: 8% -8% 2%;
+  z-index: 1;
+  width: 116%;
+  height: 90%;
+  opacity: 0.68;
 }
 
-[data-theme="dark"] .floscas-dream-flower {
-  opacity: 0.28;
-  mix-blend-mode: screen;
+.floscas-linefield path {
+  fill: none;
+  stroke-linecap: round;
+  stroke-width: 1.45;
+  stroke-dasharray: 1200 1600;
+  animation: floscas-linefield-flow 28s linear infinite;
 }
 
-.flower-one {
-  left: clamp(-210px, -9vw, -72px);
-  top: clamp(86px, 14vw, 150px);
-  transform-origin: 48% 58%;
+.linefield-blue {
+  stroke: rgba(20, 104, 255, 0.46);
 }
 
-.flower-two {
-  right: clamp(-260px, -12vw, -96px);
-  top: clamp(102px, 13vw, 172px);
-  width: clamp(320px, 44vw, 720px);
-  opacity: 0.42;
-  animation-delay: -5s;
-  animation-duration: 19s;
+.linefield-green {
+  stroke: rgba(66, 200, 93, 0.42);
+  animation-duration: 34s;
 }
 
-.flower-three {
-  right: clamp(40px, 10vw, 180px);
-  bottom: clamp(12px, 6vw, 90px);
-  width: clamp(220px, 28vw, 460px);
-  opacity: 0.26;
-  animation-delay: -9s;
-  animation-duration: 22s;
+.linefield-cyan {
+  stroke: rgba(57, 196, 212, 0.32);
+  animation-duration: 40s;
+}
+
+.linefield-hair {
+  stroke: rgba(8, 22, 50, 0.1);
+  stroke-width: 1;
+  animation-duration: 46s;
 }
 
 .floscas-latest {
@@ -541,10 +588,17 @@ body:has(.floscas-shell) .main {
   text-decoration: none;
 }
 
-.floscas-card-grid {
+.floscas-reading-layout {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: clamp(24px, 2.4vw, 34px);
+  grid-template-columns: minmax(360px, 0.95fr) minmax(0, 1.35fr);
+  gap: clamp(24px, 3vw, 42px);
+  align-items: stretch;
+}
+
+.floscas-card-stack {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(20px, 2vw, 28px);
 }
 
 .floscas-card {
@@ -563,6 +617,17 @@ body:has(.floscas-shell) .main {
   backdrop-filter: blur(26px) saturate(1.52);
   -webkit-backdrop-filter: blur(26px) saturate(1.52);
   transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
+}
+
+.floscas-card::before {
+  content: "";
+  position: absolute;
+  inset: auto -20% -28% -20%;
+  height: 55%;
+  background:
+    radial-gradient(ellipse at 20% 50%, rgba(20, 104, 255, 0.18), transparent 52%),
+    radial-gradient(ellipse at 72% 40%, rgba(66, 200, 93, 0.16), transparent 50%);
+  pointer-events: none;
 }
 
 .floscas-card:hover {
@@ -586,19 +651,12 @@ body:has(.floscas-shell) .main {
 .floscas-card::after {
   content: "";
   position: absolute;
-  right: -78px;
-  bottom: -46px;
-  width: 238px;
-  height: 176px;
-  background: url("/images/floscas-flower.svg") center / contain no-repeat;
-  opacity: 0.13;
-  transform: rotate(-4deg);
-  transition: opacity 220ms ease, transform 420ms ease;
-}
-
-.floscas-card:hover::after {
-  opacity: 0.2;
-  transform: rotate(2deg) translateY(-8px);
+  left: 26px;
+  right: 26px;
+  bottom: 28px;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(20, 104, 255, 0.45), rgba(66, 200, 93, 0.36), transparent);
+  opacity: 0.75;
 }
 
 .floscas-card time {
@@ -613,6 +671,37 @@ body:has(.floscas-shell) .main {
   font-size: clamp(1.62rem, 2.25vw, 2.12rem);
   font-weight: 500;
   line-height: 1.14;
+}
+
+.floscas-card-featured {
+  min-height: 520px;
+}
+
+.floscas-card-featured .floscas-card-body {
+  min-height: 520px;
+}
+
+.floscas-card-featured h3 {
+  font-size: clamp(2.25rem, 4.8vw, 5.2rem);
+  line-height: 0.98;
+}
+
+.floscas-card-compact {
+  min-height: 246px;
+}
+
+.floscas-card-compact .floscas-card-body {
+  min-height: 246px;
+  padding: clamp(22px, 2vw, 28px);
+}
+
+.floscas-card-compact h3 {
+  font-size: clamp(1.42rem, 2vw, 2rem);
+}
+
+.floscas-card-compact p {
+  font-size: 0.98rem;
+  line-height: 1.66;
 }
 
 .floscas-card p {
@@ -932,26 +1021,13 @@ body:has(.floscas-shell) .main {
   }
 }
 
-@keyframes floscas-flower-dream {
-  0% {
-    transform: translate3d(0, 0, 0) rotate(-5deg) scale(0.98);
-    opacity: 0.34;
-  }
-  45% {
-    transform: translate3d(18px, -24px, 0) rotate(3deg) scale(1.04);
-    opacity: 0.58;
-  }
-  100% {
-    transform: translate3d(-12px, 18px, 0) rotate(8deg) scale(1.01);
-    opacity: 0.42;
+@keyframes floscas-linefield-flow {
+  to {
+    stroke-dashoffset: -2800;
   }
 }
 
 @media (max-width: 1060px) {
-  .floscas-card-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
   .floscas-social-rail {
     display: none;
   }
@@ -997,14 +1073,14 @@ body:has(.floscas-shell) .main {
   }
 
   .floscas-hero {
+    grid-template-columns: 1fr;
     min-height: 560px;
     padding: 86px 18px 112px;
   }
 
-  .floscas-hero-art {
-    inset: 13% -26% auto -30%;
-    width: 156%;
-    height: 520px;
+  .floscas-hero-copy,
+  .floscas-hero-index {
+    border-radius: 22px;
   }
 
   .floscas-ribbon {
@@ -1025,13 +1101,19 @@ body:has(.floscas-shell) .main {
     flex-direction: column;
   }
 
-  .floscas-card-grid {
+  .floscas-reading-layout,
+  .floscas-card-stack {
     grid-template-columns: 1fr;
   }
 
   .floscas-card,
   .floscas-card-body {
     min-height: 310px;
+  }
+
+  .floscas-card-featured,
+  .floscas-card-featured .floscas-card-body {
+    min-height: 420px;
   }
 
   .floscas-writing-item {
@@ -1059,11 +1141,10 @@ body:has(.floscas-shell) .main {
 
 @media (prefers-reduced-motion: reduce) {
   .floscas-home,
-  .floscas-hero-art,
   .ribbon-line,
+  .floscas-linefield path,
   .floscas-card,
   .floscas-liquid-field span,
-  .floscas-dream-flower,
   .floscas-navlinks a::after,
   .floscas-lang-panel {
     animation: none;
