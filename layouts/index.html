@@ -2,12 +2,31 @@
 <script>document.body.classList.add('floscas-home-page');</script>
 {{- $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
 {{- $pages = where $pages "Params.hiddenInHomeList" "!=" "true" }}
+{{- $recent := first 5 $pages }}
+{{- $coverSet := slice
+  "/images/floscas-gallery/cloud-mobile.jpg"
+  "/images/floscas-gallery/water-grapes.jpg"
+  "/images/floscas-gallery/deep-forest.jpg"
+  "/images/floscas-gallery/green-city-wide.jpg"
+}}
+{{- $gallery := slice
+  (dict "src" "/images/floscas-gallery/city-rain-wide.jpg" "title" "Rain city" "tone" "City")
+  (dict "src" "/images/floscas-gallery/mural-building.jpg" "title" "Painted facade" "tone" "Street")
+  (dict "src" "/images/floscas-gallery/blue-cloud-wide.jpg" "title" "Blue weather" "tone" "Sky")
+  (dict "src" "/images/floscas-gallery/orange-light-wide.jpg" "title" "Orange room" "tone" "Warmth")
+  (dict "src" "/images/floscas-gallery/white-flowers.jpg" "title" "White bloom" "tone" "Garden")
+  (dict "src" "/images/floscas-gallery/desk-lamp-wide.jpg" "title" "Working light" "tone" "Interior")
+}}
 
-<div class="floscas-home" data-floscas-home>
+<div class="floscas-home floscas-magazine" data-floscas-home>
   {{ partial "floscas_nav.html" . }}
   {{ partial "floscas_decor.html" . }}
 
-  <section class="floscas-hero floscas-editorial-hero" aria-labelledby="floscas-title">
+  <section class="floscas-hero floscas-magazine-hero" aria-labelledby="floscas-title">
+    <div class="floscas-hero-image" aria-hidden="true">
+      <img src="{{ "/images/floscas-gallery/skyline-mist-wide.jpg" | relURL }}" alt="">
+    </div>
+    <div class="floscas-hero-shade" aria-hidden="true"></div>
     <div class="floscas-ribbon" aria-hidden="true">
       <svg viewBox="0 0 1200 520" preserveAspectRatio="none">
         <path class="ribbon-line ribbon-blue" d="M-20 340 C 150 250, 240 315, 360 365 S 580 390, 710 300 S 910 185, 1220 260" />
@@ -15,15 +34,31 @@
         <path class="ribbon-line ribbon-cyan" d="M-40 240 C 170 185, 310 235, 430 330 S 620 465, 790 260 S 1010 95, 1230 160" />
       </svg>
     </div>
-    <div class="floscas-hero-copy floscas-glass">
+
+    <div class="floscas-hero-copy">
       <p class="floscas-kicker" data-i18n="hero.kicker">Writerly portfolio</p>
-      <h1 id="floscas-title">C'est La Vie.</h1>
+      <h1 id="floscas-title">C’est La Vie.</h1>
       <p class="floscas-subtitle" data-i18n="hero.subtitle">Notes on life, memory, language, and becoming.</p>
+      <div class="floscas-hero-actions">
+        <a class="floscas-pill-link" href="{{ "posts/" | relURL }}">
+          <span data-i18n="latest.all">View all posts</span>
+          <svg aria-hidden="true" viewBox="0 0 24 24">
+            <path d="M5 12h14M13 6l6 6-6 6" />
+          </svg>
+        </a>
+        <a class="floscas-pill-link" href="{{ "gallery/" | relURL }}">
+          <span data-i18n="nav.gallery">Gallery</span>
+          <svg aria-hidden="true" viewBox="0 0 24 24">
+            <path d="M7 17 17 7M8 7h9v9" />
+          </svg>
+        </a>
+      </div>
     </div>
+
     <div class="floscas-hero-index floscas-glass">
-      <span>001</span>
+      <span>FIELD NOTE 001</span>
       <strong>Floscas</strong>
-      <p>Journal / Essays / Memory fragments</p>
+      <p data-i18n="hero.index">Writing, photographs, fragments, and private weather.</p>
     </div>
   </section>
 
@@ -33,20 +68,108 @@
     <a href="mailto:chocojun05@outlook.com" data-i18n="side.contact">Contact</a>
   </aside>
 
+  <section class="floscas-visual-strip" aria-label="Visual diary">
+    <figure class="floscas-strip-card">
+      <img src="{{ "/images/floscas-gallery/leaf-map.jpg" | relURL }}" alt="Sunlit leaf veins">
+      <figcaption>
+        <span>01</span>
+        <strong>Memory has veins.</strong>
+      </figcaption>
+    </figure>
+    <div class="floscas-quote-panel floscas-glass">
+      <p data-i18n="quote.line">“A quiet shelf for notes, fragments, and becoming.”</p>
+      <span data-i18n="quote.caption">Notes on life, memory, language, and becoming.</span>
+      <div class="floscas-account-card" aria-label="WeChat official account">
+        <small data-i18n="account.label">WeChat official account</small>
+        <strong>FLOSCAS 花与栗</strong>
+        <dl>
+          <div>
+            <dt data-i18n="account.region.label">Region</dt>
+            <dd data-i18n="account.region">Shenzhen, Guangdong, China</dd>
+          </div>
+          <div>
+            <dt data-i18n="account.id.label">ID</dt>
+            <dd>FLOSCAS_HuaYuLi</dd>
+          </div>
+        </dl>
+        <em data-i18n="account.bio">Watch flowers open in tenderness; gather chestnuts in strength.</em>
+      </div>
+    </div>
+    <figure class="floscas-strip-card is-tall">
+      <img src="{{ "/images/floscas-gallery/candle.jpg" | relURL }}" alt="Warm candle flame">
+      <figcaption>
+        <span>02</span>
+        <strong>Small light, long night.</strong>
+      </figcaption>
+    </figure>
+  </section>
+
+  <section class="floscas-music-section" aria-label="Music">
+    <div class="floscas-music-copy">
+      <p class="floscas-section-kicker" data-i18n="music.kicker">Listening room</p>
+      <h2 data-i18n="music.title">A little weather for reading.</h2>
+      <p data-i18n="music.copy">A local glass player prepared from the Spotify reference playlist.</p>
+      <a class="floscas-music-source" href="https://open.spotify.com/playlist/3UQVv3BjPgadnI2DY2fAJY?si=5a5425ed30e54ffb" target="_blank" rel="noreferrer">
+        <span data-i18n="music.source">Spotify reference</span>
+        <svg aria-hidden="true" viewBox="0 0 24 24">
+          <path d="M7 17 17 7M8 7h9v9" />
+        </svg>
+      </a>
+    </div>
+    <div class="floscas-local-player floscas-glass" data-local-player data-playlist-url="{{ "/music/playlist.json" | relURL }}">
+      <div class="floscas-player-meta">
+        <span data-i18n="music.window">Local playlist</span>
+        <strong data-player-title>Floscas listening room</strong>
+        <p data-player-artist data-i18n="music.empty">Add audio files to /static/music and update playlist.json.</p>
+      </div>
+      <div class="floscas-player-body">
+        <figure class="floscas-player-art">
+          <img src="{{ "/images/floscas-gallery/green-valley.jpg" | relURL }}" alt="">
+        </figure>
+        <div class="floscas-player-controls">
+          <audio data-player-audio preload="metadata"></audio>
+          <div class="floscas-player-progress" data-player-progress>
+            <span data-player-progress-bar></span>
+          </div>
+          <div class="floscas-player-buttons">
+            <button type="button" data-player-prev aria-label="Previous track">
+              <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M11 18V6M19 18 11 12l8-6M5 18V6" /></svg>
+            </button>
+            <button class="is-primary" type="button" data-player-toggle aria-label="Play">
+              <svg class="icon-play" aria-hidden="true" viewBox="0 0 24 24"><path d="m9 7 9 5-9 5Z" /></svg>
+              <svg class="icon-pause" aria-hidden="true" viewBox="0 0 24 24"><path d="M8 6v12M16 6v12" /></svg>
+            </button>
+            <button type="button" data-player-next aria-label="Next track">
+              <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M13 6v12M5 6l8 6-8 6M19 6v12" /></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      <ol class="floscas-player-list" data-player-list></ol>
+    </div>
+  </section>
+
   <section class="floscas-latest" aria-labelledby="floscas-latest-title">
     <div class="floscas-section-head">
-      <h2 id="floscas-latest-title" data-i18n="latest.title">Latest Thoughts</h2>
+      <div>
+        <p class="floscas-section-kicker" data-i18n="section.journal">Journal</p>
+        <h2 id="floscas-latest-title" data-i18n="latest.title">Latest Thoughts</h2>
+      </div>
       <a href="{{ "posts/" | relURL }}">
         <span data-i18n="latest.all">View all posts</span>
-        <span aria-hidden="true">-></span>
+        <svg class="floscas-link-icon" aria-hidden="true" viewBox="0 0 24 24">
+          <path d="M5 12h14M13 6l6 6-6 6" />
+        </svg>
       </a>
     </div>
 
-    {{- $recent := first 5 $pages }}
     <div class="floscas-reading-layout">
       {{- with index $recent 0 }}
       <article class="floscas-card floscas-card-featured">
         <a class="floscas-card-link" href="{{ .RelPermalink }}" aria-label="{{ .Title | plainify }}"></a>
+        <div class="floscas-card-media">
+          <img src="{{ "/images/floscas-gallery/forest-bloom.jpg" | relURL }}" alt="">
+        </div>
         <div class="floscas-card-body">
           <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 02, 2006" }}</time>
           <h3>{{ .Title }}</h3>
@@ -61,17 +184,21 @@
       </article>
       {{- end }}
       <div class="floscas-card-stack">
-      {{- range after 1 $recent }}
+      {{- range $idx, $page := after 1 $recent }}
+        {{- $cover := index $coverSet (mod $idx (len $coverSet)) }}
         <article class="floscas-card floscas-card-compact">
-          <a class="floscas-card-link" href="{{ .RelPermalink }}" aria-label="{{ .Title | plainify }}"></a>
+          <a class="floscas-card-link" href="{{ $page.RelPermalink }}" aria-label="{{ $page.Title | plainify }}"></a>
+          <div class="floscas-card-media">
+            <img src="{{ $cover | relURL }}" alt="">
+          </div>
           <div class="floscas-card-body">
-            <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 02, 2006" }}</time>
-            <h3>{{ .Title }}</h3>
-            <p>{{ .Summary | plainify | htmlUnescape | truncate 110 }}</p>
+            <time datetime="{{ $page.Date.Format "2006-01-02" }}">{{ $page.Date.Format "Jan 02, 2006" }}</time>
+            <h3>{{ $page.Title }}</h3>
+            <p>{{ $page.Summary | plainify | htmlUnescape | truncate 110 }}</p>
             <footer>
-              <span>{{ with index .Params.categories 0 }}{{ . }}{{ else }}Notes{{ end }}</span>
-              {{- if .ReadingTime }}
-              <em>{{ .ReadingTime }} min read</em>
+              <span>{{ with index $page.Params.categories 0 }}{{ . }}{{ else }}Notes{{ end }}</span>
+              {{- if $page.ReadingTime }}
+              <em>{{ $page.ReadingTime }} min read</em>
               {{- end }}
             </footer>
           </div>
@@ -80,5 +207,32 @@
       </div>
     </div>
   </section>
+
+  <section class="floscas-gallery-preview" aria-labelledby="floscas-gallery-title">
+    <div class="floscas-section-head">
+      <div>
+        <p class="floscas-section-kicker" data-i18n="section.gallery">Gallery</p>
+        <h2 id="floscas-gallery-title" data-i18n="gallery.selected">Selected Light</h2>
+      </div>
+      <a href="{{ "gallery/" | relURL }}">
+        <span data-i18n="gallery.open">Open gallery</span>
+        <svg class="floscas-link-icon" aria-hidden="true" viewBox="0 0 24 24">
+          <path d="M7 17 17 7M8 7h9v9" />
+        </svg>
+      </a>
+    </div>
+    <div class="floscas-gallery-grid">
+      {{- range $gallery }}
+      <figure class="floscas-photo-card">
+        <img src="{{ .src | relURL }}" alt="{{ .title }}">
+        <figcaption>
+          <span>{{ .tone }}</span>
+          <strong>{{ .title }}</strong>
+        </figcaption>
+      </figure>
+      {{- end }}
+    </div>
+  </section>
+
 </div>
 {{- end }}

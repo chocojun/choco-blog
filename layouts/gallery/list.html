@@ -1,0 +1,58 @@
+{{- define "main" }}
+<script>document.body.classList.add('floscas-inner-page');</script>
+{{- $gallery := slice
+  (dict "src" "/images/floscas-gallery/forest-root.jpg" "title" "Root aperture" "tone" "Botanical")
+  (dict "src" "/images/floscas-gallery/forest-light.jpg" "title" "Forest light" "tone" "Botanical")
+  (dict "src" "/images/floscas-gallery/concrete-frame.jpg" "title" "Concrete quiet" "tone" "Monochrome")
+  (dict "src" "/images/floscas-gallery/water-grapes.jpg" "title" "Water grapes" "tone" "Still life")
+  (dict "src" "/images/floscas-gallery/candle.jpg" "title" "Small light" "tone" "Nocturne")
+  (dict "src" "/images/floscas-gallery/green-leaves.jpg" "title" "Green interior" "tone" "Shadow")
+  (dict "src" "/images/floscas-gallery/city-pink.jpg" "title" "Pink hour" "tone" "City")
+  (dict "src" "/images/floscas-gallery/station-ghost.jpg" "title" "Station ghost" "tone" "Monochrome")
+  (dict "src" "/images/floscas-gallery/urban-corridor.jpg" "title" "Urban corridor" "tone" "Monochrome")
+  (dict "src" "/images/floscas-gallery/idea-box.jpg" "title" "Idea box" "tone" "City")
+  (dict "src" "/images/floscas-gallery/turquoise-tree.jpg" "title" "Turquoise tree" "tone" "Sun")
+  (dict "src" "/images/floscas-gallery/sticker-wall.jpg" "title" "Sticker wall" "tone" "Archive")
+  (dict "src" "/images/floscas-gallery/building-grid.jpg" "title" "Building grid" "tone" "Monochrome")
+  (dict "src" "/images/floscas-gallery/leaf-map.jpg" "title" "Leaf map" "tone" "Botanical")
+  (dict "src" "/images/floscas-gallery/butterflies.jpg" "title" "Butterflies" "tone" "Garden")
+  (dict "src" "/images/floscas-gallery/brick-night.jpg" "title" "Blue night" "tone" "Nocturne")
+  (dict "src" "/images/floscas-gallery/yellow-flowers.jpg" "title" "Late flowers" "tone" "Garden")
+  (dict "src" "/images/floscas-gallery/shadow-floor.jpg" "title" "Shadow floor" "tone" "Monochrome")
+  (dict "src" "/images/floscas-gallery/skyline-mist-wide.jpg" "title" "Mist skyline" "tone" "City")
+  (dict "src" "/images/floscas-gallery/cloud-mobile.jpg" "title" "Cloud mobile" "tone" "Interior")
+  (dict "src" "/images/floscas-gallery/mural-building.jpg" "title" "Mural building" "tone" "Street")
+  (dict "src" "/images/floscas-gallery/city-rain-wide.jpg" "title" "Rain city" "tone" "City")
+  (dict "src" "/images/floscas-gallery/blue-cloud-wide.jpg" "title" "Blue cloud" "tone" "Sky")
+  (dict "src" "/images/floscas-gallery/green-city-wide.jpg" "title" "Green city" "tone" "City")
+  (dict "src" "/images/floscas-gallery/green-valley.jpg" "title" "Green valley" "tone" "Landscape")
+  (dict "src" "/images/floscas-gallery/orange-light-wide.jpg" "title" "Orange light" "tone" "Warmth")
+  (dict "src" "/images/floscas-gallery/desk-lamp-wide.jpg" "title" "Desk lamp" "tone" "Interior")
+  (dict "src" "/images/floscas-gallery/deep-forest.jpg" "title" "Deep forest" "tone" "Botanical")
+  (dict "src" "/images/floscas-gallery/white-flowers.jpg" "title" "White flowers" "tone" "Garden")
+  (dict "src" "/images/floscas-gallery/forest-bloom.jpg" "title" "Forest bloom" "tone" "Garden")
+}}
+<div class="floscas-shell floscas-gallery-page">
+  {{ partial "floscas_nav.html" . }}
+  {{ partial "floscas_decor.html" . }}
+  <main class="floscas-archive">
+    <header class="floscas-page-hero floscas-glass">
+      <p class="floscas-kicker">Gallery</p>
+      <h1>{{ .Title | default "Gallery" }}</h1>
+      <p>{{ .Description | default "A visual shelf for images, sketches, and collected atmospheres." }}</p>
+    </header>
+
+    <section class="floscas-gallery-grid floscas-gallery-grid-full" aria-label="Photography gallery">
+      {{- range $gallery }}
+      <figure class="floscas-photo-card">
+        <img src="{{ .src | relURL }}" alt="{{ .title }}">
+        <figcaption>
+          <span data-gallery-tone="{{ .tone }}">{{ .tone }}</span>
+          <strong data-gallery-title="{{ .title }}">{{ .title }}</strong>
+        </figcaption>
+      </figure>
+      {{- end }}
+    </section>
+  </main>
+</div>
+{{- end }}

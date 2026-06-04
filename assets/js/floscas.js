@@ -17,10 +17,24 @@
       "archive.empty": "这个房间还在慢慢布置。",
       "article.back": "返回",
       "translation.source": "译文由 ChatGPT 提供，仅供参考。",
-      "game.open": "无聊一下",
-      "game.title": "接住花瓣",
-      "game.score": "花瓣",
-      "game.hint": "移动鼠标或手指，让小花落进杯里。"
+      "hero.index": "文字、摄影、片段和私人的天气。",
+      "quote.line": "“安放札记、片段和正在成为的自己。”",
+      "quote.caption": "关于生活、记忆、语言与成为自己的札记。",
+      "section.journal": "札记",
+      "section.gallery": "图集",
+      "gallery.selected": "被选中的光",
+      "gallery.open": "打开图集",
+      "account.label": "微信公众号",
+      "account.region.label": "地区",
+      "account.region": "中国 广东 深圳",
+      "account.id.label": "公众号 ID",
+      "account.bio": "于温柔处看花开，于坚强处结栗果。",
+      "music.kicker": "听觉房间",
+      "music.title": "给阅读一点柔软的天气。",
+      "music.copy": "这里会播放你放进本地音乐文件夹里的歌，像一只安静的玻璃唱机。",
+      "music.source": "Spotify 参考歌单",
+      "music.window": "本地歌单",
+      "music.empty": "把音频放进 /static/music，并在 playlist.json 里登记。"
     },
     "zh-Hant": {
       label: "繁",
@@ -39,10 +53,24 @@
       "archive.empty": "這個房間還在慢慢佈置。",
       "article.back": "返回",
       "translation.source": "譯文由 ChatGPT 提供，僅供參考。",
-      "game.open": "無聊一下",
-      "game.title": "接住花瓣",
-      "game.score": "花瓣",
-      "game.hint": "移動滑鼠或手指，讓小花落進杯裡。"
+      "hero.index": "文字、攝影、片段和私人的天氣。",
+      "quote.line": "「安放札記、片段和正在成為的自己。」",
+      "quote.caption": "關於生活、記憶、語言與成為自己的札記。",
+      "section.journal": "札記",
+      "section.gallery": "圖集",
+      "gallery.selected": "被選中的光",
+      "gallery.open": "打開圖集",
+      "account.label": "微信公眾號",
+      "account.region.label": "地區",
+      "account.region": "中國 廣東 深圳",
+      "account.id.label": "公眾號 ID",
+      "account.bio": "於溫柔處看花開，於堅強處結栗果。",
+      "music.kicker": "聽覺房間",
+      "music.title": "給閱讀一點柔軟的天氣。",
+      "music.copy": "這裡會播放你放進本地音樂資料夾裡的歌，像一台安靜的玻璃唱機。",
+      "music.source": "Spotify 參考歌單",
+      "music.window": "本地歌單",
+      "music.empty": "把音訊放進 /static/music，並在 playlist.json 裡登記。"
     },
     en: {
       label: "EN",
@@ -61,10 +89,24 @@
       "archive.empty": "This room is still being arranged.",
       "article.back": "Back",
       "translation.source": "Translation provided by ChatGPT for reference.",
-      "game.open": "Drift",
-      "game.title": "Petal Catch",
-      "game.score": "Petals",
-      "game.hint": "Move the cup with your cursor or finger."
+      "hero.index": "Writing, photographs, fragments, and private weather.",
+      "quote.line": "“A quiet shelf for notes, fragments, and becoming.”",
+      "quote.caption": "Notes on life, memory, language, and becoming.",
+      "section.journal": "Journal",
+      "section.gallery": "Gallery",
+      "gallery.selected": "Selected Light",
+      "gallery.open": "Open gallery",
+      "account.label": "WeChat official account",
+      "account.region.label": "Region",
+      "account.region": "Shenzhen, Guangdong, China",
+      "account.id.label": "Official account ID",
+      "account.bio": "Watch flowers open in tenderness; gather chestnuts in strength.",
+      "music.kicker": "Listening room",
+      "music.title": "A little weather for reading.",
+      "music.copy": "A local glass player for the songs you place inside the music folder.",
+      "music.source": "Spotify reference",
+      "music.window": "Local playlist",
+      "music.empty": "Add audio files to /static/music and update playlist.json."
     },
     fr: {
       label: "FR",
@@ -83,10 +125,24 @@
       "archive.empty": "Cette pièce est encore en cours d'arrangement.",
       "article.back": "Retour",
       "translation.source": "Traduction fournie par ChatGPT, à titre indicatif.",
-      "game.open": "Flâner",
-      "game.title": "Attrape-pétales",
-      "game.score": "Pétales",
-      "game.hint": "Déplacez la coupe avec la souris ou le doigt."
+      "hero.index": "Écriture, photographies, fragments et météo intime.",
+      "quote.line": "« Une étagère calme pour les notes, les fragments et le devenir. »",
+      "quote.caption": "Notes sur la vie, la mémoire, la langue et ce que l'on devient.",
+      "section.journal": "Journal",
+      "section.gallery": "Galerie",
+      "gallery.selected": "Lumière choisie",
+      "gallery.open": "Ouvrir la galerie",
+      "account.label": "Compte officiel WeChat",
+      "account.region.label": "Région",
+      "account.region": "Shenzhen, Guangdong, Chine",
+      "account.id.label": "ID du compte",
+      "account.bio": "Regarder les fleurs s'ouvrir dans la douceur; cueillir des châtaignes dans la force.",
+      "music.kicker": "Salon d'écoute",
+      "music.title": "Un peu de météo pour lire.",
+      "music.copy": "Un lecteur local en verre pour les morceaux déposés dans le dossier musique.",
+      "music.source": "Playlist Spotify de référence",
+      "music.window": "Playlist locale",
+      "music.empty": "Ajoutez les fichiers audio dans /static/music et mettez à jour playlist.json."
     },
     es: {
       label: "ES",
@@ -105,10 +161,24 @@
       "archive.empty": "Esta habitación todavía se está preparando.",
       "article.back": "Volver",
       "translation.source": "Traducción proporcionada por ChatGPT como referencia.",
-      "game.open": "Divagar",
-      "game.title": "Atrapa pétalos",
-      "game.score": "Pétalos",
-      "game.hint": "Mueve la copa con el cursor o el dedo."
+      "hero.index": "Escritura, fotografías, fragmentos y clima privado.",
+      "quote.line": "“Un estante tranquilo para notas, fragmentos y transformación.”",
+      "quote.caption": "Notas sobre la vida, la memoria, el lenguaje y el llegar a ser.",
+      "section.journal": "Diario",
+      "section.gallery": "Galería",
+      "gallery.selected": "Luz seleccionada",
+      "gallery.open": "Abrir galería",
+      "account.label": "Cuenta oficial de WeChat",
+      "account.region.label": "Región",
+      "account.region": "Shenzhen, Guangdong, China",
+      "account.id.label": "ID de la cuenta",
+      "account.bio": "Mirar las flores abrirse en la ternura; recoger castañas en la fortaleza.",
+      "music.kicker": "Sala de escucha",
+      "music.title": "Un poco de clima para leer.",
+      "music.copy": "Un reproductor local de vidrio para las canciones que pongas en la carpeta de música.",
+      "music.source": "Lista de referencia de Spotify",
+      "music.window": "Lista local",
+      "music.empty": "Agrega audio a /static/music y actualiza playlist.json."
     }
   };
 
@@ -188,13 +258,15 @@
     const langButton = langMenu?.querySelector(".floscas-lang-button");
     const options = [...langMenu.querySelectorAll("[data-lang-option]")];
 
-    langButton?.addEventListener("click", () => {
+    langButton?.addEventListener("click", (event) => {
+      event.stopPropagation();
       const isOpen = langMenu.classList.toggle("is-open");
       langButton.setAttribute("aria-expanded", String(isOpen));
     });
 
     options.forEach((option) => {
-      option.addEventListener("click", () => {
+      option.addEventListener("click", (event) => {
+        event.stopPropagation();
         const lang = option.dataset.langOption;
         localStorage.setItem("floscas-lang", lang);
         applyCopy(lang);
@@ -267,80 +339,118 @@
     }
   };
 
-  const createGame = () => {
-    if (document.querySelector("[data-floscas-game]")) return;
-    const game = document.createElement("div");
-    game.className = "floscas-game";
-    game.dataset.floscasGame = "";
-    game.innerHTML = `
-      <button class="floscas-game-toggle" type="button" data-i18n="game.open">Drift</button>
-      <div class="floscas-game-panel" aria-live="polite">
-        <div class="floscas-game-head">
-          <strong data-i18n="game.title">Petal Catch</strong>
-          <span><span data-i18n="game.score">Petals</span>: <b data-game-score>0</b></span>
-        </div>
-        <div class="floscas-game-stage">
-          <span class="game-petal"></span>
-          <span class="game-cup"></span>
-        </div>
-        <p data-i18n="game.hint">Move the cup with your cursor or finger.</p>
-      </div>
-    `;
-    document.body.appendChild(game);
+  const setupLocalPlayer = () => {
+    const player = document.querySelector("[data-local-player]");
+    if (!player) return;
 
-    const toggle = game.querySelector(".floscas-game-toggle");
-    const stage = game.querySelector(".floscas-game-stage");
-    const petal = game.querySelector(".game-petal");
-    const cup = game.querySelector(".game-cup");
-    const scoreNode = game.querySelector("[data-game-score]");
-    let score = 0;
-    let petalX = 40;
-    let petalY = 0;
-    let cupX = 50;
-    let speed = 1.25;
+    const audio = player.querySelector("[data-player-audio]");
+    const title = player.querySelector("[data-player-title]");
+    const artist = player.querySelector("[data-player-artist]");
+    const list = player.querySelector("[data-player-list]");
+    const progress = player.querySelector("[data-player-progress]");
+    const progressBar = player.querySelector("[data-player-progress-bar]");
+    const toggle = player.querySelector("[data-player-toggle]");
+    const prev = player.querySelector("[data-player-prev]");
+    const next = player.querySelector("[data-player-next]");
+    const art = player.querySelector(".floscas-player-art img");
+    let tracks = [];
+    let index = 0;
 
-    toggle.addEventListener("click", () => game.classList.toggle("is-open"));
-
-    const moveCup = (clientX) => {
-      const rect = stage.getBoundingClientRect();
-      cupX = Math.max(8, Math.min(92, ((clientX - rect.left) / rect.width) * 100));
-      cup.style.left = `${cupX}%`;
+    const setEmpty = () => {
+      player.classList.add("is-empty");
+      if (title) title.textContent = "Floscas listening room";
+      if (artist) artist.textContent = copy[getLanguage()]?.["music.empty"] || copy.en["music.empty"];
+      if (list) list.innerHTML = "";
+      [toggle, prev, next].forEach((button) => {
+        if (button) button.disabled = true;
+      });
     };
 
-    stage.addEventListener("pointermove", (event) => moveCup(event.clientX));
-    stage.addEventListener("pointerdown", (event) => moveCup(event.clientX));
-
-    const resetPetal = () => {
-      petalY = -8;
-      petalX = 10 + Math.random() * 80;
-      speed = 0.9 + Math.random() * 1.4;
-      petal.style.left = `${petalX}%`;
+    const setTrack = (nextIndex) => {
+      if (!tracks.length || !audio) return;
+      index = (nextIndex + tracks.length) % tracks.length;
+      const track = tracks[index];
+      audio.src = track.src;
+      if (title) title.textContent = track.title || "Untitled";
+      if (artist) artist.textContent = track.artist || "Floscas";
+      if (art && track.cover) art.src = track.cover;
+      player.classList.remove("is-playing");
+      list?.querySelectorAll("button").forEach((button, itemIndex) => {
+        button.classList.toggle("is-active", itemIndex === index);
+      });
     };
 
-    const tick = () => {
-      if (game.classList.contains("is-open")) {
-        petalY += speed;
-        petal.style.top = `${petalY}%`;
-        petal.style.transform = `rotate(${petalY * 5}deg)`;
-        if (petalY > 80 && Math.abs(petalX - cupX) < 12) {
-          score += 1;
-          scoreNode.textContent = String(score);
-          resetPetal();
-        } else if (petalY > 106) {
-          resetPetal();
+    const renderList = () => {
+      if (!list) return;
+      list.innerHTML = "";
+      tracks.forEach((track, itemIndex) => {
+        const item = document.createElement("li");
+        const button = document.createElement("button");
+        button.type = "button";
+        button.innerHTML = `<span>${track.title || `Track ${itemIndex + 1}`}</span><small>${track.artist || "Floscas"}</small>`;
+        button.addEventListener("click", () => {
+          setTrack(itemIndex);
+          audio?.play();
+        });
+        item.append(button);
+        list.append(item);
+      });
+    };
+
+    fetch(player.dataset.playlistUrl, { cache: "no-store" })
+      .then((response) => (response.ok ? response.json() : Promise.reject(new Error("playlist missing"))))
+      .then((data) => {
+        tracks = Array.isArray(data?.tracks) ? data.tracks.filter((track) => track.src) : [];
+        if (!tracks.length) {
+          setEmpty();
+          return;
         }
-      }
-      requestAnimationFrame(tick);
-    };
+        [toggle, prev, next].forEach((button) => {
+          if (button) button.disabled = false;
+        });
+        renderList();
+        setTrack(0);
+      })
+      .catch(setEmpty);
 
-    resetPetal();
-    tick();
+    toggle?.addEventListener("click", () => {
+      if (!audio || !tracks.length) return;
+      if (audio.paused) audio.play();
+      else audio.pause();
+    });
+
+    prev?.addEventListener("click", () => {
+      setTrack(index - 1);
+      audio?.play();
+    });
+
+    next?.addEventListener("click", () => {
+      setTrack(index + 1);
+      audio?.play();
+    });
+
+    audio?.addEventListener("play", () => player.classList.add("is-playing"));
+    audio?.addEventListener("pause", () => player.classList.remove("is-playing"));
+    audio?.addEventListener("ended", () => {
+      setTrack(index + 1);
+      audio.play();
+    });
+    audio?.addEventListener("timeupdate", () => {
+      if (!progressBar || !audio.duration) return;
+      progressBar.style.width = `${(audio.currentTime / audio.duration) * 100}%`;
+    });
+
+    progress?.addEventListener("click", (event) => {
+      if (!audio?.duration) return;
+      const rect = progress.getBoundingClientRect();
+      audio.currentTime = ((event.clientX - rect.left) / rect.width) * audio.duration;
+    });
   };
 
   document.querySelectorAll("[data-lang-menu]").forEach(setupLanguageMenu);
   setupTheme();
   setupHomeMotion();
-  createGame();
+  setupLocalPlayer();
   const lang = getLanguage();
   applyCopy(lang);
   applyArticleTranslation(lang);

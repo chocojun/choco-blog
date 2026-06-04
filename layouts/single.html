@@ -4,15 +4,28 @@
   {{ partial "floscas_nav.html" . }}
   {{ partial "floscas_decor.html" . }}
 
-  <article class="floscas-article floscas-glass">
+  <article class="post-single floscas-article floscas-glass">
     <header class="floscas-article-header">
-      <a class="floscas-back" href="{{ if eq .Section "posts" }}{{ "posts/" | relURL }}{{ else }}{{ "" | relURL }}{{ end }}">← <span data-i18n="article.back">Back</span></a>
+      <a class="floscas-back" href="{{ if eq .Section "posts" }}{{ "posts/" | relURL }}{{ else }}{{ "" | relURL }}{{ end }}">
+        <svg aria-hidden="true" viewBox="0 0 24 24">
+          <path d="M19 12H5M11 6l-6 6 6 6" />
+        </svg>
+        <span data-i18n="article.back">Back</span>
+      </a>
       <p class="floscas-kicker">{{ with index .Params.categories 0 }}{{ . }}{{ else }}Floscas{{ end }}</p>
       <h1 class="post-title">{{ .Title }}</h1>
       {{- if not (.Param "hideMeta") }}
       <div class="post-meta">
-        {{ .Date.Format "2006.01.02" }}
-        {{- if .ReadingTime }} · {{ .ReadingTime }} min read{{- end }}
+        <span>{{ .Date.Format "2006.01.02" }}</span>
+        {{- if .ReadingTime }}
+        <span class="floscas-meta-read">
+          <svg aria-hidden="true" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="8" />
+            <path d="M12 8v4l3 2" />
+          </svg>
+          {{ .ReadingTime }} min read
+        </span>
+        {{- end }}
       </div>
       {{- end }}
     </header>
