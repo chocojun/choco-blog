@@ -10,12 +10,12 @@
   "/images/floscas-gallery/green-city-wide.jpg"
 }}
 {{- $gallery := slice
-  (dict "src" "/images/floscas-gallery/city-rain-wide.jpg" "title" "Rain city" "tone" "City")
-  (dict "src" "/images/floscas-gallery/mural-building.jpg" "title" "Painted facade" "tone" "Street")
-  (dict "src" "/images/floscas-gallery/blue-cloud-wide.jpg" "title" "Blue weather" "tone" "Sky")
-  (dict "src" "/images/floscas-gallery/orange-light-wide.jpg" "title" "Orange room" "tone" "Warmth")
-  (dict "src" "/images/floscas-gallery/white-flowers.jpg" "title" "White bloom" "tone" "Garden")
-  (dict "src" "/images/floscas-gallery/desk-lamp-wide.jpg" "title" "Working light" "tone" "Interior")
+  (dict "id" "rainCity" "src" "/images/floscas-gallery/city-rain-wide.jpg" "title" "Rain city" "tone" "City")
+  (dict "id" "paintedFacade" "src" "/images/floscas-gallery/mural-building.jpg" "title" "Painted facade" "tone" "Street")
+  (dict "id" "blueWeather" "src" "/images/floscas-gallery/blue-cloud-wide.jpg" "title" "Blue weather" "tone" "Sky")
+  (dict "id" "orangeRoom" "src" "/images/floscas-gallery/orange-light-wide.jpg" "title" "Orange room" "tone" "Warmth")
+  (dict "id" "whiteBloom" "src" "/images/floscas-gallery/white-flowers.jpg" "title" "White bloom" "tone" "Garden")
+  (dict "id" "workingLight" "src" "/images/floscas-gallery/desk-lamp-wide.jpg" "title" "Working light" "tone" "Interior")
 }}
 
 <div class="floscas-home floscas-magazine" data-floscas-home>
@@ -37,8 +37,11 @@
 
     <div class="floscas-hero-copy">
       <p class="floscas-kicker" data-i18n="hero.kicker">Writerly portfolio</p>
-      <h1 id="floscas-title">C’est La Vie.</h1>
-      <p class="floscas-subtitle" data-i18n="hero.subtitle">Notes on life, memory, language, and becoming.</p>
+      <h1 id="floscas-title" class="floscas-slogan-long" aria-label="Everything I know about Life.">
+        <span class="floscas-slogan-prefix">Everything I know</span>
+        <span class="floscas-slogan-main">about Life.</span>
+      </h1>
+      <p class="floscas-subtitle" data-i18n="hero.subtitle">Writing my thoughts, recording my loves.</p>
       <div class="floscas-hero-actions">
         <a class="floscas-pill-link" href="{{ "posts/" | relURL }}">
           <span data-i18n="latest.all">View all posts</span>
@@ -56,7 +59,6 @@
     </div>
 
     <div class="floscas-hero-index floscas-glass">
-      <span>FIELD NOTE 001</span>
       <strong>Floscas</strong>
       <p data-i18n="hero.index">Writing, photographs, fragments, and private weather.</p>
     </div>
@@ -79,21 +81,6 @@
     <div class="floscas-quote-panel floscas-glass">
       <p data-i18n="quote.line">“A quiet shelf for notes, fragments, and becoming.”</p>
       <span data-i18n="quote.caption">Notes on life, memory, language, and becoming.</span>
-      <div class="floscas-account-card" aria-label="WeChat official account">
-        <small data-i18n="account.label">WeChat official account</small>
-        <strong>FLOSCAS 花与栗</strong>
-        <dl>
-          <div>
-            <dt data-i18n="account.region.label">Region</dt>
-            <dd data-i18n="account.region">Shenzhen, Guangdong, China</dd>
-          </div>
-          <div>
-            <dt data-i18n="account.id.label">ID</dt>
-            <dd>FLOSCAS_HuaYuLi</dd>
-          </div>
-        </dl>
-        <em data-i18n="account.bio">Watch flowers open in tenderness; gather chestnuts in strength.</em>
-      </div>
     </div>
     <figure class="floscas-strip-card is-tall">
       <img src="{{ "/images/floscas-gallery/candle.jpg" | relURL }}" alt="Warm candle flame">
@@ -128,7 +115,8 @@
         </figure>
         <div class="floscas-player-controls">
           <audio data-player-audio preload="metadata"></audio>
-          <div class="floscas-player-progress" data-player-progress>
+          <div class="floscas-mobius-progress" data-player-progress aria-label="Playback progress" data-i18n-aria-label="music.progress">
+            <canvas data-mobius-canvas></canvas>
             <span data-player-progress-bar></span>
           </div>
           <div class="floscas-player-buttons">
@@ -165,7 +153,8 @@
 
     <div class="floscas-reading-layout">
       {{- with index $recent 0 }}
-      <article class="floscas-card floscas-card-featured">
+      {{- $cat := "notes" }}
+      <article class="floscas-card floscas-card-featured" data-floscas-card-category="{{ $cat }}">
         <a class="floscas-card-link" href="{{ .RelPermalink }}" aria-label="{{ .Title | plainify }}"></a>
         <div class="floscas-card-media">
           <img src="{{ "/images/floscas-gallery/forest-bloom.jpg" | relURL }}" alt="">
@@ -175,7 +164,7 @@
           <h3>{{ .Title }}</h3>
           <p>{{ .Summary | plainify | htmlUnescape | truncate 220 }}</p>
           <footer>
-            <span>{{ with index .Params.categories 0 }}{{ . }}{{ else }}Notes{{ end }}</span>
+              <span data-i18n="filter.notes">Notes</span>
             {{- if .ReadingTime }}
             <em>{{ .ReadingTime }} min read</em>
             {{- end }}
@@ -186,7 +175,8 @@
       <div class="floscas-card-stack">
       {{- range $idx, $page := after 1 $recent }}
         {{- $cover := index $coverSet (mod $idx (len $coverSet)) }}
-        <article class="floscas-card floscas-card-compact">
+        {{- $cat := "notes" }}
+        <article class="floscas-card floscas-card-compact" data-floscas-card-category="{{ $cat }}">
           <a class="floscas-card-link" href="{{ $page.RelPermalink }}" aria-label="{{ $page.Title | plainify }}"></a>
           <div class="floscas-card-media">
             <img src="{{ $cover | relURL }}" alt="">
@@ -196,7 +186,7 @@
             <h3>{{ $page.Title }}</h3>
             <p>{{ $page.Summary | plainify | htmlUnescape | truncate 110 }}</p>
             <footer>
-              <span>{{ with index $page.Params.categories 0 }}{{ . }}{{ else }}Notes{{ end }}</span>
+              <span data-i18n="filter.notes">Notes</span>
               {{- if $page.ReadingTime }}
               <em>{{ $page.ReadingTime }} min read</em>
               {{- end }}
@@ -205,6 +195,10 @@
         </article>
       {{- end }}
       </div>
+    </div>
+    <div class="floscas-filter-row" data-floscas-filters aria-label="Filter recent posts">
+      <button class="is-active" type="button" data-filter="all" data-i18n="filter.all">All</button>
+      <button type="button" data-filter="notes" data-i18n="filter.notes">Notes</button>
     </div>
   </section>
 
@@ -224,10 +218,10 @@
     <div class="floscas-gallery-grid">
       {{- range $gallery }}
       <figure class="floscas-photo-card">
-        <img src="{{ .src | relURL }}" alt="{{ .title }}">
+        <img src="{{ .src | relURL }}" alt="{{ .title }}" title="{{ .title }}" data-gallery-image="{{ .id }}">
         <figcaption>
-          <span>{{ .tone }}</span>
-          <strong>{{ .title }}</strong>
+          <span data-gallery-tone="{{ .id }}">{{ .tone }}</span>
+          <strong data-gallery-title="{{ .id }}">{{ .title }}</strong>
         </figcaption>
       </figure>
       {{- end }}

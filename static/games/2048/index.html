@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Floscas 2048</title>
+  <link rel="stylesheet" href="../floscas-games.css">
+</head>
+<body>
+  <main class="game-shell">
+    <nav class="game-nav"><a href="/">Floscas</a><span>Offline game</span></nav>
+    <h1 class="game-title">2048</h1>
+    <section class="game-panel">
+      <p class="muted">Use arrow keys or swipe. Glass tiles, quiet arithmetic.</p>
+      <div class="game-actions"><button id="new">New game</button><strong id="score">0</strong></div>
+      <div id="grid" class="grid-2048" aria-label="2048 board"></div>
+    </section>
+  </main>
+  <script>
+  const grid = document.getElementById("grid"), scoreEl = document.getElementById("score");
+  let board, score, start;
+  const empty = () => board.flatMap((row,y)=>row.map((v,x)=>v?null:[x,y])).filter(Boolean);
+  const add = () => { const e = empty(); if (!e.length) return; const [x,y] = e[Math.floor(Math.random()*e.length)]; board[y][x] = Math.random() > .88 ? 4 : 2; };
+  const draw = () => { grid.innerHTML = ""; board.flat().forEach(v => { const d=document.createElement("div"); d.className="tile"; d.textContent=v||""; d.style.opacity=v?1:.34; grid.append(d); }); scoreEl.textContent = `Score ${score}`; };
+  const reset = () => { board = Array.from({length:4},()=>Array(4).fill(0)); score = 0; add(); add(); draw(); };
+  const slide = row => { let a=row.filter(Boolean); for(let i=0;i<a.length-1;i++) if(a[i]===a[i+1]) { a[i]*=2; score+=a[i]; a.splice(i+1,1); } return [...a, ...Array(4-a.length).fill(0)]; };
+  const move = dir => {
+    const before = JSON.stringify(board);
+    for(let i=0;i<4;i++) {
+      let row = dir<2 ? board[i] : board.map(r=>r[i]);
+      if(dir===1 || dir===3) row = row.reverse();
+      row = slide(row);
+      if(dir===1 || dir===3) row = row.reverse();
+      for(let j=0;j<4;j++) dir<2 ? board[i][j]=row[j] : board[j][i]=row[j];
+    }
+    if (before !== JSON.stringify(board)) { add(); draw(); }
+  };
+  addEventListener("keydown", e => {
+    const dir = {ArrowLeft:0,ArrowRight:1,ArrowUp:2,ArrowDown:3}[e.key];
+    if (dir === undefined) return;
+    e.preventDefault();
+    move(dir);
+  }, { passive: false });
+  addEventListener("touchstart", e => start=[e.touches[0].clientX,e.touches[0].clientY], {passive:true});
+  addEventListener("touchend", e => { if(!start) return; const dx=e.changedTouches[0].clientX-start[0], dy=e.changedTouches[0].clientY-start[1]; Math.abs(dx)>Math.abs(dy)?move(dx>0?1:0):move(dy>0?3:2); }, {passive:true});
+  document.getElementById("new").onclick = reset; reset();
+  </script>
+</body>
+</html>

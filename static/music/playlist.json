@@ -1,4 +1,41 @@
 {
   "source": "https://open.spotify.com/playlist/3UQVv3BjPgadnI2DY2fAJY?si=5a5425ed30e54ffb",
-  "tracks": []
+  "tracks": [
+    {
+      "title": "Closer Extended",
+      "artist": "Belle Chan",
+      "album": "",
+      "year": "",
+      "genre": "",
+      "notes": "",
+      "sourceUrl": "",
+      "src": "/music/tracks/closer-extended-belle-chan.mp3",
+      "cover": "",
+      "addedAt": "2026-06-10T00:00:00+08:00"
+    },
+    {
+      "title": "Ocean",
+      "artist": "Jeff Roy",
+      "album": "",
+      "year": "",
+      "genre": "",
+      "notes": "",
+      "sourceUrl": "",
+      "src": "/music/tracks/ocean-jeff-roy.mp3",
+      "cover": "",
+      "addedAt": "2026-06-10T00:00:00+08:00"
+    },
+    {
+      "title": "The Dragonfly",
+      "artist": "Belle Chan",
+      "album": "",
+      "year": "",
+      "genre": "",
+      "notes": "",
+      "sourceUrl": "",
+      "src": "/music/tracks/the-dragonfly-belle-chan.mp3",
+      "cover": "",
+      "addedAt": "2026-06-10T00:00:00+08:00"
+    }
+  ]
 }

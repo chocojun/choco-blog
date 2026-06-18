@@ -1,36 +1,36 @@
 {{- define "main" }}
 <script>document.body.classList.add('floscas-inner-page');</script>
 {{- $gallery := slice
-  (dict "src" "/images/floscas-gallery/forest-root.jpg" "title" "Root aperture" "tone" "Botanical")
-  (dict "src" "/images/floscas-gallery/forest-light.jpg" "title" "Forest light" "tone" "Botanical")
-  (dict "src" "/images/floscas-gallery/concrete-frame.jpg" "title" "Concrete quiet" "tone" "Monochrome")
-  (dict "src" "/images/floscas-gallery/water-grapes.jpg" "title" "Water grapes" "tone" "Still life")
-  (dict "src" "/images/floscas-gallery/candle.jpg" "title" "Small light" "tone" "Nocturne")
-  (dict "src" "/images/floscas-gallery/green-leaves.jpg" "title" "Green interior" "tone" "Shadow")
-  (dict "src" "/images/floscas-gallery/city-pink.jpg" "title" "Pink hour" "tone" "City")
-  (dict "src" "/images/floscas-gallery/station-ghost.jpg" "title" "Station ghost" "tone" "Monochrome")
-  (dict "src" "/images/floscas-gallery/urban-corridor.jpg" "title" "Urban corridor" "tone" "Monochrome")
-  (dict "src" "/images/floscas-gallery/idea-box.jpg" "title" "Idea box" "tone" "City")
-  (dict "src" "/images/floscas-gallery/turquoise-tree.jpg" "title" "Turquoise tree" "tone" "Sun")
-  (dict "src" "/images/floscas-gallery/sticker-wall.jpg" "title" "Sticker wall" "tone" "Archive")
-  (dict "src" "/images/floscas-gallery/building-grid.jpg" "title" "Building grid" "tone" "Monochrome")
-  (dict "src" "/images/floscas-gallery/leaf-map.jpg" "title" "Leaf map" "tone" "Botanical")
-  (dict "src" "/images/floscas-gallery/butterflies.jpg" "title" "Butterflies" "tone" "Garden")
-  (dict "src" "/images/floscas-gallery/brick-night.jpg" "title" "Blue night" "tone" "Nocturne")
-  (dict "src" "/images/floscas-gallery/yellow-flowers.jpg" "title" "Late flowers" "tone" "Garden")
-  (dict "src" "/images/floscas-gallery/shadow-floor.jpg" "title" "Shadow floor" "tone" "Monochrome")
-  (dict "src" "/images/floscas-gallery/skyline-mist-wide.jpg" "title" "Mist skyline" "tone" "City")
-  (dict "src" "/images/floscas-gallery/cloud-mobile.jpg" "title" "Cloud mobile" "tone" "Interior")
-  (dict "src" "/images/floscas-gallery/mural-building.jpg" "title" "Mural building" "tone" "Street")
-  (dict "src" "/images/floscas-gallery/city-rain-wide.jpg" "title" "Rain city" "tone" "City")
-  (dict "src" "/images/floscas-gallery/blue-cloud-wide.jpg" "title" "Blue cloud" "tone" "Sky")
-  (dict "src" "/images/floscas-gallery/green-city-wide.jpg" "title" "Green city" "tone" "City")
-  (dict "src" "/images/floscas-gallery/green-valley.jpg" "title" "Green valley" "tone" "Landscape")
-  (dict "src" "/images/floscas-gallery/orange-light-wide.jpg" "title" "Orange light" "tone" "Warmth")
-  (dict "src" "/images/floscas-gallery/desk-lamp-wide.jpg" "title" "Desk lamp" "tone" "Interior")
-  (dict "src" "/images/floscas-gallery/deep-forest.jpg" "title" "Deep forest" "tone" "Botanical")
-  (dict "src" "/images/floscas-gallery/white-flowers.jpg" "title" "White flowers" "tone" "Garden")
-  (dict "src" "/images/floscas-gallery/forest-bloom.jpg" "title" "Forest bloom" "tone" "Garden")
+  (dict "id" "rootAperture" "src" "/images/floscas-gallery/forest-root.jpg" "title" "Root aperture" "tone" "Botanical")
+  (dict "id" "forestLight" "src" "/images/floscas-gallery/forest-light.jpg" "title" "Forest light" "tone" "Botanical")
+  (dict "id" "concreteQuiet" "src" "/images/floscas-gallery/concrete-frame.jpg" "title" "Concrete quiet" "tone" "Monochrome")
+  (dict "id" "waterGrapes" "src" "/images/floscas-gallery/water-grapes.jpg" "title" "Water grapes" "tone" "Still life")
+  (dict "id" "smallLight" "src" "/images/floscas-gallery/candle.jpg" "title" "Small light" "tone" "Nocturne")
+  (dict "id" "greenInterior" "src" "/images/floscas-gallery/green-leaves.jpg" "title" "Green interior" "tone" "Shadow")
+  (dict "id" "pinkHour" "src" "/images/floscas-gallery/city-pink.jpg" "title" "Pink hour" "tone" "City")
+  (dict "id" "stationGhost" "src" "/images/floscas-gallery/station-ghost.jpg" "title" "Station ghost" "tone" "Monochrome")
+  (dict "id" "urbanCorridor" "src" "/images/floscas-gallery/urban-corridor.jpg" "title" "Urban corridor" "tone" "Monochrome")
+  (dict "id" "ideaBox" "src" "/images/floscas-gallery/idea-box.jpg" "title" "Idea box" "tone" "City")
+  (dict "id" "turquoiseTree" "src" "/images/floscas-gallery/turquoise-tree.jpg" "title" "Turquoise tree" "tone" "Sun")
+  (dict "id" "stickerWall" "src" "/images/floscas-gallery/sticker-wall.jpg" "title" "Sticker wall" "tone" "Archive")
+  (dict "id" "buildingGrid" "src" "/images/floscas-gallery/building-grid.jpg" "title" "Building grid" "tone" "Monochrome")
+  (dict "id" "leafMap" "src" "/images/floscas-gallery/leaf-map.jpg" "title" "Leaf map" "tone" "Botanical")
+  (dict "id" "butterflies" "src" "/images/floscas-gallery/butterflies.jpg" "title" "Butterflies" "tone" "Garden")
+  (dict "id" "blueNight" "src" "/images/floscas-gallery/brick-night.jpg" "title" "Blue night" "tone" "Nocturne")
+  (dict "id" "lateFlowers" "src" "/images/floscas-gallery/yellow-flowers.jpg" "title" "Late flowers" "tone" "Garden")
+  (dict "id" "shadowFloor" "src" "/images/floscas-gallery/shadow-floor.jpg" "title" "Shadow floor" "tone" "Monochrome")
+  (dict "id" "mistSkyline" "src" "/images/floscas-gallery/skyline-mist-wide.jpg" "title" "Mist skyline" "tone" "City")
+  (dict "id" "cloudMobile" "src" "/images/floscas-gallery/cloud-mobile.jpg" "title" "Cloud mobile" "tone" "Interior")
+  (dict "id" "muralBuilding" "src" "/images/floscas-gallery/mural-building.jpg" "title" "Mural building" "tone" "Street")
+  (dict "id" "rainCity" "src" "/images/floscas-gallery/city-rain-wide.jpg" "title" "Rain city" "tone" "City")
+  (dict "id" "blueCloud" "src" "/images/floscas-gallery/blue-cloud-wide.jpg" "title" "Blue cloud" "tone" "Sky")
+  (dict "id" "greenCity" "src" "/images/floscas-gallery/green-city-wide.jpg" "title" "Green city" "tone" "City")
+  (dict "id" "greenValley" "src" "/images/floscas-gallery/green-valley.jpg" "title" "Green valley" "tone" "Landscape")
+  (dict "id" "orangeLight" "src" "/images/floscas-gallery/orange-light-wide.jpg" "title" "Orange light" "tone" "Warmth")
+  (dict "id" "deskLamp" "src" "/images/floscas-gallery/desk-lamp-wide.jpg" "title" "Desk lamp" "tone" "Interior")
+  (dict "id" "deepForest" "src" "/images/floscas-gallery/deep-forest.jpg" "title" "Deep forest" "tone" "Botanical")
+  (dict "id" "whiteFlowers" "src" "/images/floscas-gallery/white-flowers.jpg" "title" "White flowers" "tone" "Garden")
+  (dict "id" "forestBloom" "src" "/images/floscas-gallery/forest-bloom.jpg" "title" "Forest bloom" "tone" "Garden")
 }}
 <div class="floscas-shell floscas-gallery-page">
   {{ partial "floscas_nav.html" . }}
@@ -45,10 +45,10 @@
     <section class="floscas-gallery-grid floscas-gallery-grid-full" aria-label="Photography gallery">
       {{- range $gallery }}
       <figure class="floscas-photo-card">
-        <img src="{{ .src | relURL }}" alt="{{ .title }}">
+        <img src="{{ .src | relURL }}" alt="{{ .title }}" title="{{ .title }}" data-gallery-image="{{ .id }}">
         <figcaption>
-          <span data-gallery-tone="{{ .tone }}">{{ .tone }}</span>
-          <strong data-gallery-title="{{ .title }}">{{ .title }}</strong>
+          <span data-gallery-tone="{{ .id }}">{{ .tone }}</span>
+          <strong data-gallery-title="{{ .id }}">{{ .title }}</strong>
         </figcaption>
       </figure>
       {{- end }}

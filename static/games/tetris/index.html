@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Floscas Tetris</title>
+  <link rel="stylesheet" href="../floscas-games.css">
+</head>
+<body>
+  <main class="game-shell">
+    <nav class="game-nav"><a href="/">Floscas</a><span>Offline game</span></nav>
+    <h1 class="game-title">Tetris</h1>
+    <section class="game-panel">
+      <p class="muted">Arrow keys: move, rotate, drop. Quiet falling geometry.</p>
+      <div class="game-actions"><button id="new">Restart</button><strong id="score">Lines 0</strong></div>
+      <canvas id="game" width="300" height="600"></canvas>
+    </section>
+  </main>
+  <script>
+  const c=document.getElementById("game"),x=c.getContext("2d"),w=10,h=20,z=30,scoreEl=document.getElementById("score");
+  const shapes=[[[1,1,1,1]],[[1,1],[1,1]],[[0,1,0],[1,1,1]],[[1,0,0],[1,1,1]],[[0,0,1],[1,1,1]],[[1,1,0],[0,1,1]],[[0,1,1],[1,1,0]]];
+  let board,piece,lines,last=0,drop=680;
+  const clone=o=>JSON.parse(JSON.stringify(o)), spawn=()=>piece={m:clone(shapes[Math.floor(Math.random()*shapes.length)]),x:3,y:0};
+  const reset=()=>{board=Array.from({length:h},()=>Array(w).fill(0));lines=0;spawn();};
+  const hit=(px=piece.x,py=piece.y,m=piece.m)=>m.some((r,y)=>r.some((v,x)=>v&&(board[py+y]?.[px+x]!==0||px+x<0||px+x>=w||py+y>=h)));
+  const merge=()=>{piece.m.forEach((r,y)=>r.forEach((v,x)=>{if(v)board[piece.y+y][piece.x+x]=1;})); board=board.filter(r=>r.some(v=>!v)); const cleared=h-board.length; lines+=cleared; while(board.length<h)board.unshift(Array(w).fill(0)); spawn(); if(hit()) reset();};
+  const rot=m=>m[0].map((_,i)=>m.map(r=>r[i]).reverse());
+  const cell=(px,py,a=.72)=>{x.fillStyle=`rgba(236,242,236,${a})`;x.shadowColor="rgba(132,170,150,.8)";x.shadowBlur=10;x.fillRect(px*z+2,py*z+2,z-4,z-4);x.shadowBlur=0;};
+  const draw=()=>{x.clearRect(0,0,c.width,c.height);board.forEach((r,y)=>r.forEach((v,px)=>v&&cell(px,y,.46)));piece.m.forEach((r,y)=>r.forEach((v,px)=>v&&cell(piece.x+px,piece.y+y,.9)));scoreEl.textContent=`Lines ${lines}`;};
+  const step=t=>{if(t-last>drop){piece.y++;if(hit()){piece.y--;merge();}last=t;}draw();requestAnimationFrame(step);};
+  addEventListener("keydown",e=>{
+    if(!["ArrowLeft","ArrowRight","ArrowDown","ArrowUp"," "].includes(e.key)) return;
+    e.preventDefault();
+    if(e.key==="ArrowLeft"&&!hit(piece.x-1))piece.x--;
+    if(e.key==="ArrowRight"&&!hit(piece.x+1))piece.x++;
+    if((e.key==="ArrowDown"||e.key===" ")&&!hit(piece.x,piece.y+1))piece.y++;
+    if(e.key==="ArrowUp"){const m=rot(piece.m); if(!hit(piece.x,piece.y,m))piece.m=m;}
+  }, { passive: false });
+  document.getElementById("new").onclick=reset; reset(); requestAnimationFrame(step);
+  </script>
+</body>
+</html>

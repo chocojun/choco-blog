@@ -1,6 +1,6 @@
 baseURL = "https://choco-blog-20l.pages.dev/"
 languageCode = "zh-cn"
-title = "Floscas"
+title = "Choco's Blog"
 theme = "PaperMod"
 
 [outputs]
@@ -9,7 +9,7 @@ home = ["HTML", "RSS"]
 [params]
 env = "production"
 description = "A quiet place for essays, poems, notes, and becoming."
-author = "Floscas"
+author = "Choco's Blog"
 defaultTheme = "light"
 mainSections = ["posts"]
 DateFormat = "2006-01-02"
@@ -21,13 +21,13 @@ ShowCodeCopyButtons = true
 disableSpecial1stPost = true
 
 [params.label]
-text = "Floscas"
+text = "Choco's Blog"
 
 [params.homeInfoParams]
-Title = "Floscas"
-Content = "Notes on life, memory, language, and becoming."
+Title = "Choco's Blog"
+Content = "Writing my thoughts, recording my loves."
 ImageUrl = "/images/avatar.svg"
-ImageTitle = "Floscas"
+ImageTitle = "Choco's Blog"
 
 [[params.socialIcons]]
 name = "github"
