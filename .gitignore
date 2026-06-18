@@ -5,3 +5,4 @@ resources/
 Thumbs.db
 .hugo-server.*.log
 repair-codex-bundled.ps1
+.wrangler/
