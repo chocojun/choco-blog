@@ -13,7 +13,6 @@ hideMeta: true
 你也可以在微信公众号找到我：
 
 - 名称：FLOSCAS 花与栗
-- 地区：中国 广东 深圳
 - 公众号 ID：FLOSCAS_HuaYuLi
 - 简介：于温柔处看花开，于坚强处结栗果。
 
@@ -21,4 +20,6 @@ hideMeta: true
 
 如果你偶然来到这里，希望你能在某一行里短暂停留。
 
-联系邮箱：[chocojun05@outlook.com](mailto:chocojun05@outlook.com)
+联系邮箱：[casparjang@outlook.com](mailto:casparjang@outlook.com)
+
+微信：CasparJang_o18

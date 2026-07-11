@@ -1,5 +1,4 @@
 {{- define "main" }}
-<script>document.body.classList.add('floscas-inner-page');</script>
 {{- $gallery := slice
   (dict "id" "rootAperture" "src" "/images/floscas-gallery/forest-root.jpg" "title" "Root aperture" "tone" "Botanical")
   (dict "id" "forestLight" "src" "/images/floscas-gallery/forest-light.jpg" "title" "Forest light" "tone" "Botanical")
@@ -32,27 +31,32 @@
   (dict "id" "whiteFlowers" "src" "/images/floscas-gallery/white-flowers.jpg" "title" "White flowers" "tone" "Garden")
   (dict "id" "forestBloom" "src" "/images/floscas-gallery/forest-bloom.jpg" "title" "Forest bloom" "tone" "Garden")
 }}
-<div class="floscas-shell floscas-gallery-page">
-  {{ partial "floscas_nav.html" . }}
-  {{ partial "floscas_decor.html" . }}
-  <main class="floscas-archive">
-    <header class="floscas-page-hero floscas-glass">
-      <p class="floscas-kicker">Gallery</p>
-      <h1>{{ .Title | default "Gallery" }}</h1>
-      <p>{{ .Description | default "A visual shelf for images, sketches, and collected atmospheres." }}</p>
-    </header>
 
-    <section class="floscas-gallery-grid floscas-gallery-grid-full" aria-label="Photography gallery">
-      {{- range $gallery }}
-      <figure class="floscas-photo-card">
-        <img src="{{ .src | relURL }}" alt="{{ .title }}" title="{{ .title }}" data-gallery-image="{{ .id }}">
-        <figcaption>
-          <span data-gallery-tone="{{ .id }}">{{ .tone }}</span>
-          <strong data-gallery-title="{{ .id }}">{{ .title }}</strong>
-        </figcaption>
-      </figure>
-      {{- end }}
-    </section>
-  </main>
+<div class="cinema-page cinema-gallery-page">
+  <header class="cinema-gallery-hero cinema-container">
+    <p class="cinema-eyebrow"><span data-i18n="gallery.label">Images</span> / {{ now.Year }}</p>
+    <h1 data-i18n-html="gallery.title">Things the light<br>left behind.</h1>
+    <p data-i18n="gallery.description">A visual shelf for images, sketches, and collected atmospheres.</p>
+  </header>
+
+  <section class="cinema-gallery-grid cinema-container" aria-label="Photography gallery">
+    {{- range $index, $item := $gallery }}
+    <figure class="cinema-photo cinema-photo-{{ mod $index 6 }} floscas-photo-card">
+      <button type="button" data-lightbox-src="{{ $item.src | relURL }}" data-lightbox-alt="{{ $item.title }}">
+        <img class="cinema-image" src="{{ $item.src | relURL }}" alt="{{ $item.title }}" title="{{ $item.title }}" data-gallery-image="{{ $item.id }}" loading="lazy">
+      </button>
+      <figcaption>
+        <span data-gallery-tone="{{ $item.id }}">{{ $item.tone }}</span>
+        <strong data-gallery-title="{{ $item.id }}">{{ $item.title }}</strong>
+        <small data-i18n="gallery.medium">Digital photograph</small>
+      </figcaption>
+    </figure>
+    {{- end }}
+  </section>
+
+  <dialog class="cinema-lightbox" data-cinema-lightbox>
+    <button type="button" data-lightbox-close data-i18n="action.close">Close</button>
+    <img alt="">
+  </dialog>
 </div>
 {{- end }}

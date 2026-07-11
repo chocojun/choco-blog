@@ -7,11 +7,11 @@
       htmlLang: "en",
       "theme.toggle": "Toggle color theme",
       "language.toggle": "Switch language",
-      "nav.home": "Home",
-      "nav.posts": "Posts",
+      "nav.home": "Index",
+      "nav.posts": "Journal",
       "nav.essays": "Essays",
       "nav.about": "About",
-      "nav.gallery": "Gallery",
+      "nav.gallery": "Images",
       "hero.kicker": "Writerly portfolio",
       "hero.subtitle": "Writing my thoughts, recording my loves.",
       "hero.index": "Writing, photographs, fragments, and private weather.",
@@ -20,15 +20,17 @@
       "quote.caption": "Writing my thoughts, recording my loves.",
       "section.journal": "Journal",
       "section.gallery": "Gallery",
-      "latest.title": "Latest Thoughts",
+      "latest.title": "Journal timeline",
       "latest.all": "View all posts",
       "gallery.selected": "Selected Light",
       "gallery.open": "Open gallery",
       "archive.subtitle": "A quiet shelf for notes, fragments, and becoming.",
       "archive.empty": "This room is still being arranged.",
       "article.back": "Back",
-      "article.footer": "Follow the visual diary on Instagram.",
-      "translation.source": "Translation provided by ChatGPT for reference.",
+      "article.footer": "Continue the visual diary across social platforms.",
+      "translation.source": "Titles and summaries are translated by ChatGPT; the full text is translated locally by your browser for reference.",
+      "translation.loading": "Preparing the local translation…",
+      "translation.unavailable": "Local translation is unavailable in this browser. The original text remains visible.",
       "music.kicker": "Listening room",
       "music.title": "A little weather for reading.",
       "music.copy": "A local glass player for songs placed inside the music folder.",
@@ -43,7 +45,51 @@
       "cat.hint": "Left click to pet. Right click to change coat.",
       "games.playOffline": "Play offline",
       "filter.all": "All",
-      "filter.notes": "Notes"
+      "filter.notes": "Notes",
+      "brand.home": "Floscas home",
+      "nav.menu": "Menu",
+      "home.title": "WRITE WHAT I THINK<br>LOVE AND FREEDOM",
+      "home.selectedLabel": "01 / Selected",
+      "home.selectedTitle": "Fragments kept<br>in changing light.",
+      "home.interlude": "I am rooted,<br>but I flow",
+      "home.cinemaLabel": "02 / Film recommendations",
+      "home.cinemaTitle": "Films I have seen<br>and recommend.",
+      "home.cinemaNote": "A personal shelf of films I have watched and still want to pass on.",
+      "home.cinemaAria": "Film recommendations. Each poster opens its Douban page.",
+      "home.cinemaScroll": "films / scroll horizontally",
+      "home.posterSources": "Poster sources",
+      "home.journalLabel": "03 / Journal",
+      "home.imagesLabel": "04 / Images",
+      "home.imagesTitle": "Keep walking,<br>keep photographing.",
+      "action.enter": "Enter",
+      "action.read": "Read",
+      "action.close": "Close",
+      "archive.journal": "Journal",
+      "archive.essays": "Essays",
+      "gallery.label": "Images",
+      "gallery.title": "Things the light<br>left behind.",
+      "gallery.description": "A visual shelf for images, sketches, and collected atmospheres.",
+      "gallery.medium": "Digital photograph",
+      "about.label": "About",
+      "about.title": "A quiet place<br>for unfinished things.",
+      "about.currently": "Currently",
+      "about.currentlyValue": "Writing, photographing, noticing.",
+      "about.workingOn": "Working on",
+      "about.email": "Email",
+      "article.adjacent": "Adjacent articles",
+      "article.previous": "Previous",
+      "article.next": "Next",
+      "music.prevShort": "Prev",
+      "music.nextShort": "Next",
+      "footer.contact": "Contact",
+      "footer.games": "Offline games",
+      "footer.statement": "If possible, it will become better still.",
+      "category.journal": "Journal",
+      "category.essay": "Essay",
+      "category.poetry": "Poetry",
+      "category.introduction": "Introduction",
+      "archive.introduction": "Introduction",
+      "archive.timeline": "Timeline"
     },
     "zh-Hans": {
       label: "中",
@@ -63,15 +109,17 @@
       "quote.caption": "写我所想，记我所爱",
       "section.journal": "札记",
       "section.gallery": "图集",
-      "latest.title": "最近的想法",
+      "latest.title": "文章时间线",
       "latest.all": "查看全部文章",
       "gallery.selected": "被选中的光",
       "gallery.open": "打开图集",
       "archive.subtitle": "安放札记、碎片和正在成为的自己。",
       "archive.empty": "这个房间还在慢慢布置。",
       "article.back": "返回",
-      "article.footer": "在 Instagram 继续看这本视觉日记。",
-      "translation.source": "译文由 ChatGPT 提供，仅供参考。",
+      "article.footer": "在社交平台继续看这本视觉日记。",
+      "translation.source": "标题与摘要由 ChatGPT 翻译；长正文由浏览器在本地翻译，仅供参考。",
+      "translation.loading": "正在准备本地译文…",
+      "translation.unavailable": "当前浏览器不支持本地翻译，暂时显示原文。",
       "music.kicker": "听觉房间",
       "music.title": "给阅读一点柔软的天气。",
       "music.copy": "一个本地毛玻璃播放器，用来播放你放进音乐文件夹里的歌。",
@@ -86,8 +134,213 @@
       "cat.hint": "左键摸摸，右键换毛色。",
       "games.playOffline": "离线游戏",
       "filter.all": "全部",
-      "filter.notes": "札记"
+      "filter.notes": "札记",
+      "brand.home": "Floscas 首页",
+      "nav.menu": "菜单",
+      "home.title": "写我所想<br>爱与自由",
+      "home.selectedLabel": "01 / 精选",
+      "home.selectedTitle": "在变动的光里<br>留下碎片。",
+      "home.interlude": "I am rooted,<br>but I flow",
+      "home.cinemaLabel": "02 / 电影推荐",
+      "home.cinemaTitle": "我看过的<br>电影推荐",
+      "home.cinemaNote": "从看过的电影中，留下仍想推荐给你的几部。",
+      "home.cinemaAria": "电影推荐，每张海报均可打开对应豆瓣页面。",
+      "home.cinemaScroll": "部作品 / 横向浏览",
+      "home.posterSources": "海报来源",
+      "home.journalLabel": "03 / 札记",
+      "home.imagesLabel": "04 / 图像",
+      "home.imagesTitle": "步履不停，<br>拍摄才行。",
+      "action.enter": "进入",
+      "action.read": "阅读",
+      "action.close": "关闭",
+      "archive.journal": "札记",
+      "archive.essays": "随笔",
+      "gallery.label": "图集",
+      "gallery.title": "被光线<br>留下的事物。",
+      "gallery.description": "收纳影像、草图与沿途气氛的视觉书架。",
+      "gallery.medium": "数码摄影",
+      "about.label": "关于",
+      "about.title": "一个安放<br>未完成之物的地方。",
+      "about.currently": "此刻",
+      "about.currentlyValue": "写作、摄影、留意细小的事。",
+      "about.workingOn": "正在进行",
+      "about.email": "邮箱",
+      "article.adjacent": "相邻文章",
+      "article.previous": "上一篇",
+      "article.next": "下一篇",
+      "music.prevShort": "上一首",
+      "music.nextShort": "下一首",
+      "footer.contact": "联系",
+      "footer.games": "离线小游戏",
+      "footer.statement": "如果有可能，还会变得更好。",
+      "category.journal": "札记",
+      "category.essay": "随笔",
+      "category.poetry": "诗歌",
+      "category.introduction": "说明",
+      "archive.introduction": "说明",
+      "archive.timeline": "时间线"
+    },
+    fr: {
+      label: "FR",
+      htmlLang: "fr",
+      "theme.toggle": "Changer le thème",
+      "language.toggle": "Changer de langue",
+      "nav.home": "Index",
+      "nav.posts": "Journal",
+      "nav.essays": "Essais",
+      "nav.about": "À propos",
+      "nav.gallery": "Images",
+      "nav.menu": "Menu",
+      "brand.home": "Accueil Floscas",
+      "hero.subtitle": "Écrire mes pensées, garder ce que j’aime.",
+      "latest.title": "Chronologie du journal",
+      "latest.all": "Voir tous les textes",
+      "archive.subtitle": "Notes personnelles, fragments et observations.",
+      "archive.empty": "Cette pièce est encore en train de prendre forme.",
+      "archive.journal": "Journal",
+      "archive.essays": "Essais",
+      "article.back": "Retour",
+      "article.footer": "Continuer le journal visuel sur les réseaux.",
+      "article.adjacent": "Articles voisins",
+      "article.previous": "Précédent",
+      "article.next": "Suivant",
+      "translation.source": "Titres et résumés traduits par ChatGPT ; texte intégral traduit localement par votre navigateur, à titre indicatif.",
+      "translation.loading": "Préparation de la traduction locale…",
+      "translation.unavailable": "La traduction locale n’est pas disponible dans ce navigateur. Le texte original reste affiché.",
+      "home.title": "ÉCRIRE CE QUE JE PENSE<br>L’AMOUR ET LA LIBERTÉ",
+      "home.selectedLabel": "01 / Sélection",
+      "home.selectedTitle": "Fragments gardés<br>dans une lumière changeante.",
+      "home.interlude": "I am rooted,<br>but I flow",
+      "home.cinemaLabel": "02 / Films recommandés",
+      "home.cinemaTitle": "Des films vus<br>et recommandés.",
+      "home.cinemaNote": "Une sélection personnelle de films vus que j’ai encore envie de partager.",
+      "home.cinemaAria": "Films recommandés. Chaque affiche ouvre sa page Douban.",
+      "home.cinemaScroll": "films / faire défiler horizontalement",
+      "home.posterSources": "Sources des affiches",
+      "home.journalLabel": "03 / Journal",
+      "home.imagesLabel": "04 / Images",
+      "home.imagesTitle": "Continuer à marcher,<br>continuer à photographier.",
+      "action.enter": "Entrer",
+      "action.read": "Lire",
+      "action.close": "Fermer",
+      "gallery.label": "Images",
+      "gallery.title": "Ce que la lumière<br>a laissé derrière elle.",
+      "gallery.description": "Une étagère visuelle pour images, esquisses et atmosphères recueillies.",
+      "gallery.medium": "Photographie numérique",
+      "about.label": "À propos",
+      "about.title": "Un lieu calme<br>pour les choses inachevées.",
+      "about.currently": "En ce moment",
+      "about.currentlyValue": "Écrire, photographier, observer.",
+      "about.workingOn": "Projet en cours",
+      "about.email": "E-mail",
+      "music.kicker": "Salon d’écoute",
+      "music.title": "Un peu de temps pour lire.",
+      "music.window": "Liste locale",
+      "music.empty": "Ajoutez des fichiers audio dans le dossier musical local.",
+      "music.progress": "Progression de la lecture",
+      "music.prev": "Piste précédente",
+      "music.next": "Piste suivante",
+      "music.prevShort": "Préc.",
+      "music.nextShort": "Suiv.",
+      "music.play": "Lire",
+      "music.pause": "Pause",
+      "games.playOffline": "Jouer hors ligne",
+      "filter.all": "Tout",
+      "filter.notes": "Notes",
+      "footer.contact": "Contact",
+      "footer.games": "Jeux hors ligne",
+      "footer.statement": "Si possible, cela deviendra encore meilleur.",
+      "category.journal": "Journal",
+      "category.essay": "Essai",
+      "category.poetry": "Poésie",
+      "category.introduction": "Introduction",
+      "archive.introduction": "Introduction",
+      "archive.timeline": "Chronologie"
+    },
+    ja: {
+      label: "日",
+      htmlLang: "ja",
+      "theme.toggle": "テーマを切り替える",
+      "language.toggle": "言語を切り替える",
+      "nav.home": "索引",
+      "nav.posts": "日記",
+      "nav.essays": "随筆",
+      "nav.about": "概要",
+      "nav.gallery": "写真",
+      "nav.menu": "メニュー",
+      "brand.home": "Floscas ホーム",
+      "hero.subtitle": "考えを書き、愛するものを記す。",
+      "latest.title": "記録の時間軸",
+      "latest.all": "すべての記事を見る",
+      "archive.subtitle": "個人的な記録、断片、観察。",
+      "archive.empty": "この部屋はまだ整えられている途中です。",
+      "archive.journal": "日記",
+      "archive.essays": "随筆",
+      "article.back": "戻る",
+      "article.footer": "ソーシャルメディアで写真日記の続きを見る。",
+      "article.adjacent": "前後の記事",
+      "article.previous": "前の記事",
+      "article.next": "次の記事",
+      "translation.source": "タイトルと要約はChatGPT、本文はブラウザ内で翻訳した参考訳です。",
+      "translation.loading": "ローカル翻訳を準備しています…",
+      "translation.unavailable": "このブラウザではローカル翻訳を利用できないため、原文を表示しています。",
+      "home.title": "思うことを書き<br>愛と自由",
+      "home.selectedLabel": "01 / 選集",
+      "home.selectedTitle": "移ろう光の中に<br>残した断片。",
+      "home.interlude": "I am rooted,<br>but I flow",
+      "home.cinemaLabel": "02 / おすすめ映画",
+      "home.cinemaTitle": "観た映画から<br>おすすめを。",
+      "home.cinemaNote": "観た作品の中から、今も誰かに手渡したい映画を選びました。",
+      "home.cinemaAria": "おすすめ映画。各ポスターから豆瓣の作品ページを開けます。",
+      "home.cinemaScroll": "作品 / 横にスクロール",
+      "home.posterSources": "ポスター出典",
+      "home.journalLabel": "03 / 日記",
+      "home.imagesLabel": "04 / 写真",
+      "home.imagesTitle": "歩みを止めず、<br>撮り続ける",
+      "action.enter": "入る",
+      "action.read": "読む",
+      "action.close": "閉じる",
+      "gallery.label": "写真",
+      "gallery.title": "光が<br>残していったもの。",
+      "gallery.description": "写真、スケッチ、集めた空気のための視覚的な棚。",
+      "gallery.medium": "デジタル写真",
+      "about.label": "概要",
+      "about.title": "未完成のものを置く<br>静かな場所。",
+      "about.currently": "現在",
+      "about.currentlyValue": "書くこと、撮ること、気づくこと。",
+      "about.workingOn": "制作中",
+      "about.email": "メール",
+      "music.kicker": "リスニングルーム",
+      "music.title": "読書のための小さな天気。",
+      "music.window": "ローカルプレイリスト",
+      "music.empty": "音楽フォルダーに音声ファイルを追加してください。",
+      "music.progress": "再生位置",
+      "music.prev": "前の曲",
+      "music.next": "次の曲",
+      "music.prevShort": "前へ",
+      "music.nextShort": "次へ",
+      "music.play": "再生",
+      "music.pause": "一時停止",
+      "games.playOffline": "オフラインで遊ぶ",
+      "filter.all": "すべて",
+      "filter.notes": "記録",
+      "footer.contact": "連絡先",
+      "footer.games": "オフラインゲーム",
+      "footer.statement": "可能なら、もっと良くなっていく。",
+      "category.journal": "日記",
+      "category.essay": "随筆",
+      "category.poetry": "詩",
+      "category.introduction": "はじめに",
+      "archive.introduction": "はじめに",
+      "archive.timeline": "時間軸"
     }
+  };
+
+  const MONTHS = {
+    en: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+    "zh-Hans": ["一月", "二月", "三月", "四月", "五月", "六月", "七月", "八月", "九月", "十月", "十一月", "十二月"],
+    fr: ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre"],
+    ja: ["1月", "2月", "3月", "4月", "5月", "6月", "7月", "8月", "9月", "10月", "11月", "12月"]
   };
 
   const GALLERY = {
@@ -128,12 +381,272 @@
     forestBloom: { en: ["Garden", "Forest bloom"], "zh-Hans": ["花园", "森林花事"] }
   };
 
+  const GALLERY_TONES = {
+    fr: {
+      Botanical: "Botanique", Monochrome: "Monochrome", "Still life": "Nature morte",
+      Nocturne: "Nocturne", Shadow: "Ombre", City: "Ville", Sun: "Soleil",
+      Archive: "Archive", Garden: "Jardin", Interior: "Intérieur", Street: "Rue",
+      Sky: "Ciel", Landscape: "Paysage", Warmth: "Chaleur"
+    },
+    ja: {
+      Botanical: "植物", Monochrome: "モノクロ", "Still life": "静物",
+      Nocturne: "夜景", Shadow: "影", City: "都市", Sun: "日光",
+      Archive: "記録", Garden: "庭", Interior: "室内", Street: "街路",
+      Sky: "空", Landscape: "風景", Warmth: "ぬくもり"
+    }
+  };
+
+  const GALLERY_TITLES = {
+    fr: {
+      rootAperture: "Ouverture des racines", forestLight: "Lumière en forêt",
+      concreteQuiet: "Silence du béton", waterGrapes: "Raisins dans l’eau",
+      smallLight: "Petite lumière", greenInterior: "Intérieur vert",
+      pinkHour: "Heure rose", stationGhost: "Fantôme de la gare",
+      urbanCorridor: "Couloir urbain", ideaBox: "Boîte à idées",
+      turquoiseTree: "Arbre turquoise", stickerWall: "Mur d’autocollants",
+      buildingGrid: "Grille architecturale", leafMap: "Carte des feuilles",
+      butterflies: "Papillons", blueNight: "Nuit bleue", lateFlowers: "Fleurs tardives",
+      shadowFloor: "Sol d’ombres", mistSkyline: "Horizon dans la brume",
+      cloudMobile: "Mobile de nuages", muralBuilding: "Immeuble peint",
+      rainCity: "Ville de pluie", blueCloud: "Nuage bleu", greenCity: "Ville verte",
+      greenValley: "Vallée verte", orangeLight: "Lumière orange",
+      deskLamp: "Lampe de bureau", deepForest: "Forêt profonde",
+      whiteFlowers: "Fleurs blanches", forestBloom: "Floraison en forêt"
+    },
+    ja: {
+      rootAperture: "根の天窓", forestLight: "森の光", concreteQuiet: "コンクリートの静寂",
+      waterGrapes: "水の中の葡萄", smallLight: "小さな光", greenInterior: "緑の室内",
+      pinkHour: "桃色の時間", stationGhost: "駅の幽影", urbanCorridor: "都市の回廊",
+      ideaBox: "アイデアの箱", turquoiseTree: "青緑の木", stickerWall: "ステッカーの壁",
+      buildingGrid: "建築の格子", leafMap: "葉脈の地図", butterflies: "蝶",
+      blueNight: "青い夜", lateFlowers: "遅咲きの花", shadowFloor: "影の床",
+      mistSkyline: "霧のスカイライン", cloudMobile: "雲のモビール",
+      muralBuilding: "壁画の建物", rainCity: "雨の都市", blueCloud: "青い雲",
+      greenCity: "緑の都市", greenValley: "緑の谷", orangeLight: "橙色の光",
+      deskLamp: "机の灯り", deepForest: "深い森", whiteFlowers: "白い花",
+      forestBloom: "森の花"
+    }
+  };
+
+  const galleryItem = (id, lang) => {
+    const entry = GALLERY[id];
+    if (!entry) return null;
+    if (entry[lang]) return entry[lang];
+    const base = entry.en;
+    const title = GALLERY_TITLES[lang]?.[id] || base[1];
+    const tone = GALLERY_TONES[lang]?.[base[0]] || base[0];
+    return [tone, title];
+  };
+
+  const FILMS = {
+    worstPerson: {
+      en: "The Worst Person in the World",
+      "zh-Hans": "世界上最糟糕的人",
+      fr: "Julie (en 12 chapitres)",
+      ja: "わたしは最悪。"
+    },
+    laLaLand: { en: "La La Land", "zh-Hans": "爱乐之城", fr: "La La Land", ja: "ラ・ラ・ランド" },
+    callMe: {
+      en: "Call Me by Your Name",
+      "zh-Hans": "请以你的名字呼唤我",
+      fr: "Call Me by Your Name",
+      ja: "君の名前で僕を呼んで"
+    },
+    decisionToLeave: {
+      en: "Decision to Leave",
+      "zh-Hans": "分手的决心",
+      fr: "Decision to Leave",
+      ja: "別れる決心"
+    },
+    anatomy: {
+      en: "Anatomy of a Fall",
+      "zh-Hans": "坠落的审判",
+      fr: "Anatomie d’une chute",
+      ja: "落下の解剖学"
+    },
+    portrait: {
+      en: "Portrait of a Lady on Fire",
+      "zh-Hans": "燃烧女子的肖像",
+      fr: "Portrait de la jeune fille en feu",
+      ja: "燃ゆる女の肖像"
+    },
+    dreamers: { en: "The Dreamers", "zh-Hans": "戏梦巴黎", fr: "Innocents: The Dreamers", ja: "ドリーマーズ" },
+    lostTranslation: {
+      en: "Lost in Translation",
+      "zh-Hans": "迷失东京",
+      fr: "Lost in Translation",
+      ja: "ロスト・イン・トランスレーション"
+    }
+  };
+
+  const filmTitle = (id, lang, node) => {
+    const card = node?.closest?.("[data-film-card]") || document.querySelector(`[data-film-link="${id}"]`);
+    const key = { en: "titleEn", "zh-Hans": "titleZh", fr: "titleFr", ja: "titleJa" }[lang] || "titleEn";
+    return card?.dataset[key] || FILMS[id]?.[lang] || FILMS[id]?.en || "";
+  };
+
   const getLanguage = () => {
+    const requested = new URLSearchParams(window.location.search).get("lang");
+    if (requested && I18N[requested]) return requested;
     const stored = localStorage.getItem("floscas-lang");
-    return stored && I18N[stored] ? stored : "en";
+    return stored && I18N[stored] ? stored : "zh-Hans";
   };
 
   const t = (key, lang = getLanguage()) => I18N[lang]?.[key] || I18N.en[key] || key;
+
+  const JOURNAL_LANGUAGE_CODES = { en: "en", "zh-Hans": "zh", fr: "fr", ja: "ja" };
+  const journalOriginalBodies = new WeakMap();
+  const journalTranslationCache = new Map();
+  const localTranslators = new Map();
+  let journalTranslationRequest = 0;
+
+  const journalField = (node, field, lang) => {
+    const entry = node.closest("[data-journal-entry]");
+    if (!entry) return "";
+    const suffix = lang.toLowerCase();
+    return entry.getAttribute(`data-journal-${field}-${suffix}`)
+      || entry.getAttribute(`data-journal-${field}-en`)
+      || "";
+  };
+
+  const applyJournalCards = (lang) => {
+    document.querySelectorAll("[data-journal-title]").forEach((node) => {
+      const copy = journalField(node, "title", lang);
+      if (copy) node.textContent = copy;
+    });
+
+    document.querySelectorAll("[data-journal-summary]").forEach((node) => {
+      const copy = journalField(node, "summary", lang);
+      if (copy) node.textContent = copy;
+    });
+
+    const articleTitle = document.querySelector(".cinema-article-header [data-journal-title]");
+    if (articleTitle?.textContent.trim()) {
+      const localizedDocumentTitle = `${articleTitle.textContent.trim()} | Floscas`;
+      document.title = localizedDocumentTitle;
+      window.setTimeout(() => {
+        if (document.querySelector(".cinema-article-header [data-journal-title]")) document.title = localizedDocumentTitle;
+      }, 120);
+    }
+  };
+
+  const getLocalTranslator = async (sourceLanguage, targetLanguage) => {
+    if (sourceLanguage === targetLanguage) return null;
+    const key = `${sourceLanguage}:${targetLanguage}`;
+    if (localTranslators.has(key)) return localTranslators.get(key);
+
+    let pending;
+    if (globalThis.Translator?.create) {
+      pending = globalThis.Translator.create({ sourceLanguage, targetLanguage });
+    } else if (globalThis.ai?.translator?.create) {
+      pending = globalThis.ai.translator.create({ sourceLanguage, targetLanguage });
+    } else {
+      throw new Error("Local Translator API unavailable");
+    }
+
+    localTranslators.set(key, pending);
+    try {
+      const translator = await pending;
+      localTranslators.set(key, translator);
+      return translator;
+    } catch (error) {
+      localTranslators.delete(key);
+      throw error;
+    }
+  };
+
+  const sourceLanguageFor = (text) => {
+    const compact = text.replace(/\s/g, "");
+    if (!compact) return "zh";
+    const han = (compact.match(/[\u3400-\u9fff]/g) || []).length;
+    return han / compact.length > 0.12 ? "zh" : "en";
+  };
+
+  const translateJournalElement = async (element, targetLanguage) => {
+    const text = element.textContent.trim();
+    if (!text) return;
+    const sourceLanguage = sourceLanguageFor(text);
+    if (sourceLanguage === targetLanguage) return;
+    const translator = await getLocalTranslator(sourceLanguage, targetLanguage);
+    element.textContent = await translator.translate(text);
+  };
+
+  const translateInBatches = async (elements, targetLanguage) => {
+    const queue = [...elements];
+    const workers = Array.from({ length: Math.min(3, queue.length) }, async () => {
+      while (queue.length) {
+        const element = queue.shift();
+        await translateJournalElement(element, targetLanguage);
+      }
+    });
+    await Promise.all(workers);
+  };
+
+  const prepareBilingualPoem = (root, lang) => {
+    const paragraphs = [...root.querySelectorAll("p")];
+    paragraphs.forEach((paragraph, index) => {
+      const isChineseLine = index % 2 === 1;
+      if ((lang === "zh-Hans" && !isChineseLine) || (lang !== "zh-Hans" && isChineseLine)) {
+        paragraph.remove();
+      }
+    });
+  };
+
+  const setJournalStatus = (status, key, lang) => {
+    if (!status) return;
+    status.hidden = !key;
+    status.textContent = key ? t(key, lang) : "";
+  };
+
+  const applyJournalBody = async (lang) => {
+    const body = document.querySelector("[data-journal-body]");
+    if (!body) return;
+    const request = ++journalTranslationRequest;
+    const status = body.querySelector("[data-journal-translation-status]");
+    const original = body.querySelector("[data-journal-original]");
+    if (!original) return;
+
+    if (!journalOriginalBodies.has(body)) journalOriginalBodies.set(body, original.innerHTML);
+    const originalHTML = journalOriginalBodies.get(body);
+    const slug = body.dataset.journalSlug || "article";
+
+    if (lang === "zh-Hans") {
+      original.innerHTML = originalHTML;
+      original.setAttribute("lang", "zh-CN");
+      setJournalStatus(status, "", lang);
+      return;
+    }
+
+    const cacheKey = `${slug}:${lang}`;
+    if (journalTranslationCache.has(cacheKey)) {
+      original.innerHTML = journalTranslationCache.get(cacheKey);
+      original.setAttribute("lang", JOURNAL_LANGUAGE_CODES[lang]);
+      setJournalStatus(status, "translation.source", lang);
+      return;
+    }
+
+    setJournalStatus(status, "translation.loading", lang);
+    const translated = document.createElement("div");
+    translated.innerHTML = originalHTML;
+    if (slug === "ms-solitude-with-lady-love") prepareBilingualPoem(translated, lang);
+
+    const blocks = [...translated.querySelectorAll("h1, h2, h3, h4, p, li, blockquote")]
+      .filter((node) => !node.parentElement?.closest("p, li, blockquote"));
+
+    try {
+      await translateInBatches(blocks, JOURNAL_LANGUAGE_CODES[lang]);
+      if (request !== journalTranslationRequest) return;
+      journalTranslationCache.set(cacheKey, translated.innerHTML);
+      original.innerHTML = translated.innerHTML;
+      original.setAttribute("lang", JOURNAL_LANGUAGE_CODES[lang]);
+      setJournalStatus(status, "translation.source", lang);
+    } catch (error) {
+      if (request !== journalTranslationRequest) return;
+      original.innerHTML = originalHTML;
+      original.setAttribute("lang", "zh-CN");
+      setJournalStatus(status, "translation.unavailable", lang);
+    }
+  };
 
   const applyCopy = (lang = getLanguage()) => {
     const messages = I18N[lang] || I18N.en;
@@ -144,6 +657,11 @@
       node.textContent = t(key, lang);
     });
 
+    document.querySelectorAll("[data-i18n-html]").forEach((node) => {
+      const key = node.dataset.i18nHtml;
+      node.innerHTML = t(key, lang);
+    });
+
     document.querySelectorAll("[data-i18n-aria-label]").forEach((node) => {
       node.setAttribute("aria-label", t(node.dataset.i18nAriaLabel, lang));
     });
@@ -152,26 +670,50 @@
       node.textContent = messages.label;
     });
 
+    document.querySelectorAll("[data-cinema-month]").forEach((node) => {
+      const month = Number.parseInt(node.dataset.cinemaMonth, 10);
+      node.textContent = MONTHS[lang]?.[month - 1] || MONTHS.en[month - 1] || "";
+    });
+
     document.querySelectorAll("[data-lang-option]").forEach((option) => {
       option.classList.toggle("is-active", option.dataset.langOption === lang);
     });
 
     document.querySelectorAll("[data-gallery-title]").forEach((node) => {
-      const item = GALLERY[node.dataset.galleryTitle]?.[lang] || GALLERY[node.dataset.galleryTitle]?.en;
+      const item = galleryItem(node.dataset.galleryTitle, lang);
       if (item) node.textContent = item[1];
     });
 
     document.querySelectorAll("[data-gallery-tone]").forEach((node) => {
-      const item = GALLERY[node.dataset.galleryTone]?.[lang] || GALLERY[node.dataset.galleryTone]?.en;
+      const item = galleryItem(node.dataset.galleryTone, lang);
       if (item) node.textContent = item[0];
     });
 
     document.querySelectorAll("[data-gallery-image]").forEach((image) => {
-      const item = GALLERY[image.dataset.galleryImage]?.[lang] || GALLERY[image.dataset.galleryImage]?.en;
+      const item = galleryItem(image.dataset.galleryImage, lang);
       if (!item) return;
       image.alt = item[1];
       image.title = item[1];
+      image.closest("button")?.setAttribute("data-lightbox-alt", item[1]);
     });
+
+    document.querySelectorAll("[data-film-title]").forEach((node) => {
+      node.textContent = filmTitle(node.dataset.filmTitle, lang, node);
+    });
+
+    document.querySelectorAll("[data-film-image]").forEach((image) => {
+      const title = filmTitle(image.dataset.filmImage, lang, image);
+      image.alt = `${title} poster`;
+      image.title = title;
+    });
+
+    document.querySelectorAll("[data-film-link]").forEach((link) => {
+      const title = filmTitle(link.dataset.filmLink, lang, link);
+      link.setAttribute("aria-label", `${title} — Douban`);
+    });
+
+    applyJournalCards(lang);
+    applyJournalBody(lang);
 
     document.querySelectorAll("[data-filter]").forEach((button) => {
       if (button.dataset.filter === "all") button.textContent = t("filter.all", lang);
@@ -422,7 +964,7 @@
       mobius = instance;
     }).catch(() => {});
 
-    const trackInfo = (track) => [track.artist, track.album, track.year, track.genre].filter(Boolean).join(" · ") || "Choco's Blog";
+    const trackInfo = (track) => [track.artist, track.album, track.year, track.genre].filter(Boolean).join(" · ") || "Floscas";
 
     const setLabels = () => {
       const isPlaying = audio && !audio.paused;
@@ -435,7 +977,7 @@
 
     const setEmpty = () => {
       player.classList.add("is-empty");
-      if (title) title.textContent = "Choco's Blog listening room";
+      if (title) title.textContent = "Floscas listening room";
       if (artist) artist.textContent = t("music.empty");
       if (list) list.innerHTML = "";
       [toggle, prev, next].forEach((button) => {

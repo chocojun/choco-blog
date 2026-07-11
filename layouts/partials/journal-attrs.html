@@ -1,0 +1,13 @@
+{{- $page := . -}}
+{{- $slug := $page.File.BaseFileName -}}
+{{- $copy := index hugo.Data.journal $slug -}}
+data-journal-entry="{{ $slug }}"
+{{- with $copy }}
+  {{- range $lang := (slice "zh-Hans" "en" "fr" "ja") }}
+    {{- $localized := index $copy $lang }}
+    {{- if $localized }}
+ data-journal-title-{{ lower $lang }}="{{ $localized.title | htmlEscape }}"
+ data-journal-summary-{{ lower $lang }}="{{ $localized.summary | htmlEscape }}"
+    {{- end }}
+  {{- end }}
+{{- end -}}

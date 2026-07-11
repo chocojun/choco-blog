@@ -4364,3 +4364,86 @@ html[lang="es"] .floscas-music-copy {
     flex-direction: column;
   }
 }
+
+/* Final visual diary alignment: match the hero measure and keep all three modules equal. */
+.floscas-magazine .floscas-magazine-hero,
+.floscas-magazine .floscas-visual-strip {
+  width: min(1220px, calc(100% - clamp(28px, 4vw, 64px)));
+  max-width: 1220px;
+}
+
+.floscas-magazine .floscas-visual-strip {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(18px, 2.2vw, 28px);
+  align-items: stretch;
+}
+
+.floscas-magazine .floscas-strip-card,
+.floscas-magazine .floscas-strip-card.is-tall,
+.floscas-magazine .floscas-quote-panel {
+  width: 100%;
+  min-width: 0;
+  min-height: clamp(360px, 38vw, 520px);
+}
+
+.floscas-magazine .floscas-strip-card img {
+  display: block;
+  aspect-ratio: auto;
+}
+
+.floscas-magazine .floscas-quote-panel {
+  justify-content: stretch;
+  padding: clamp(30px, 4vw, 54px);
+}
+
+.floscas-magazine .floscas-quote-panel p {
+  max-width: 8.5ch;
+  font-size: clamp(3rem, 4.5vw, 5rem);
+}
+
+@media (max-width: 1199px) {
+  .floscas-magazine .floscas-magazine-hero,
+  .floscas-magazine .floscas-visual-strip {
+    width: min(920px, calc(100% - 28px));
+    max-width: 920px;
+  }
+}
+
+@media (max-width: 920px) {
+  .floscas-magazine .floscas-visual-strip {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: min(920px, calc(100% - 28px));
+    max-width: 920px;
+  }
+
+  .floscas-magazine .floscas-quote-panel {
+    grid-column: 1 / -1;
+    order: -1;
+    min-height: 320px;
+  }
+
+  .floscas-magazine .floscas-strip-card,
+  .floscas-magazine .floscas-strip-card.is-tall {
+    min-height: 320px;
+  }
+}
+
+@media (max-width: 760px) {
+  .floscas-magazine .floscas-visual-strip {
+    width: calc(100% - 28px);
+    max-width: none;
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .floscas-magazine .floscas-strip-card,
+  .floscas-magazine .floscas-strip-card.is-tall,
+  .floscas-magazine .floscas-quote-panel {
+    min-height: 300px;
+  }
+
+  .floscas-magazine .floscas-quote-panel p {
+    max-width: 9ch;
+    font-size: clamp(2.6rem, 13vw, 4rem);
+  }
+}

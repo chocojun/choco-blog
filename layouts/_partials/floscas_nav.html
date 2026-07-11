@@ -1,24 +1,44 @@
-<nav class="floscas-topbar floscas-glass" aria-label="Primary">
-  <a class="floscas-mark" href="{{ "" | relURL }}">Choco's Blog</a>
-  <div class="floscas-navlinks">
-    <a href="{{ "" | relURL }}" data-i18n="nav.home">Home</a>
-    <a href="{{ "posts/" | relURL }}" data-i18n="nav.posts">Posts</a>
-    <a href="{{ "essays/" | relURL }}" data-i18n="nav.essays">Essays</a>
+<header class="cinema-header" data-cinema-header>
+  <a class="cinema-brand" href="{{ "" | relURL }}" aria-label="Floscas home" data-i18n-aria-label="brand.home">FLOSCAS</a>
+
+  <nav class="cinema-nav floscas-navlinks" aria-label="Primary">
+    <a href="{{ "" | relURL }}" data-i18n="nav.home">Index</a>
+    <a href="{{ "posts/" | relURL }}" data-i18n="nav.posts">Journal</a>
+    <a href="{{ "gallery/" | relURL }}" data-i18n="nav.gallery">Images</a>
     <a href="{{ "about/" | relURL }}" data-i18n="nav.about">About</a>
-    <a href="{{ "gallery/" | relURL }}" data-i18n="nav.gallery">Gallery</a>
-  </div>
-  <div class="floscas-actions">
-    <button id="floscas-theme-toggle" class="floscas-icon-button" type="button" aria-label="Toggle theme" data-i18n-aria-label="theme.toggle">
-      <span aria-hidden="true"></span>
-    </button>
-    <div class="floscas-lang" data-lang-menu>
+    <div class="floscas-lang cinema-language" data-lang-menu>
       <button class="floscas-lang-button" type="button" aria-expanded="false" aria-haspopup="true" data-i18n-aria-label="language.toggle">
         <span data-lang-current>EN</span>
       </button>
       <div class="floscas-lang-panel" role="menu">
         <button type="button" role="menuitem" data-lang-option="zh-Hans">中</button>
         <button type="button" role="menuitem" data-lang-option="en">EN</button>
+        <button type="button" role="menuitem" data-lang-option="fr">FR</button>
+        <button type="button" role="menuitem" data-lang-option="ja">日</button>
       </div>
     </div>
-  </div>
-</nav>
+  </nav>
+
+  <details class="cinema-mobile-menu">
+    <summary data-i18n="nav.menu">Menu</summary>
+    <div class="cinema-mobile-panel">
+      <nav class="floscas-navlinks" aria-label="Mobile primary">
+        <a href="{{ "" | relURL }}" data-i18n="nav.home">Index</a>
+        <a href="{{ "posts/" | relURL }}" data-i18n="nav.posts">Journal</a>
+        <a href="{{ "gallery/" | relURL }}" data-i18n="nav.gallery">Images</a>
+        <a href="{{ "about/" | relURL }}" data-i18n="nav.about">About</a>
+      </nav>
+      <div class="floscas-lang cinema-language" data-lang-menu>
+        <button class="floscas-lang-button" type="button" aria-expanded="false" aria-haspopup="true" data-i18n-aria-label="language.toggle">
+          <span data-lang-current>EN</span>
+        </button>
+        <div class="floscas-lang-panel" role="menu">
+          <button type="button" role="menuitem" data-lang-option="zh-Hans">中文</button>
+          <button type="button" role="menuitem" data-lang-option="en">English</button>
+          <button type="button" role="menuitem" data-lang-option="fr">Français</button>
+          <button type="button" role="menuitem" data-lang-option="ja">日本語</button>
+        </div>
+      </div>
+    </div>
+  </details>
+</header>

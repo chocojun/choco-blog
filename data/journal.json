@@ -1,0 +1,68 @@
+{
+  "first-post": {
+    "zh-Hans": { "title": "我的第一篇博客", "summary": "Floscas 的第一则说明：这个网站如何开始，以及仍在继续发生的变化。" },
+    "en": { "title": "My First Blog Post", "summary": "The opening note of Floscas: how this site began, and how it continues to change." },
+    "fr": { "title": "Mon premier billet", "summary": "La note d’ouverture de Floscas : la naissance de ce site et ses transformations à venir." },
+    "ja": { "title": "はじめてのブログ", "summary": "Floscasの最初の記録。このサイトの始まりと、これから続いていく変化について。" }
+  },
+  "ms-solitude-with-lady-love": {
+    "zh-Hans": { "title": "索里特德女士与乐芙小姐", "summary": "一首写给孤独与爱人的双语诗，在离散、记忆与短暂相拥之间往返。" },
+    "en": { "title": "Ms. Solitude with Lady Love", "summary": "A bilingual poem for solitude and love, moving between separation, memory, and a fleeting embrace." },
+    "fr": { "title": "Mademoiselle Solitude et Dame Amour", "summary": "Un poème adressé à la solitude et à l’amour, entre séparation, mémoire et étreinte fugitive." },
+    "ja": { "title": "孤独嬢と愛の女神", "summary": "別離と記憶、束の間の抱擁を行き来しながら、孤独と愛に捧げる詩。" }
+  },
+  "随笔001": {
+    "zh-Hans": { "title": "随笔 001 - 城市潮湿", "summary": "雨后的城市、地铁与不断上涨的黑水，让一个人的存在逐渐溶进潮湿之中。" },
+    "en": { "title": "Essay 001 - The Damp City", "summary": "After the rain, a city and its metro dissolve one person’s presence into rising black water and humidity." },
+    "fr": { "title": "Essai 001 - La ville humide", "summary": "Après la pluie, la ville et son métro dissolvent peu à peu une présence dans l’humidité et l’eau noire." },
+    "ja": { "title": "随筆 001 - 湿った街", "summary": "雨上がりの街と地下鉄。増していく湿気と黒い水の中へ、一人の存在が溶けていく。" }
+  },
+  "随笔002": {
+    "zh-Hans": { "title": "随笔 002 - 入秋空白", "summary": "在身份、记忆与虚无之间徘徊，直到一阵秋风带来一句微弱却确定的回答。" },
+    "en": { "title": "Essay 002 - A Blank at Autumn’s Arrival", "summary": "A passage through identity, memory, and emptiness, until an autumn wind brings a quiet, certain answer." },
+    "fr": { "title": "Essai 002 - Le blanc de l’automne", "summary": "Une traversée de l’identité, de la mémoire et du vide, jusqu’à ce qu’un vent d’automne apporte une réponse." },
+    "ja": { "title": "随筆 002 - 秋の空白", "summary": "自己と記憶、虚無のあいだをさまよい、秋風の中でかすかだが確かな答えに触れる。" }
+  },
+  "随笔003": {
+    "zh-Hans": { "title": "随笔 003 - 黑白色斑斓", "summary": "黑白并不只是死亡与消失，也能由记忆重新描绘出复杂而斑斓的颜色。" },
+    "en": { "title": "Essay 003 - Monochrome, in Full Color", "summary": "Black and white need not mean only death or disappearance; memory can paint them vivid again." },
+    "fr": { "title": "Essai 003 - Le noir et blanc bariolé", "summary": "Le noir et blanc ne disent pas seulement la mort ou l’absence : la mémoire peut leur rendre leurs couleurs." },
+    "ja": { "title": "随筆 003 - 色彩ある白黒", "summary": "白黒は死や消失だけを意味しない。記憶はそこに、複雑で鮮やかな色をもう一度描ける。" }
+  },
+  "随笔004": {
+    "zh-Hans": { "title": "随笔 004 - 夜野漫长", "summary": "站在城市长夜里回望故乡、孤独与未发送的消息，最后走进一间昏黄的小酒馆。" },
+    "en": { "title": "Essay 004 - The Long Night", "summary": "A long urban night of homesickness, solitude, and an unsent message ends inside a dimly lit bar." },
+    "fr": { "title": "Essai 004 - La longue nuit", "summary": "Une longue nuit urbaine, entre nostalgie, solitude et message jamais envoyé, s’achève dans un bar tamisé." },
+    "ja": { "title": "随筆 004 - 長い夜", "summary": "都会の長い夜に故郷と孤独、送れなかった言葉を思い、やがて薄暗い酒場へ入っていく。" }
+  },
+  "随笔005": {
+    "zh-Hans": { "title": "随笔 005 - 枫雪", "summary": "一片难以辨认的叶、一支笔与一个陌生男人，把林带回失去与沉默的深处。" },
+    "en": { "title": "Essay 005 - Maple Snow", "summary": "An uncertain leaf, a pen, and a strange man draw Lin back into the depths of loss and silence." },
+    "fr": { "title": "Essai 005 - Neige d’érable", "summary": "Une feuille indécise, un stylo et un inconnu ramènent Lin au cœur de la perte et du silence." },
+    "ja": { "title": "随筆 005 - 楓雪", "summary": "見分けのつかない一枚の葉、一本のペン、見知らぬ男が、林を喪失と沈黙の奥へ連れ戻す。" }
+  },
+  "随笔006": {
+    "zh-Hans": { "title": "随笔 006 - 独角步", "summary": "一具身体住着两颗心，脚步在残夏、故乡与看不见的爱人之间追寻。" },
+    "en": { "title": "Essay 006 - A Solitary Step", "summary": "Two hearts inhabit one body, while footsteps search through late summer, home, and an unseen beloved." },
+    "fr": { "title": "Essai 006 - Le pas solitaire", "summary": "Deux cœurs habitent un même corps, tandis que les pas cherchent l’être aimé entre la fin de l’été et le pays natal." },
+    "ja": { "title": "随筆 006 - ひとりの足取り", "summary": "一つの身体に二つの心。晩夏と故郷、見えない愛しい人の影を追って歩き続ける。" }
+  },
+  "随笔007": {
+    "zh-Hans": { "title": "随笔 007 - 爱与雨", "summary": "从夏雨与痛苦出发，重新凝视爱、冲突、原谅，以及生命在苦楚里留下的韧性。" },
+    "en": { "title": "Essay 007 - Love and Rain", "summary": "Beginning with summer rain and pain, this essay looks again at love, conflict, forgiveness, and resilience." },
+    "fr": { "title": "Essai 007 - L’amour et la pluie", "summary": "À partir de la pluie d’été et de la douleur, ce texte revisite l’amour, le conflit, le pardon et la résilience." },
+    "ja": { "title": "随筆 007 - 愛と雨", "summary": "夏の雨と痛みから、愛、衝突、赦し、そして苦しみの中で育つ生命の強さを見つめ直す。" }
+  },
+  "随笔008": {
+    "zh-Hans": { "title": "随笔 008 - 不需要答案的问题", "summary": "问题与答案不必成对；尊重未知与不完美，也许正是面对生活最诚实的方式。" },
+    "en": { "title": "Essay 008 - Questions Need No Answers", "summary": "Questions and answers need not come in pairs; honoring uncertainty may be the most honest way to live." },
+    "fr": { "title": "Essai 008 - Des questions sans réponse", "summary": "Questions et réponses ne vont pas toujours de pair ; accueillir l’incertitude est peut-être la façon la plus honnête de vivre." },
+    "ja": { "title": "随筆 008 - 答えを必要としない問い", "summary": "問いと答えは対でなくてもいい。未知と不完全さを受け入れることが、誠実に生きる方法かもしれない。" }
+  },
+  "随笔009": {
+    "zh-Hans": { "title": "随笔 009 - 笨蛋美梦", "summary": "写丢的文章、无人读完的初稿与一次智力测试，最终汇成对真实和做梦的辩护。" },
+    "en": { "title": "Essay 009 - A Fool’s Beautiful Dream", "summary": "A lost draft, an unread manuscript, and an IQ test become a defense of dreaming and staying true." },
+    "fr": { "title": "Essai 009 - Le beau rêve d’un idiot", "summary": "Un brouillon perdu, un texte inachevé et un test de QI deviennent une défense du rêve et de la sincérité." },
+    "ja": { "title": "随筆 009 - 愚か者の美しい夢", "summary": "失われた原稿、読まれなかった文章、知能テストが、夢見ることと真実でいることの擁護へ変わる。" }
+  }
+}

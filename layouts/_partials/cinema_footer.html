@@ -1,0 +1,24 @@
+<footer class="cinema-footer">
+  <div class="cinema-footer-grid">
+    <div>
+      <strong>FLOSCAS</strong>
+      <span>{{ now.Year }}</span>
+    </div>
+    <div class="cinema-footer-links">
+      <nav class="cinema-footer-contact" aria-label="Contact">
+        <span data-i18n="footer.contact">Contact</span>
+        <a href="https://www.instagram.com/floscas_huayuli?igsh=ZDhibTB6M25yemlh" target="_blank" rel="noreferrer"><img src="{{ "/icons/instagram.svg" | relURL }}" alt="">Instagram</a>
+        <a href="https://www.linkedin.com/in/jing-an-jang-47a9a91a4/" target="_blank" rel="noreferrer"><img src="{{ "/icons/linkedin.svg" | relURL }}" alt="">LinkedIn</a>
+        <a href="mailto:casparjang@outlook.com"><img src="{{ "/icons/mail.svg" | relURL }}" alt="">casparjang@outlook.com</a>
+        <span><img src="{{ "/icons/wechat.svg" | relURL }}" alt="">WeChat: CasparJang_o18</span>
+      </nav>
+      <nav class="cinema-footer-games" aria-label="Offline games">
+        <span data-i18n="footer.games">Offline games</span>
+        <a href="{{ "games/2048/" | relURL }}">2048</a>
+        <a href="{{ "games/snake/" | relURL }}">Snake</a>
+        <a href="{{ "games/tetris/" | relURL }}">Tetris</a>
+      </nav>
+    </div>
+  </div>
+  <p data-i18n="footer.statement">如果有可能，还会变得更好。</p>
+</footer>

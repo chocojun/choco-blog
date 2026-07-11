@@ -1,49 +1,59 @@
 {{- define "main" }}
-<script>document.body.classList.add('floscas-inner-page');</script>
-<div class="floscas-shell">
-  {{ partial "floscas_nav.html" . }}
-  {{ partial "floscas_decor.html" . }}
-  <main class="floscas-archive">
-    <header class="floscas-page-hero floscas-glass">
-      <p class="floscas-kicker">{{ if eq .Section "posts" }}Journal{{ else }}Floscas{{ end }}</p>
-      <h1>{{ .Title | default "Writing" }}</h1>
-      {{- with .Description }}
-      <p>{{ . }}</p>
-      {{- else }}
-      <p data-i18n="archive.subtitle">A quiet shelf for notes, fragments, and becoming.</p>
-      {{- end }}
-    </header>
+{{- $pages := .RegularPages }}
+{{- if eq .Section "essays" }}
+  {{- $pages = where site.RegularPages "Params.categories" "intersect" (slice "随笔") }}
+{{- end }}
+{{- $intro := where $pages "File.BaseFileName" "first-post" }}
+{{- $timeline := where $pages "File.BaseFileName" "!=" "first-post" }}
+{{- $timeline = $timeline.ByDate.Reverse }}
 
-    {{- if .Content }}
-    <section class="floscas-page-content floscas-glass">
-      {{ .Content }}
-    </section>
-    {{- end }}
+<div class="cinema-page cinema-archive-page">
+  <header class="cinema-archive-hero cinema-container">
+    <p class="cinema-eyebrow" data-i18n="{{ if eq .Section "essays" }}archive.essays{{ else }}archive.journal{{ end }}">{{ if eq .Section "essays" }}Essays{{ else }}Journal{{ end }}</p>
+    <h1 data-i18n="{{ if eq .Section "essays" }}archive.essays{{ else }}archive.journal{{ end }}">{{ if eq .Section "essays" }}Essays{{ else }}Journal{{ end }}</h1>
+    <div>
+      <span data-i18n="archive.timeline">Timeline</span>
+      <p data-i18n="archive.subtitle">Personal notes and observations.</p>
+    </div>
+  </header>
 
-    {{- $pages := .RegularPages }}
-    {{- if .IsHome }}
-      {{- $pages = where site.RegularPages "Type" "in" site.Params.mainSections }}
-    {{- end }}
-    {{- if $pages }}
-    <section class="floscas-writing-list">
-      {{- range $pages }}
-      <article class="floscas-writing-item floscas-glass">
-        <a href="{{ .RelPermalink }}" aria-label="{{ .Title | plainify }}"></a>
-        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006.01.02" }}</time>
-        <h2>{{ .Title }}</h2>
-        <p>{{ .Summary | plainify | htmlUnescape | truncate 180 }}</p>
-        <footer>
-          <span>{{ with index .Params.categories 0 }}{{ . }}{{ else }}Notes{{ end }}</span>
-          {{- if .ReadingTime }}<em>{{ .ReadingTime }} min read</em>{{- end }}
-        </footer>
-      </article>
-      {{- end }}
-    </section>
-    {{- else }}
-    <section class="floscas-empty floscas-glass">
-      <p data-i18n="archive.empty">This room is still being arranged.</p>
+  {{- if .Content }}
+  <div class="cinema-archive-description cinema-container">{{ .Content }}</div>
+  {{- end }}
+
+  {{- if or $intro $timeline }}
+  <div class="cinema-year-index cinema-container">
+    {{- if $intro }}
+    <section class="cinema-year-group cinema-intro-group" aria-labelledby="archive-introduction">
+      <h2 id="archive-introduction" data-i18n="archive.introduction">Introduction</h2>
+      <div class="cinema-index-list">
+        {{- range $intro }}
+        <article class="cinema-index-row cinema-intro-row" {{ partial "journal-attrs.html" . | safeHTMLAttr }}>
+          <time datetime="{{ .Date.Format "2006-01-02" }}" data-cinema-month="{{ .Date.Format "1" }}">{{ .Date.Format "January" }}</time>
+          <h3><a href="{{ .RelPermalink }}" data-journal-title>{{ .Title }}</a></h3>
+          <span data-i18n="category.introduction">Introduction</span>
+        </article>
+        {{- end }}
+      </div>
     </section>
     {{- end }}
-  </main>
+    {{- if $timeline }}
+    <section class="cinema-year-group cinema-timeline-group" aria-labelledby="archive-timeline">
+      <h2 id="archive-timeline" data-i18n="archive.timeline">Timeline</h2>
+      <div class="cinema-index-list">
+        {{- range $timeline }}
+        <article class="cinema-index-row" {{ partial "journal-attrs.html" . | safeHTMLAttr }}>
+          <time datetime="{{ .Date.Format "2006-01-02" }}" data-cinema-month="{{ .Date.Format "1" }}">{{ .Date.Format "January" }}</time>
+          <h3><a href="{{ .RelPermalink }}" data-journal-title>{{ .Title }}</a></h3>
+          <span data-i18n="{{ with index .Params.categories 0 }}{{ if eq . "诗歌" }}category.poetry{{ else }}category.essay{{ end }}{{ else }}category.journal{{ end }}">{{ with index .Params.categories 0 }}{{ . }}{{ else }}Journal{{ end }}</span>
+        </article>
+        {{- end }}
+      </div>
+    </section>
+    {{- end }}
+  </div>
+  {{- else }}
+  <p class="cinema-empty cinema-container" data-i18n="archive.empty">This room is still being arranged.</p>
+  {{- end }}
 </div>
 {{- end }}

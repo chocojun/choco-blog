@@ -1,50 +1,57 @@
 {{- define "main" }}
-<script>document.body.classList.add('floscas-inner-page');</script>
-<div class="floscas-shell">
-  {{ partial "floscas_nav.html" . }}
-  {{ partial "floscas_decor.html" . }}
-
-  <article class="post-single floscas-article floscas-glass">
-    <header class="floscas-article-header">
-      <a class="floscas-back" href="{{ if eq .Section "posts" }}{{ "posts/" | relURL }}{{ else }}{{ "" | relURL }}{{ end }}">
-        <svg aria-hidden="true" viewBox="0 0 24 24">
-          <path d="M19 12H5M11 6l-6 6 6 6" />
-        </svg>
-        <span data-i18n="article.back">Back</span>
-      </a>
-      <p class="floscas-kicker">{{ with index .Params.categories 0 }}{{ . }}{{ else }}Floscas{{ end }}</p>
-      <h1 class="post-title">{{ .Title }}</h1>
-      {{- if not (.Param "hideMeta") }}
-      <div class="post-meta">
-        <span>{{ .Date.Format "2006.01.02" }}</span>
-        {{- if .ReadingTime }}
-        <span class="floscas-meta-read">
-          <svg aria-hidden="true" viewBox="0 0 24 24">
-            <circle cx="12" cy="12" r="8" />
-            <path d="M12 8v4l3 2" />
-          </svg>
-          {{ .ReadingTime }} min read
-        </span>
-        {{- end }}
-      </div>
-      {{- end }}
-    </header>
-
-    {{- if .Content }}
-    <div class="post-content md-content">
+{{- if eq .RelPermalink "/about/" }}
+<div class="cinema-page cinema-about-page cinema-container">
+  <header class="cinema-about-title">
+    <p class="cinema-eyebrow" data-i18n="about.label">About</p>
+    <h1 data-i18n-html="about.title">A quiet place<br>for unfinished things.</h1>
+  </header>
+  <div class="cinema-about-grid">
+    <figure>
+      <img class="cinema-image" src="{{ "/images/floscas-gallery/desk-lamp-wide.jpg" | relURL }}" alt="A desk lit at night" width="1920" height="1080">
+    </figure>
+    <div class="cinema-about-copy post-content">
       {{ .Content }}
     </div>
-    {{- end }}
-
-    <footer class="floscas-article-footer">
-      <span data-i18n="article.footer">Follow the visual diary on Instagram.</span>
-      <a href="https://www.instagram.com/floscas/" target="_blank" rel="noreferrer">
-        Instagram
-        <svg aria-hidden="true" viewBox="0 0 24 24">
-          <path d="M7 17 17 7M8 7h9v9" />
-        </svg>
-      </a>
-    </footer>
-  </article>
+  </div>
+  <dl class="cinema-about-facts">
+    <div><dt data-i18n="about.currently">Currently</dt><dd data-i18n="about.currentlyValue">Writing, photographing, noticing.</dd></div>
+    <div><dt data-i18n="about.workingOn">Working on</dt><dd>Floscas / 花与栗</dd></div>
+    <div><dt data-i18n="about.email">Email</dt><dd><a href="mailto:casparjang@outlook.com">casparjang@outlook.com</a></dd></div>
+    <div><dt>WECHAT</dt><dd>CasparJang_o18</dd></div>
+  </dl>
 </div>
+{{- else }}
+<article class="cinema-page cinema-article-page" {{ partial "journal-attrs.html" . | safeHTMLAttr }}>
+  <header class="cinema-article-header cinema-container">
+    <a class="cinema-text-link" href="{{ if eq .Section "posts" }}{{ "posts/" | relURL }}{{ else }}{{ "" | relURL }}{{ end }}" data-i18n="article.back">Back</a>
+    <p class="cinema-meta">
+      <span data-i18n="{{ with index .Params.categories 0 }}{{ if eq . "诗歌" }}category.poetry{{ else }}category.essay{{ end }}{{ else }}category.journal{{ end }}">{{ with index .Params.categories 0 }}{{ . }}{{ else }}Journal{{ end }}</span> / <time datetime="{{ .Date.Format "2006-01-02" }}" data-cinema-month="{{ .Date.Format "1" }}">{{ .Date.Format "January" }}</time>
+    </p>
+    <h1 data-journal-title>{{ .Title }}</h1>
+    <p class="cinema-article-deck" data-journal-summary>{{ with .Description }}{{ . }}{{ else }}{{ .Summary | plainify | htmlUnescape | truncate 210 }}{{ end }}</p>
+  </header>
+
+  <div class="cinema-article-body post-content" data-journal-body data-journal-slug="{{ .File.BaseFileName }}">
+    <p class="journal-translation-status" data-journal-translation-status hidden></p>
+    <div data-journal-original>{{ .Content }}</div>
+  </div>
+
+  <nav class="cinema-article-nav cinema-container" aria-label="Adjacent articles" data-i18n-aria-label="article.adjacent">
+    {{- with .PrevInSection }}
+    <a href="{{ .RelPermalink }}" {{ partial "journal-attrs.html" . | safeHTMLAttr }}><span data-i18n="article.previous">Previous</span><strong data-journal-title>{{ .Title }}</strong></a>
+    {{- end }}
+    {{- with .NextInSection }}
+    <a href="{{ .RelPermalink }}" {{ partial "journal-attrs.html" . | safeHTMLAttr }}><span data-i18n="article.next">Next</span><strong data-journal-title>{{ .Title }}</strong></a>
+    {{- end }}
+  </nav>
+
+  <footer class="cinema-article-social cinema-container">
+    <span data-i18n="article.footer">Follow the visual diary on Instagram.</span>
+    <span class="cinema-article-social-links">
+      <a href="https://www.instagram.com/floscas_huayuli?igsh=ZDhibTB6M25yemlh" target="_blank" rel="noreferrer"><img src="{{ "/icons/instagram.svg" | relURL }}" alt="">Instagram</a>
+      <a href="https://www.linkedin.com/in/jing-an-jang-47a9a91a4/" target="_blank" rel="noreferrer"><img src="{{ "/icons/linkedin.svg" | relURL }}" alt="">LinkedIn</a>
+    </span>
+  </footer>
+</article>
+{{- end }}
 {{- end }}

@@ -6,3 +6,6 @@ Thumbs.db
 .hugo-server.*.log
 repair-codex-bundled.ps1
 .wrangler/
+.hugo-cache/
+public-audit/
+audit-screenshots/

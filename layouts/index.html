@@ -1,232 +1,161 @@
 {{- define "main" }}
-<script>document.body.classList.add('floscas-home-page');</script>
 {{- $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
 {{- $pages = where $pages "Params.hiddenInHomeList" "!=" "true" }}
-{{- $recent := first 5 $pages }}
-{{- $coverSet := slice
+{{- $intro := where $pages "File.BaseFileName" "first-post" }}
+{{- $timeline := where $pages "File.BaseFileName" "!=" "first-post" }}
+{{- $timeline = $timeline.ByDate.Reverse }}
+{{- $pages = union $intro $timeline }}
+{{- $featured := first 4 $pages }}
+{{- $recent := $pages }}
+{{- $covers := slice
+  "/images/floscas-gallery/forest-bloom.jpg"
   "/images/floscas-gallery/cloud-mobile.jpg"
   "/images/floscas-gallery/water-grapes.jpg"
-  "/images/floscas-gallery/deep-forest.jpg"
-  "/images/floscas-gallery/green-city-wide.jpg"
-}}
-{{- $gallery := slice
-  (dict "id" "rainCity" "src" "/images/floscas-gallery/city-rain-wide.jpg" "title" "Rain city" "tone" "City")
-  (dict "id" "paintedFacade" "src" "/images/floscas-gallery/mural-building.jpg" "title" "Painted facade" "tone" "Street")
-  (dict "id" "blueWeather" "src" "/images/floscas-gallery/blue-cloud-wide.jpg" "title" "Blue weather" "tone" "Sky")
-  (dict "id" "orangeRoom" "src" "/images/floscas-gallery/orange-light-wide.jpg" "title" "Orange room" "tone" "Warmth")
-  (dict "id" "whiteBloom" "src" "/images/floscas-gallery/white-flowers.jpg" "title" "White bloom" "tone" "Garden")
-  (dict "id" "workingLight" "src" "/images/floscas-gallery/desk-lamp-wide.jpg" "title" "Working light" "tone" "Interior")
+  "/images/floscas-gallery/desk-lamp-wide.jpg"
 }}
 
-<div class="floscas-home floscas-magazine" data-floscas-home>
-  {{ partial "floscas_nav.html" . }}
-  {{ partial "floscas_decor.html" . }}
-
-  <section class="floscas-hero floscas-magazine-hero" aria-labelledby="floscas-title">
-    <div class="floscas-hero-image" aria-hidden="true">
-      <img src="{{ "/images/floscas-gallery/skyline-mist-wide.jpg" | relURL }}" alt="">
+<div class="cinema-page cinema-home-page">
+  <section class="cinema-film-title" aria-labelledby="cinema-home-title">
+    <div class="cinema-film-title-inner">
+      <p class="cinema-eyebrow">FLOSCAS</p>
+      <h1 id="cinema-home-title" data-i18n-html="home.title">写我所想<br>爱与自由</h1>
+      <p class="cinema-place">{{ now.Year }}</p>
+      <a class="cinema-text-link" href="#selected" data-i18n="action.enter">Enter</a>
     </div>
-    <div class="floscas-hero-shade" aria-hidden="true"></div>
-    <div class="floscas-ribbon" aria-hidden="true">
-      <svg viewBox="0 0 1200 520" preserveAspectRatio="none">
-        <path class="ribbon-line ribbon-blue" d="M-20 340 C 150 250, 240 315, 360 365 S 580 390, 710 300 S 910 185, 1220 260" />
-        <path class="ribbon-line ribbon-green" d="M-30 430 C 190 500, 330 455, 470 405 S 650 265, 810 315 S 1020 430, 1230 110" />
-        <path class="ribbon-line ribbon-cyan" d="M-40 240 C 170 185, 310 235, 430 330 S 620 465, 790 260 S 1010 95, 1230 160" />
-      </svg>
-    </div>
+  </section>
 
-    <div class="floscas-hero-copy">
-      <p class="floscas-kicker" data-i18n="hero.kicker">Writerly portfolio</p>
-      <h1 id="floscas-title" class="floscas-slogan-long" aria-label="Everything I know about Life.">
-        <span class="floscas-slogan-prefix">Everything I know</span>
-        <span class="floscas-slogan-main">about Life.</span>
-      </h1>
-      <p class="floscas-subtitle" data-i18n="hero.subtitle">Writing my thoughts, recording my loves.</p>
-      <div class="floscas-hero-actions">
-        <a class="floscas-pill-link" href="{{ "posts/" | relURL }}">
-          <span data-i18n="latest.all">View all posts</span>
-          <svg aria-hidden="true" viewBox="0 0 24 24">
-            <path d="M5 12h14M13 6l6 6-6 6" />
-          </svg>
+  <section class="cinema-selected cinema-container" id="selected" aria-labelledby="selected-title">
+    <header class="cinema-section-heading">
+      <p data-i18n="home.selectedLabel">01 / Selected</p>
+      <h2 id="selected-title" data-i18n-html="home.selectedTitle">Fragments kept<br>in changing light.</h2>
+    </header>
+
+    <div class="cinema-editorial-list">
+      {{- range $index, $page := $featured }}
+      {{- $cover := index $covers (mod $index (len $covers)) }}
+      <article class="cinema-editorial-item cinema-editorial-item-{{ add $index 1 }}" {{ partial "journal-attrs.html" $page | safeHTMLAttr }}>
+        <a class="cinema-editorial-media" href="{{ $page.RelPermalink }}" aria-label="{{ $page.Title | plainify }}">
+          <img class="cinema-image" src="{{ $cover | relURL }}" alt="" loading="lazy" width="1600" height="1200">
         </a>
-        <a class="floscas-pill-link" href="{{ "gallery/" | relURL }}">
-          <span data-i18n="nav.gallery">Gallery</span>
-          <svg aria-hidden="true" viewBox="0 0 24 24">
-            <path d="M7 17 17 7M8 7h9v9" />
-          </svg>
-        </a>
-      </div>
-    </div>
-
-    <div class="floscas-hero-index floscas-glass">
-      <strong>Floscas</strong>
-      <p data-i18n="hero.index">Writing, photographs, fragments, and private weather.</p>
-    </div>
-  </section>
-
-  <aside class="floscas-social-rail" aria-label="Social links">
-    <a href="https://github.com/chocojun" target="_blank" rel="noreferrer">GitHub</a>
-    <a href="{{ "index.xml" | relURL }}">RSS</a>
-    <a href="mailto:chocojun05@outlook.com" data-i18n="side.contact">Contact</a>
-  </aside>
-
-  <section class="floscas-visual-strip" aria-label="Visual diary">
-    <figure class="floscas-strip-card">
-      <img src="{{ "/images/floscas-gallery/leaf-map.jpg" | relURL }}" alt="Sunlit leaf veins">
-      <figcaption>
-        <span>01</span>
-        <strong>Memory has veins.</strong>
-      </figcaption>
-    </figure>
-    <div class="floscas-quote-panel floscas-glass">
-      <p data-i18n="quote.line">“A quiet shelf for notes, fragments, and becoming.”</p>
-      <span data-i18n="quote.caption">Notes on life, memory, language, and becoming.</span>
-    </div>
-    <figure class="floscas-strip-card is-tall">
-      <img src="{{ "/images/floscas-gallery/candle.jpg" | relURL }}" alt="Warm candle flame">
-      <figcaption>
-        <span>02</span>
-        <strong>Small light, long night.</strong>
-      </figcaption>
-    </figure>
-  </section>
-
-  <section class="floscas-music-section" aria-label="Music">
-    <div class="floscas-music-copy">
-      <p class="floscas-section-kicker" data-i18n="music.kicker">Listening room</p>
-      <h2 data-i18n="music.title">A little weather for reading.</h2>
-      <p data-i18n="music.copy">A local glass player prepared from the Spotify reference playlist.</p>
-      <a class="floscas-music-source" href="https://open.spotify.com/playlist/3UQVv3BjPgadnI2DY2fAJY?si=5a5425ed30e54ffb" target="_blank" rel="noreferrer">
-        <span data-i18n="music.source">Spotify reference</span>
-        <svg aria-hidden="true" viewBox="0 0 24 24">
-          <path d="M7 17 17 7M8 7h9v9" />
-        </svg>
-      </a>
-    </div>
-    <div class="floscas-local-player floscas-glass" data-local-player data-playlist-url="{{ "/music/playlist.json" | relURL }}">
-      <div class="floscas-player-meta">
-        <span data-i18n="music.window">Local playlist</span>
-        <strong data-player-title>Floscas listening room</strong>
-        <p data-player-artist data-i18n="music.empty">Add audio files to /static/music and update playlist.json.</p>
-      </div>
-      <div class="floscas-player-body">
-        <figure class="floscas-player-art">
-          <img src="{{ "/images/floscas-gallery/green-valley.jpg" | relURL }}" alt="">
-        </figure>
-        <div class="floscas-player-controls">
-          <audio data-player-audio preload="metadata"></audio>
-          <div class="floscas-mobius-progress" data-player-progress aria-label="Playback progress" data-i18n-aria-label="music.progress">
-            <canvas data-mobius-canvas></canvas>
-            <span data-player-progress-bar></span>
-          </div>
-          <div class="floscas-player-buttons">
-            <button type="button" data-player-prev aria-label="Previous track">
-              <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M11 18V6M19 18 11 12l8-6M5 18V6" /></svg>
-            </button>
-            <button class="is-primary" type="button" data-player-toggle aria-label="Play">
-              <svg class="icon-play" aria-hidden="true" viewBox="0 0 24 24"><path d="m9 7 9 5-9 5Z" /></svg>
-              <svg class="icon-pause" aria-hidden="true" viewBox="0 0 24 24"><path d="M8 6v12M16 6v12" /></svg>
-            </button>
-            <button type="button" data-player-next aria-label="Next track">
-              <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M13 6v12M5 6l8 6-8 6M19 6v12" /></svg>
-            </button>
-          </div>
-        </div>
-      </div>
-      <ol class="floscas-player-list" data-player-list></ol>
-    </div>
-  </section>
-
-  <section class="floscas-latest" aria-labelledby="floscas-latest-title">
-    <div class="floscas-section-head">
-      <div>
-        <p class="floscas-section-kicker" data-i18n="section.journal">Journal</p>
-        <h2 id="floscas-latest-title" data-i18n="latest.title">Latest Thoughts</h2>
-      </div>
-      <a href="{{ "posts/" | relURL }}">
-        <span data-i18n="latest.all">View all posts</span>
-        <svg class="floscas-link-icon" aria-hidden="true" viewBox="0 0 24 24">
-          <path d="M5 12h14M13 6l6 6-6 6" />
-        </svg>
-      </a>
-    </div>
-
-    <div class="floscas-reading-layout">
-      {{- with index $recent 0 }}
-      {{- $cat := "notes" }}
-      <article class="floscas-card floscas-card-featured" data-floscas-card-category="{{ $cat }}">
-        <a class="floscas-card-link" href="{{ .RelPermalink }}" aria-label="{{ .Title | plainify }}"></a>
-        <div class="floscas-card-media">
-          <img src="{{ "/images/floscas-gallery/forest-bloom.jpg" | relURL }}" alt="">
-        </div>
-        <div class="floscas-card-body">
-          <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 02, 2006" }}</time>
-          <h3>{{ .Title }}</h3>
-          <p>{{ .Summary | plainify | htmlUnescape | truncate 220 }}</p>
-          <footer>
-              <span data-i18n="filter.notes">Notes</span>
-            {{- if .ReadingTime }}
-            <em>{{ .ReadingTime }} min read</em>
-            {{- end }}
-          </footer>
+        <div class="cinema-editorial-copy">
+          <p class="cinema-meta"><time datetime="{{ $page.Date.Format "2006-01-02" }}" data-cinema-month="{{ $page.Date.Format "1" }}">{{ $page.Date.Format "January" }}</time> / <span data-i18n="{{ with index $page.Params.categories 0 }}{{ if eq . "诗歌" }}category.poetry{{ else }}category.essay{{ end }}{{ else }}category.journal{{ end }}">{{ with index $page.Params.categories 0 }}{{ . }}{{ else }}Journal{{ end }}</span></p>
+          <h3><a href="{{ $page.RelPermalink }}" data-journal-title>{{ $page.Title }}</a></h3>
+          <p data-journal-summary>{{ $page.Summary | plainify | htmlUnescape | truncate 170 }}</p>
+          <a class="cinema-text-link" href="{{ $page.RelPermalink }}" data-i18n="action.read">Read</a>
         </div>
       </article>
       {{- end }}
-      <div class="floscas-card-stack">
-      {{- range $idx, $page := after 1 $recent }}
-        {{- $cover := index $coverSet (mod $idx (len $coverSet)) }}
-        {{- $cat := "notes" }}
-        <article class="floscas-card floscas-card-compact" data-floscas-card-category="{{ $cat }}">
-          <a class="floscas-card-link" href="{{ $page.RelPermalink }}" aria-label="{{ $page.Title | plainify }}"></a>
-          <div class="floscas-card-media">
-            <img src="{{ $cover | relURL }}" alt="">
-          </div>
-          <div class="floscas-card-body">
-            <time datetime="{{ $page.Date.Format "2006-01-02" }}">{{ $page.Date.Format "Jan 02, 2006" }}</time>
-            <h3>{{ $page.Title }}</h3>
-            <p>{{ $page.Summary | plainify | htmlUnescape | truncate 110 }}</p>
-            <footer>
-              <span data-i18n="filter.notes">Notes</span>
-              {{- if $page.ReadingTime }}
-              <em>{{ $page.ReadingTime }} min read</em>
-              {{- end }}
-            </footer>
-          </div>
-        </article>
-      {{- end }}
-      </div>
-    </div>
-    <div class="floscas-filter-row" data-floscas-filters aria-label="Filter recent posts">
-      <button class="is-active" type="button" data-filter="all" data-i18n="filter.all">All</button>
-      <button type="button" data-filter="notes" data-i18n="filter.notes">Notes</button>
     </div>
   </section>
 
-  <section class="floscas-gallery-preview" aria-labelledby="floscas-gallery-title">
-    <div class="floscas-section-head">
-      <div>
-        <p class="floscas-section-kicker" data-i18n="section.gallery">Gallery</p>
-        <h2 id="floscas-gallery-title" data-i18n="gallery.selected">Selected Light</h2>
+  <section class="cinema-interlude" aria-label="Interlude">
+    <blockquote>
+      <p data-i18n-html="home.interlude">I am rooted,<br>but I flow</p>
+      <cite>Virginia Woolf</cite>
+    </blockquote>
+  </section>
+
+  <section class="cinema-film-shelf" aria-labelledby="cinema-shelf-title">
+    <div class="cinema-film-shelf-inner cinema-container">
+      <header class="cinema-section-heading">
+        <p data-i18n="home.cinemaLabel">02 / Cinema references</p>
+        <h2 id="cinema-shelf-title" data-i18n-html="home.cinemaTitle">Films that keep<br>the frame open.</h2>
+        <p class="cinema-film-note" data-i18n="home.cinemaNote">A small wall of films whose images remain after the screen goes dark.</p>
+      </header>
+      {{- $films := hugo.Data.films }}
+      <p class="cinema-film-count"><span>{{ len $films }}</span><span data-i18n="home.cinemaScroll">films / scroll horizontally</span></p>
+      <div class="cinema-poster-track" aria-label="Film recommendations" data-i18n-aria-label="home.cinemaAria">
+        {{- range $films }}
+        {{- $posterFile := printf "static/images/cinema-posters/library/%s.jpg" .slug }}
+        {{- $posterOptimizedFile := printf "static/images/cinema-posters/library/optimized/%s.webp" .slug }}
+        {{- $posterURL := printf "/images/cinema-posters/library/%s.jpg" .slug }}
+        {{- if fileExists $posterOptimizedFile }}{{ $posterURL = printf "/images/cinema-posters/library/optimized/%s.webp" .slug }}{{ end }}
+        {{- $doubanSearch := printf "https://search.douban.com/movie/subject_search?search_text=%s" (.zh | urlquery) }}
+        <a class="cinema-poster" href="{{ .douban | default $doubanSearch }}" target="_blank" rel="noreferrer"
+          data-film-card data-film-link="{{ .slug }}" data-title-en="{{ .en }}" data-title-zh="{{ .zh }}" data-title-fr="{{ .fr }}" data-title-ja="{{ .ja }}">
+          <figure>
+            <span class="cinema-poster-image">
+              {{- if fileExists $posterFile }}
+              <img class="cinema-image" src="{{ $posterURL | relURL }}" alt="" loading="lazy" width="1000" height="1500" data-film-image="{{ .slug }}">
+              {{- else }}
+              <span class="cinema-poster-placeholder" aria-hidden="true"><span>{{ .en }}</span></span>
+              {{- end }}
+            </span>
+            <figcaption><strong data-film-title="{{ .slug }}">{{ .en }}</strong><span>{{ .meta }}</span></figcaption>
+          </figure>
+        </a>
+        {{- end }}
       </div>
+      <footer class="cinema-poster-sources">
+        <span data-i18n="home.posterSources">Poster sources</span>
+        <a href="https://www.impawards.com/" target="_blank" rel="noreferrer">IMP Awards</a>
+        <a href="https://movie.douban.com/" target="_blank" rel="noreferrer">Douban</a>
+      </footer>
+    </div>
+  </section>
+
+  <section class="cinema-index cinema-container" aria-labelledby="latest-title">
+    <header class="cinema-section-heading cinema-section-heading-row">
+      <div>
+        <p data-i18n="home.journalLabel">03 / Journal</p>
+        <h2 id="latest-title" data-i18n="latest.title">Latest thoughts</h2>
+      </div>
+      <a class="cinema-text-link" href="{{ "posts/" | relURL }}" data-i18n="latest.all">View all posts</a>
+    </header>
+    <div class="cinema-index-list">
+      {{- range $recent }}
+      <article class="cinema-index-row" {{ partial "journal-attrs.html" . | safeHTMLAttr }}>
+        <time datetime="{{ .Date.Format "2006-01-02" }}" data-cinema-month="{{ .Date.Format "1" }}">{{ .Date.Format "January" }}</time>
+        <h3><a href="{{ .RelPermalink }}" data-journal-title>{{ .Title }}</a></h3>
+        <span data-i18n="{{ with index .Params.categories 0 }}{{ if eq . "诗歌" }}category.poetry{{ else }}category.essay{{ end }}{{ else }}category.journal{{ end }}">{{ with index .Params.categories 0 }}{{ . }}{{ else }}Journal{{ end }}</span>
+      </article>
+      {{- end }}
+    </div>
+  </section>
+
+  <section class="cinema-image-pair cinema-container" aria-labelledby="images-title">
+    <header class="cinema-section-heading">
+      <p data-i18n="home.imagesLabel">04 / Images</p>
+      <h2 id="images-title" data-i18n-html="home.imagesTitle">步履不停，<br>拍摄才行。</h2>
+    </header>
+    <div class="cinema-image-pair-grid">
       <a href="{{ "gallery/" | relURL }}">
-        <span data-i18n="gallery.open">Open gallery</span>
-        <svg class="floscas-link-icon" aria-hidden="true" viewBox="0 0 24 24">
-          <path d="M7 17 17 7M8 7h9v9" />
-        </svg>
+        <img class="cinema-image" src="{{ "/images/floscas-gallery/city-rain-wide.jpg" | relURL }}" alt="Rain-softened city skyline" loading="lazy" width="1920" height="1080">
+      </a>
+      <a href="{{ "gallery/" | relURL }}">
+        <img class="cinema-image" src="{{ "/images/floscas-gallery/forest-light.jpg" | relURL }}" alt="Light passing through a forest" loading="lazy" width="1080" height="1440">
       </a>
     </div>
-    <div class="floscas-gallery-grid">
-      {{- range $gallery }}
-      <figure class="floscas-photo-card">
-        <img src="{{ .src | relURL }}" alt="{{ .title }}" title="{{ .title }}" data-gallery-image="{{ .id }}">
-        <figcaption>
-          <span data-gallery-tone="{{ .id }}">{{ .tone }}</span>
-          <strong data-gallery-title="{{ .id }}">{{ .title }}</strong>
-        </figcaption>
-      </figure>
-      {{- end }}
-    </div>
   </section>
 
+  <section class="cinema-listening cinema-container" aria-labelledby="listening-title">
+    <div class="cinema-listening-intro">
+      <p class="cinema-meta" data-i18n="music.kicker">Listening room</p>
+      <h2 id="listening-title" data-i18n="music.title">A little weather for reading.</h2>
+    </div>
+    <div class="cinema-player" data-local-player data-playlist-url="{{ "/music/playlist.json" | relURL }}">
+      <figure class="floscas-player-art cinema-player-art">
+        <img src="{{ "/images/floscas-gallery/green-valley.jpg" | relURL }}" alt="" loading="lazy">
+      </figure>
+      <div class="cinema-player-copy">
+        <span data-i18n="music.window">Local playlist</span>
+        <strong data-player-title>Floscas listening room</strong>
+        <p data-player-artist data-i18n="music.empty">Add audio files to the local music folder.</p>
+        <audio data-player-audio preload="metadata"></audio>
+        <div class="cinema-player-progress" data-player-progress aria-label="Playback progress" data-i18n-aria-label="music.progress">
+          <span data-player-progress-bar></span>
+        </div>
+        <div class="cinema-player-controls">
+          <button type="button" data-player-prev aria-label="Previous track"><span data-i18n="music.prevShort">Prev</span></button>
+          <button type="button" data-player-toggle aria-label="Play">
+            <span class="icon-play" data-i18n="music.play">Play</span>
+            <span class="icon-pause" data-i18n="music.pause">Pause</span>
+          </button>
+          <button type="button" data-player-next aria-label="Next track"><span data-i18n="music.nextShort">Next</span></button>
+        </div>
+        <ol class="floscas-player-list cinema-player-list" data-player-list></ol>
+      </div>
+    </div>
+  </section>
 </div>
 {{- end }}

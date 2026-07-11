@@ -3,32 +3,23 @@
 {{- end -}}
 
 <!DOCTYPE html>
-{{- $theme := site.Params.defaultTheme | default "auto" }}
-{{- if eq $theme "dark" }}
-<html lang="{{ site.Language }}" dir="{{ .Language.LanguageDirection | default "auto" }}" data-theme="dark">
-{{- else if eq $theme "light" }}
-<html lang="{{ site.Language }}" dir="{{ .Language.LanguageDirection | default "auto" }}" data-theme="light">
-{{- else }}
-<html lang="{{ site.Language }}" dir="{{ .Language.LanguageDirection | default "auto" }}" data-theme="auto">
-{{- end }}
+<html lang="{{ site.Language.Lang | default "zh-cn" }}" dir="{{ .Language.Direction | default "auto" }}" data-theme="light">
 
 <head>
     {{- partial "head.html" . }}
 </head>
 
-{{- if (or (ne .Kind `page` ) (eq .Layout `archives`) (eq .Layout `search`)) }}
-<body class="list" id="top">
-{{- else }}
-<body id="top">
-{{- end }}
-    {{ partialCached "header.html" . .Page -}}
+<body class="cinema-body cinema-kind-{{ .Kind }}{{ with .Section }} cinema-section-{{ . }}{{ end }}" id="top">
+    <a class="cinema-skip" href="#main-content">Skip to content</a>
+    {{ partial "floscas_nav.html" . }}
     {{ partial "floscas_persistent.html" . }}
     <div data-barba="wrapper">
-        <main class="main" data-barba="container" data-barba-namespace="{{ .Kind }}-{{ with .Section }}{{ . }}{{ else }}home{{ end }}">
+        <main class="main cinema-main" id="main-content" data-barba="container" data-barba-namespace="{{ .Kind }}-{{ with .Section }}{{ . }}{{ else }}home{{ end }}">
             {{- block "main" . }}{{ end }}
         </main>
     </div>
-    {{ partialCached "footer.html" . .Layout .Kind (.Param "hideFooter") (.Param "ShowCodeCopyButtons") -}}
+    {{ partial "cinema_footer.html" . }}
+    {{ partial "extend_footer.html" . }}
 </body>
 
 </html>
