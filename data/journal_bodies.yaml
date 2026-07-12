@@ -1,0 +1,578 @@
+first-post:
+  en: |
+    <h1>Hello World</h1>
+    <p>This is my new blog.</p>
+    <p>This website was built with GPT-5.5 and Codex throughout the process. I am still gradually exploring and testing it, and later I will continue improving its loading speed and visual theme.</p>
+  fr: |
+    <h1>Hello World</h1>
+    <p>Ceci est mon nouveau blog.</p>
+    <p>Ce site a ete construit avec GPT-5.5 et Codex tout au long du processus. Je continue a l'explorer et a le tester peu a peu ; plus tard, j'optimiserai la vitesse d'ouverture et le style visuel.</p>
+  ja: |
+    <h1>Hello World</h1>
+    <p>これは私の新しいブログです。</p>
+    <p>このウェブサイトは、GPT-5.5 と Codex を組み合わせて制作しました。現在も少しずつ試しながら調整しており、今後は表示速度やテーマの見た目をさらに整えていきます。</p>
+ms-solitude-with-lady-love:
+  en: |
+    <p>I always tell myself to be a lovely person.</p>
+    <p>To love my life, as I love the things I love.</p>
+    <p>But in these misty times, the small and tiny me has long been worn down by puzzles and lies.</p>
+    <p>I thought I was born clear and simple, yet in the end I was forced into the complications of the world.</p>
+    <p>Problems and traps follow like shadows. Please look at me once more, my dear Ms. Solitude, my dear Lady Love.</p>
+    <p>After meeting you, nothing is merely a cliche question; yet the story is not as simple as I once hoped.</p>
+    <p>It is hard to call it memory. You have become a strange fish, swimming in the shadows of my heart.</p>
+    <p>Even if everything between us is destined to be lost, even if the writing is on the wall, why are you still here, my dear Love?</p>
+    <p>We cannot stay together long enough to forget, long enough to hate. So I closed my door, and yet you broke in again, lingering over and over.</p>
+    <p>Was it my softness, or your selfishness? Neither had any place left to be held.</p>
+    <p>I still remember that gentle night. We walked into that spacious room, and your gaze fell into my eyes.</p>
+    <p>With one simple glance, the world slowed down. Nothing needed to be hidden; there was only feeling.</p>
+    <p>Warm tears washed the dust from your lies. At least in that moment, you showed me your past lives, and I dreamed the rest of ours.</p>
+    <p>Though the die is cast and the night is gone, please let love make both of us breathe again.</p>
+  fr: |
+    <p>Je me dis toujours que je dois rester une personne aimable.</p>
+    <p>Aimer ma vie comme j'aime ce que j'aime.</p>
+    <p>Mais dans cette epoque de brume, le moi minuscule que je suis a depuis longtemps ete use par les detours, les calculs et les mensonges.</p>
+    <p>Je croyais etre nee claire et simple ; j'ai pourtant fini par tomber dans les complications du monde.</p>
+    <p>Les problemes et les pieges me suivent comme des ombres. Regarde-moi encore une fois, ma chere Solitude, ma chere Dame Amour.</p>
+    <p>Depuis que je t'ai rencontree, rien n'est une question banale ; mais l'histoire n'a jamais ete aussi simple que je l'esperais.</p>
+    <p>Il est difficile d'appeler cela un souvenir. Tu es devenue un poisson etrange, nageant dans les ombres de mon coeur.</p>
+    <p>Meme si tout entre nous etait voue a se perdre, pourquoi restes-tu encore ici, mon cher amour ?</p>
+    <p>Nous ne pouvons plus nous tenir longtemps dans les bras, assez longtemps pour oublier, assez longtemps pour hair. Alors j'ai ferme la porte de mon coeur, mais tu es entree de nouveau.</p>
+    <p>Etait-ce ma tendresse, ou ton entetement ? Aucune des deux choses ne trouvait encore sa place.</p>
+    <p>Je me souviens encore de cette longue nuit. Nous sommes entrees dans cette grande chambre, ton regard pose dans mes yeux.</p>
+    <p>D'un simple regard, le monde ralentissait. Il n'y avait rien a cacher, seulement a sentir.</p>
+    <p>Des larmes tiedes ont emporte la poussiere de tes mensonges. Au moins, a cet instant, tu m'as montre tes vies passees, et moi j'ai reve le reste des notres.</p>
+    <p>Meme si tout est joue et que la nuit s'est retiree, laisse simplement l'amour nous faire respirer encore une fois.</p>
+  ja: |
+    <p>私はいつも、自分に「愛らしい人でいよう」と言い聞かせている。</p>
+    <p>好きなものを愛するように、自分の生活も愛したい。</p>
+    <p>けれど霧の深いこの時代、小さな私は、迷路のような計算と嘘にすっかり疲れてしまった。</p>
+    <p>生まれつき澄んでいたはずなのに、結局はこの世の複雑さの中へ落ちていった。</p>
+    <p>問題も罠も影のようにつきまとう。もう一度だけ私を見て、親愛なる孤独、親愛なる愛よ。</p>
+    <p>あなたに出会ってから、何も陳腐な問いではなくなった。けれど物語は、私が望んだほど単純ではなかった。</p>
+    <p>それを記憶と呼ぶのは難しい。あなたは奇妙な魚になり、私の心の影の奥を泳いでいる。</p>
+    <p>すべてが失われる運命だったとしても、なぜあなたはまだここにいるの、愛しい人。</p>
+    <p>私たちは忘れるほどにも、憎むほどにも、長く抱き合ってはいられなかった。だから私は心の扉を閉めたのに、あなたはまた入ってきた。</p>
+    <p>それは私の柔らかさなのか、あなたのわがままなのか。どちらももう置き場を失っていた。</p>
+    <p>あの長い夜を今も覚えている。私たちは広い部屋に入り、あなたの視線が私の目に落ちた。</p>
+    <p>たった一瞥で、世界はゆっくりになった。隠すものはなく、ただ感じればよかった。</p>
+    <p>温かな涙が、あなたの嘘のほこりを洗い流した。少なくともその瞬間、あなたは過去の人生を見せ、私は二人の残りの人生を夢見た。</p>
+    <p>たとえ賽は投げられ、夜が去ったとしても、どうか愛に、もう一度だけ私たちを呼吸させて。</p>
+随笔001:
+  en: |
+    <p>Anno Yeung</p>
+    <p>Across the long years, who remembers the moment when rain slips past the ear?</p>
+    <p>Sitting on a chair, I lifted my head once more. People still crowded around me. Their mouths opened and closed, yet no one seemed to feel that I existed in this exact moment.</p>
+    <p>Everything around me has always felt close and distant at once. Even when my eyes catch it, it has already withdrawn into noise within seconds.</p>
+    <p>No new raindrops clung to the bookstore's glass wall. After the heavy rain clouds drifted away, I seemed to see the sun.</p>
+    <p>The rain began to fall silent, like a riddle.</p>
+    <p>Outside, as always after rain, moisture condensed in the air. It melted on the surface of my skin and stuck to me as if it belonged there.</p>
+    <p>I did not know whether the next step should turn left or right. In this city built beside office towers, I avoided the eyes around me and quickened my pace out of fear for steel and concrete.</p>
+    <p>Pedestrians and electric bikes pressed through the same road. Every bead of water on the branches fought to fall, passed through the crowd, and seeped into the earth.</p>
+    <p>I could not dodge one of them. It attached itself to my hair, innocently treating my body as a fearless cradle. Was it afraid? I wanted to know.</p>
+    <p>The stairs into the metro stacked downward, layer after layer, until I could not see their end. Footsteps fell beside my ears, one pile after another, hesitant and dull, forcing me to follow.</p>
+    <p>On those steps, I did not know where each step was taking me. Each time my foot landed, the ground seemed to bounce me upward and set me down again.</p>
+    <p>I used all my strength to stand steady and begged myself not to fall.</p>
+    <p>At security, I smiled instinctively at the guard, signaling that the canvas bag on my shoulder did not wish to be dropped onto the heavy conveyor belt.</p>
+    <p>But no one stopped. They passed the gates and were delivered by the metro to every corner of the city.</p>
+    <p>The dampness on my body deepened, though I could not feel a single drop of sweat. Perhaps they had escaped silently.</p>
+    <p>The humid air gathered into a net and covered me. The surrounding noise withdrew, far away, as if separated by a thick fog.</p>
+    <p>On the platform, faces blurred. I could not recognize a single one. Their pupils held only the reflection of electronic screens.</p>
+    <p>No one looked at me. But I never looked away.</p>
+    <p>The lights in the train flickered, struggling and crying as if they might go out at any second.</p>
+    <p>The dampness grew more obvious, an innate discomfort, like a tide overflowing from the heart, passing through every blood vessel and surging outward from beneath the skin. I looked down at my hands; the fingertips had turned pale, wrinkled as if soaked for too long. I touched my forehead without thinking.</p>
+    <p>The air lost its warmth and became cold. My hair seemed soaked too, not with sweat, but with a heavier moisture that could not be driven away.</p>
+    <p>I realized something was wrong. A train entered slowly, brakes tearing through the air. Yet no one got off. Every seat was empty, as if this train did not belong to the city I knew.</p>
+    <p>I hesitated, then followed the crowd into the carriage. The doors closed heavily behind me, with a click that seemed to lock away something unnamed.</p>
+    <p>The train moved. I gripped the cold pole and looked into the tunnel. The walls stretched; lights flashed; the darkness outside seemed conscious, twisting and crawling like the eyes of ghosts.</p>
+    <p>The space inside the carriage changed. Seats lost their order. Some grew long and narrow, others shrank into almost invisible slits. Though I sat still, the carriage seemed to extend endlessly, pulling the seats opposite into a distance I could no longer see.</p>
+    <p>Where was that, and where was I?</p>
+    <p>Then came the low sound of dripping. Water seemed to seep from the ceiling. I looked up and saw it bending downward, not physically, but through a visual distortion, as though an invisible black hole were dragging the top of the carriage into another dimension.</p>
+    <p>The dripping quickened. My feet grew wet. A shallow layer of water covered the floor and flowed toward the end of the carriage.</p>
+    <p>The water was black as ink, swallowing light. I jumped up to avoid it, slipped, and fell onto the wet floor.</p>
+    <p>The water was freezing. I tried to stand, but the other passengers did not react. They stared at their screens, soaked and motionless, imprisoned by some invisible force.</p>
+    <p>The water rose to my knees. It pressed from all sides with a heavy force. My steps grew slower, the water colder, ice patterns forming on its surface. The walls blurred and receded; the black hole of the ceiling seemed ready to swallow the whole space.</p>
+    <p>A low voice came from the water, like someone murmuring underwater. I looked down and saw countless distorted shadows floating there, faceless outlines struggling for release.</p>
+    <p>I wanted to scream, but the sound was trapped in my throat. The rain had never stopped.</p>
+    <p>The broadcast crackled: "Next stop... terminal station..." The voice came from a remote corner of nowhere.</p>
+    <p>Ahead, the tunnel mouth was being consumed by darkness. There was no end, only void. I knew I could no longer escape this rain-flooded carriage.</p>
+    <p>My strength drained away. My body was pulled beneath the water; coldness filled my nose and mouth; my vision blurred.</p>
+    <p>Darkness spread before my eyes. My body dissolved into endless droplets, becoming a remnant of the city.</p>
+    <p>And the metro continued silently toward an unknown terminal. Who would still remember me?</p>
+    <p>Rain fell from my eyes.</p>
+    <p>I, too, became rain.</p>
+  fr: |
+    <p>Anno Yeung</p>
+    <p>Au fil des annees, qui se souvient encore de l'instant ou la pluie glisse pres de l'oreille ?</p>
+    <p>Assise, je releve encore la tete. Autour de moi, la foule est toujours la. Les bouches s'ouvrent et se ferment, mais personne ne semble sentir mon existence a cet instant precis.</p>
+    <p>Ce qui m'entoure reste proche et lointain a la fois. Meme vu par les yeux, tout s'eloigne aussitot dans le vacarme.</p>
+    <p>Sur la vitre de la librairie, plus aucune goutte nouvelle ne s'accroche. Les nuages lourds s'ecartent, et il me semble apercevoir le soleil.</p>
+    <p>La pluie devient silencieuse, comme une enigme.</p>
+    <p>Dehors, l'air humide d'apres pluie se condense. Il fond sur ma peau et s'y attache.</p>
+    <p>Je ne sais pas s'il faut aller a gauche ou a droite. Dans cette ville de tours et de bureaux, j'evite les regards et j'accelere, effrayee par le beton et l'acier.</p>
+    <p>Les pietons et les scooters se croisent sur la meme route. L'eau tombe des branches, traverse la foule et s'infiltre dans la terre.</p>
+    <p>Une goutte s'accroche a mes cheveux, prenant mon corps pour un berceau. A-t-elle peur ? J'aimerais le savoir.</p>
+    <p>Les marches du metro descendent sans fin. Le bruit des pas chute pres de mes oreilles, lourd, hesitant, m'obligeant a suivre.</p>
+    <p>A chaque marche, j'ignore vers ou je vais. Le sol me rejette puis me reprend.</p>
+    <p>Je fais tout pour rester debout et ne pas tomber.</p>
+    <p>A la securite, je souris par habitude au controleur, comme pour dire que mon sac en toile ne veut pas tomber sur le tapis lourd.</p>
+    <p>Personne ne s'arrete. Tous passent les tourniquets et le metro les emporte vers les coins de la ville.</p>
+    <p>L'humidite sur mon corps augmente, sans que je sente une goutte de sueur. Peut-etre s'est-elle enfuie en silence.</p>
+    <p>L'air humide se rassemble en filet autour de moi. Le bruit s'eloigne, separe par un brouillard epais.</p>
+    <p>Sur le quai, les visages se brouillent. Je ne peux en distinguer aucun. Dans leurs pupilles, il n'y a que le reflet des ecrans.</p>
+    <p>Personne ne me regarde. Moi, je ne detourne pas les yeux.</p>
+    <p>Dans la rame, les lumieres vacillent comme si elles criaient avant de s'eteindre.</p>
+    <p>L'humidite devient une gene primitive, une maree qui deborde du coeur, traverse les vaisseaux et remonte sous la peau. Je regarde mes doigts blanchis, rides comme apres une longue immersion.</p>
+    <p>L'air refroidit. Mes cheveux semblent trempes, non par la sueur, mais par une humidite plus lourde.</p>
+    <p>Je comprends que quelque chose ne va pas. Le train arrive, le frein dechire l'air. Personne ne descend. Les sieges sont vides, comme si cette rame n'appartenait pas a la ville que je connais.</p>
+    <p>J'hesite, puis j'entre avec la foule. Les portes se ferment derriere moi, verrouillant quelque chose d'inconnu.</p>
+    <p>Le train demarre. Je serre la barre froide. Dans le tunnel, les murs s'allongent, les lumieres clignotent, et l'obscurite semble ramper.</p>
+    <p>L'espace de la rame se deforme. Les sieges s'etirent, se retrecissent, et la voiture semble s'allonger a l'infini.</p>
+    <p>Ou est-ce, et ou suis-je ?</p>
+    <p>Un bruit de gouttes apparait. L'eau s'infiltre du plafond, comme si un trou noir invisible tirait la rame vers une autre dimension.</p>
+    <p>Le sol se couvre d'une eau noire comme l'encre. Je glisse et tombe.</p>
+    <p>L'eau est glaciale. Les autres passagers ne reagissent pas. Trempes, ils fixent leurs ecrans, prisonniers d'une force invisible.</p>
+    <p>L'eau monte jusqu'a mes genoux. Elle presse mon corps de partout. Les murs s'eloignent ; le plafond noir semble avaler l'espace.</p>
+    <p>Une voix basse monte de l'eau. Des silhouettes sans visage flottent et se debattent.</p>
+    <p>Je veux crier, mais la voix reste coincee. La pluie ne s'est jamais arretee.</p>
+    <p>La radio annonce : "Prochaine station... terminus..."</p>
+    <p>Devant moi, le tunnel est devore par le noir. Je sais que je ne peux plus m'echapper.</p>
+    <p>Mon corps s'enfonce. L'eau froide envahit mon nez et ma bouche. Ma vue se trouble.</p>
+    <p>Je me dissous dans les gouttes, devenant une trace de la ville.</p>
+    <p>Et le metro continue, silencieux, vers un terminus inconnu. Qui se souviendra de moi ?</p>
+    <p>La pluie tombe de mes yeux.</p>
+    <p>Moi aussi, je deviens pluie.</p>
+  ja: |
+    <p>Anno Yeung</p>
+    <p>長い歳月のなかで、耳もとを雨がすべり落ちる瞬間を、誰が覚えているだろう。</p>
+    <p>椅子に座ったまま、私はもう一度顔を上げる。周囲は人でいっぱいだ。彼らの口は開いたり閉じたりしているのに、今ここに私がいることを感じている人はいないようだった。</p>
+    <p>周りのすべては、いつも近くて遠い。目に入ったと思った瞬間、すでに喧騒の中へ遠ざかっている。</p>
+    <p>書店のガラスには、もう新しい雨粒がついていない。厚い雨雲が流れ去ると、太陽が見えた気がした。</p>
+    <p>雨粒は謎のように沈黙し始める。</p>
+    <p>外へ出ると、雨上がりの湿気が皮膚の表面で溶け、身体に貼りついた。</p>
+    <p>次に左へ行くのか右へ行くのか、私は知らなかった。オフィスビルと並ぶこの街で、人の視線を避け、鉄骨とコンクリートへの恐れから足を速めた。</p>
+    <p>歩行者と電動バイクが同じ道を押し合う。枝葉の雨水は一滴ずつ落ち、人混みを抜けて地面へ染み込む。</p>
+    <p>避けきれなかった一滴が髪に吸い付き、私の身体を無邪気な揺りかごのようにした。それは怖かったのだろうか。答えを知りたかった。</p>
+    <p>地下鉄の階段は重なり合い、下を見ても終わりが見えない。足音が耳のそばで落ちていき、ためらい、鈍り、私を追い立てる。</p>
+    <p>その一段一段が私をどこへ連れていくのか、私は知らない。足を下ろすたびに、地面は私を跳ね上げ、また置き直すようだった。</p>
+    <p>私は倒れないよう、全力で立っていた。</p>
+    <p>改札前で、いつものように係員に微笑む。肩の布バッグを重いベルトに置きたくない、と合図するように。</p>
+    <p>けれど誰も止まらない。人々は改札を抜け、地下鉄に街の隅々へ運ばれていく。</p>
+    <p>身体の湿り気は増していくのに、汗は一滴も感じない。もしかすると、それらは静かに逃げてしまったのかもしれない。</p>
+    <p>湿った空気が網のように集まり、私を覆う。周囲の音は遠ざかり、厚い霧の向こうに隔てられた。</p>
+    <p>ホームの顔はぼやけ、誰の顔も見えない。瞳には電子画面の反射だけが立っている。</p>
+    <p>誰も私を見ない。けれど私は、目をそらさなかった。</p>
+    <p>車内の灯りは明滅し、消える寸前のようにもがいている。</p>
+    <p>湿り気はさらに強くなる。心臓からあふれた潮が血管を通り、皮膚の内側から外へ押し出されるような、生まれつきの不快感だった。指先は白くなり、水に浸かりすぎたようにしわが深い。</p>
+    <p>空気は冷たくなり、髪も濡れているようだった。汗ではなく、もっと重く、払いのけられない湿気で。</p>
+    <p>何かがおかしい。列車がホームに入り、ブレーキ音が空気を裂く。けれど誰も降りてこない。座席は空で、この列車は私の知る街のものではないようだった。</p>
+    <p>私はためらいながらも、人の流れに従って車内へ入る。背後で扉が重く閉まり、何か名のないものを閉じ込めた。</p>
+    <p>列車が動き出す。冷たい手すりを握り、窓の外を見る。トンネルの壁は伸び、光はちらつき、闇は意識を持ったように蠢いていた。</p>
+    <p>車内の空間が変わり始める。座席は秩序を失い、長く細くなり、あるものは見えないほど狭くなる。向かいの席は遠くへ引き伸ばされ、細部が見えない。</p>
+    <p>そこはどこで、私はどこにいるのか。</p>
+    <p>やがて水滴の音が聞こえた。天井から水が滲み出し、目に見えない黒い穴が車両の上部を別の次元へ引き込んでいるようだった。</p>
+    <p>床には浅い水がたまり、車両の奥へ流れていく。水は墨のように黒く、光を飲み込んでいた。</p>
+    <p>私は立ち上がろうとして滑り、濡れた床に倒れた。触れた水は骨まで凍らせるほど冷たい。</p>
+    <p>ほかの乗客は何の反応も示さない。ずぶ濡れのまま画面を見つめ、見えない力に縛られている。</p>
+    <p>水位は膝まで上がる。四方から押し寄せる重さの中で、足は重くなり、壁は遠ざかり、黒い天井は空間ごと飲み込もうとしていた。</p>
+    <p>水の中から低い声がする。顔のない影たちが浮かび、解放を求めてもがいている。</p>
+    <p>叫びたいのに、声は喉に閉じ込められた。雨は止んでいなかった。</p>
+    <p>車内放送が掠れて響く。「次は……終点……」</p>
+    <p>前方のトンネルは闇に飲まれていく。終わりはなく、ただ虚無がある。私はもう、この雨に沈んだ車両から逃げられないと知った。</p>
+    <p>力が抜け、身体は水面の下へ引かれていく。冷たい水が鼻と口へ流れ込み、視界がぼやける。</p>
+    <p>私は無数の水滴に溶け、この街の残像になった。</p>
+    <p>地下鉄はなおも無音で、誰も知らない終点へ進んでいく。誰が私を覚えているだろう。</p>
+    <p>雨が、私の目から落ちた。</p>
+    <p>私も雨になった。</p>
+随笔002:
+  en: |
+    <p>Anno Yeung</p>
+    <p>If time ever truly existed, perhaps it was only fine sand slipping through the fingers, gone in a blink.</p>
+    <p>The future is no longer certain, while fragments of the past become strangely clear in memory. If the eyes opened at a certain instant, the pupils might shrink with astonishment, yet the light before them would already have become a foreign landscape.</p>
+    <p>To be honest, I no longer know who I am. I once tried to ask the three simplest questions: Who am I? Where am I? Where am I going? Even these could not find an answer.</p>
+    <p>Am I really here, or has my heart already flown somewhere far away?</p>
+    <p>If you asked what I look like now, I could not answer. Even the mirror refuses to reflect me. I touch my eyes, teeth, mouth, yellowing skin and dimming hair. They still exist, yet they are quiet as dead things, without warmth.</p>
+    <p>I seem to have sensation, but cannot feel a touch. Nerve endings struggle somewhere in the dark; I know they have not completely collapsed, but what meaning does such sensation have?</p>
+    <p>Why do I want to say the word "nothingness" again?</p>
+    <p>So I walk toward the door, if it is indeed a door. I cannot be certain. It may only be a brown square surface, or a concrete hallucination. If someone could hold my hand and lead me out of this fog, perhaps that would be comfort. Yet in this quiet moment, loss arrives without warning.</p>
+    <p>Memory loops and forms a direction in my mind. I do not need to think; experience carries me forward. Did I truly experience anything? Everything seems like a floating shadow, like someone who is no longer here, no longer speaking with me through a screen.</p>
+    <p>She becomes a whisper that haunts the soul and accompanies the years.</p>
+    <p>Walking on that uncertain road, I feel forces pulling my body: gravity, attraction, friction, even the subtle pull between molecules. Are these forces what brought me here? If they had no names, would their existence still be proven?</p>
+    <p>To me they are both void and real. I can no longer feel the unevenness of the road; the objects before me are blurred. Brick walls and concrete buildings are only obstacles blocking my sight from a farther view.</p>
+    <p>Fatigue closes my eyelids like an invisible hand. I do not know why I cry. Tears are the body's salt, a silent liquid sliding down the face and leaving faint traces.</p>
+    <p>The future grows clearer, while the present dies little by little. Perhaps this is the ending.</p>
+    <p>Is it?</p>
+    <p>The darkness before me thickens. My outstretched hand touches something in the void but cannot hold it. My steps stop, as if an invisible wall separates me from reality.</p>
+    <p>A faint sound reaches my ears: the sound of autumn wind. I had never imagined autumn here would arrive so quietly. The wind carries a little chill, like a distant whisper. In it are echoes of the past, people and things long forgotten suddenly returning.</p>
+    <p>I remember old streets, sunlight through mottled trees falling on brick walls, dust in the air, the sound of wind chimes. The self who once walked there seems gone.</p>
+    <p>Now everything has become a phantom. Sunlight is gone; only moonlit tree shadows are crossed by hurried steps. I begin to doubt whether memory ever existed, or whether it is only a wandering soul in the void.</p>
+    <p>I ask softly: "Who am I?"</p>
+    <p>"I am me," my mouth murmurs, as if confirming, as if answering the emptiness.</p>
+    <p>Is it enough? It is enough.</p>
+  fr: |
+    <p>Anno Yeung</p>
+    <p>Si le temps a vraiment existe, il n'etait peut-etre qu'un sable fin glissant entre les doigts, disparu en un clin d'oeil.</p>
+    <p>L'avenir n'est plus certain, tandis que les lueurs du passe deviennent etrangement nettes dans la memoire.</p>
+    <p>Pour etre honnete, je ne sais plus qui je suis. J'ai essaye de poser trois questions simples : qui suis-je, ou suis-je, ou vais-je ? Meme cela ne trouve pas de reponse.</p>
+    <p>Suis-je vraiment ici, ou mon coeur s'est-il deja envole ailleurs ?</p>
+    <p>Si l'on me demande a quoi je ressemble maintenant, je ne sais pas repondre. Meme le miroir refuse de me rendre mon visage. Je touche mes yeux, mes dents, ma bouche, ma peau jaunie, mes cheveux ternis. Ils existent encore, mais comme des choses mortes, sans chaleur.</p>
+    <p>J'ai peut-etre encore des sensations, mais je ne sens plus le toucher. Les nerfs se debattent dans un coin obscur ; je sais qu'ils ne sont pas entierement detruits, mais quel sens a une telle perception ?</p>
+    <p>Pourquoi ai-je encore envie de prononcer le mot "neant" ?</p>
+    <p>Je marche donc vers la porte, si c'est bien une porte. Peut-etre n'est-ce qu'une surface brune, ou une hallucination. Si quelqu'un pouvait me prendre la main et me sortir de cette brume, ce serait peut-etre une consolation. Mais dans ce silence, la perte arrive.</p>
+    <p>La memoire tourne en boucle et fabrique une direction. L'experience me fait avancer sans que je pense. Ai-je vraiment vecu quelque chose ? Tout ressemble a des ombres, comme celle qui n'est plus la et ne me parle plus a travers l'ecran.</p>
+    <p>Elle devient un murmure qui hante l'ame et accompagne les annees.</p>
+    <p>Sur cette route incertaine, je sens des forces tirer mon corps : gravite, attraction, friction, jusqu'aux forces minuscules entre les molecules. Sont-elles ce qui m'a menee ici ? Sans nom, leur existence pourrait-elle encore etre prouvee ?</p>
+    <p>Elles sont a la fois vides et reelles. Je ne sens plus les reliefs de la route ; les murs, les briques et les batiments ne sont plus que des obstacles devant un horizon plus lointain.</p>
+    <p>La fatigue ferme mes paupieres comme une main invisible. Je ne sais pas pourquoi je pleure. Les larmes sont le sel du corps, un liquide silencieux qui laisse une trace.</p>
+    <p>L'avenir devient plus clair, tandis que le present s'efface. Peut-etre est-ce la fin.</p>
+    <p>L'est-ce vraiment ?</p>
+    <p>L'obscurite s'epaissit. Ma main touche quelque chose dans le vide sans pouvoir le saisir. Mes pas s'arretent devant un mur invisible entre le reel et moi.</p>
+    <p>Un son infime arrive : le vent d'automne. Je n'avais pas imagine qu'ici l'automne viendrait si doucement. Le vent porte un peu de froid, comme un murmure lointain. Il charrie des echos du passe, des visages oublies qui reviennent.</p>
+    <p>Je me souviens des rues, du soleil a travers les arbres, des vieux murs, de la poussiere, des carillons. Le moi qui a marche la-bas semble avoir disparu.</p>
+    <p>Tout est devenu fantome. Je doute que la memoire ait jamais existe, ou qu'elle ne soit qu'une ame errante dans le vide.</p>
+    <p>Je demande doucement : "Qui suis-je ?"</p>
+    <p>"Je suis moi", murmure ma bouche, comme une confirmation adressee au vide.</p>
+    <p>Est-ce assez ? C'est assez.</p>
+  ja: |
+    <p>Anno Yeung</p>
+    <p>時間が本当に存在したとしても、それは指の間からこぼれる細かな砂にすぎず、瞬く間に消えてしまうものだったのかもしれない。</p>
+    <p>未来はもう確かなものではなく、過去の光の断片だけが、記憶の中で妙にはっきりしている。</p>
+    <p>正直に言えば、今の私は自分が誰なのかわからない。「私は誰か、どこにいるのか、どこへ行くのか」と自問してみたが、そんな単純な問いにも答えは見つからなかった。</p>
+    <p>私は本当にここにいるのか。それとも心だけが遠くへ飛んでいったのか。</p>
+    <p>今の姿を問われても答えられない。鏡さえ私を映そうとしない。目、歯、口、黄ばんだ皮膚、日ごとに暗くなる髪に触れる。それらはまだ存在しているのに、死んだもののように冷たい。</p>
+    <p>感覚は残っているようで、触れることは感じられない。神経の末端はどこかでまだもがいているが、その感覚にどんな意味があるのだろう。</p>
+    <p>なぜまた「虚無」という言葉を言いたくなるのか。</p>
+    <p>私は扉へ向かう。もしそれが本当に扉なら。茶色い四角い面か、具象化した幻なのか、もう判断できない。誰かが手を引いてこの霧から連れ出してくれたら慰めになるのかもしれない。けれど静けさの中で、喪失だけが訪れる。</p>
+    <p>記憶は繰り返し、頭の中に方向を作る。考えなくても、経験が私を前へ進ませる。私は本当に何かを経験したのだろうか。すべては浮かぶ影のようで、画面の向こうからもう話しかけてこない彼女のようだった。</p>
+    <p>彼女は魂にまとわりつく囁きとなり、長い歳月に寄り添う。</p>
+    <p>曖昧な道を歩きながら、身体を引く力を感じる。重力、引力、摩擦、分子のあいだの小さな力。それらが私をここへ導いたのか。名前がなければ、その存在は証明されるのか。</p>
+    <p>それらは虚ろで、同時に現実だった。私はもう道の起伏を感じられず、目の前の建物は遠くの景色を遮る障害物でしかない。</p>
+    <p>疲労が見えない手のようにまぶたを閉じる。なぜ泣いているのかわからない。涙とは身体の塩であり、頬を伝う無音の液体だ。</p>
+    <p>未来は鮮明になり、現在は少しずつ消えていく。これが結末なのかもしれない。</p>
+    <p>そうなのだろうか。</p>
+    <p>闇は濃くなり、伸ばした手は虚空の何かに触れるが掴めない。見えない壁が現実との距離を隔てる。</p>
+    <p>耳元に秋風の音がする。ここで秋がこんなに静かに来るとは思わなかった。風は遠い囁きのように、忘れていた人や物事のこだまを連れてくる。</p>
+    <p>昔の通り、木漏れ日、古いレンガの壁、埃の匂い、風鈴の音を思い出す。そこを歩いた私は、もういないようだった。</p>
+    <p>今ではすべてが幻だ。記憶は本当に存在したのか、それとも虚無を漂う魂にすぎないのか。</p>
+    <p>私は小さく問う。「私は誰？」</p>
+    <p>「私は私。」口がそっと呟く。確認のようで、虚空への答えのようだった。</p>
+    <p>それで足りるのか。足りる。</p>
+随笔003:
+  en: |
+    <p>Anno Yeung</p>
+    <p>In most of my memories, black and white were always said to symbolize death and disappearance. Beyond artistic expression, I encountered them most often in portraits of the departed. Once a vivid life and a many-coloured world have fallen completely still, fire carries away the body: one part becomes faint ash drifting with smoke and cloud; another remains as pale dust, placed in a small wooden box and buried in the earth.</p>
+    <p>The dead are gone, their final traces in this world fading away. Colour is withdrawn, and black and white are left to speak of the reverence and grief of those who remain.</p>
+    <p>If that is so, what of memory? Life is brief and the years flow like water. If we stop recalling and gradually forget, does the past truly cease to exist? Does a private blank appear somewhere on the timeline?</p>
+    <p>As human beings, perhaps we cannot actively erase what has happened. If we could freely clear away feeling and intention, how would we differ from numb electronic machinery? Even then, we might still grieve over the missing experience.</p>
+    <p>In the end, every fragment may bring pain or leave a scar. Perhaps it has not disappeared at all; choosing to forget may simply be our answer to the sorrow carried by remembrance.</p>
+    <p>Looking across the lake and woods from a quiet pavilion in the sun, I feel a transparent wall dividing reality from the past. People pass and occasionally cast a glance, yet no one else enters this private world to share it with me. Thought rises with the wind and floats like a fish. Beneath the warm sun, emotion becomes a small boat lifted by the breeze, making white waves before returning, after many turns, to the rivers and seas from which it came.</p>
+    <p>Balancing reality and memory is always a matter of borrowing from one wall to mend another. Life holds much suffering and little happiness. I want to record beautiful moments, yet cannot perform the celebrated ease of others; instead I keep questioning empty appearances. Beneath the wish for simplicity lies a longing for freedom, forever wrestling with the noise around me. My mind dreams of mountains, lakes and the beauty of sentences, but the explosion of information drags the senses into a desert until all I can do is sigh at the confusion of time.</p>
+    <p>On an evening bus, red, white and yellow lights circulate through the streets, drawing layer after layer of shadow across my eyes. I open my hands; moonlight falls through my fingers and onto the crowd, illuminating the arriving footsteps. In a million ways, they declare the impermanence of day and night.</p>
+    <p>The amber streetlamp needs no company. It stands through rain and sunlight, travelling thousands of miles through the universe with each rotation of the earth. A life might be such a light. If someone pauses for you, no explanation is needed: perhaps your glow will illuminate her. If she must leave, do not step forward; watch until her shadow lengthens and the sky grows bright. Light and warmth eventually confess the direction of every relationship.</p>
+    <p>When the light has vanished and the night has truly grown long, perhaps only then will my eyes fail to face what is before them. And what of it? At least it happened. Even when the memory of the previous second fades, the heart will colour its fragments anew. Meaning tells me that, however many times it is redrawn, memory will remain itself. Even if you are no longer as you were, may you remember the shape of the past.</p>
+    <p>Only then did I understand that black and white, too, are brilliant colours. This is how I choose to regard memory.</p>
+  fr: |
+    <p>Anno Yeung</p>
+    <p>Dans la plupart de mes souvenirs, le noir et blanc symbolisait la mort et la disparition. Au-dela de l'art, je le rencontrais surtout dans les portraits des disparus. Lorsqu'une vie coloree s'immobilise, le feu emporte le corps : une part devient cendre et se disperse avec la fumee, l'autre demeure poussiere pale dans une petite boite de bois enfouie sous terre.</p>
+    <p>Les morts quittent ainsi le monde et ses dernieres traces. La couleur se retire ; le noir et blanc exprime le respect et le chagrin de ceux qui restent.</p>
+    <p>Mais qu'en est-il de la memoire ? La vie est breve, les annees coulent comme l'eau. Si nous cessons de nous souvenir, le passe disparait-il vraiment ? Une lacune privee s'ouvre-t-elle sur la ligne du temps ?</p>
+    <p>Nous ne pouvons peut-etre pas effacer volontairement ce qui fut. Si nous pouvions supprimer sentiments et volonte, en quoi serions-nous differents d'une machine insensible ? Nous pleurerions encore l'experience absente.</p>
+    <p>Chaque fragment peut blesser ou laisser une cicatrice. Choisir l'oubli ne signifie peut-etre pas que tout a disparu, mais seulement que le souvenir fait trop mal.</p>
+    <p>Depuis un pavillon tranquille, face au lac et aux arbres, une paroi transparente semble separer le reel du passe. Les autres passent et regardent parfois, mais personne n'entre partager ce monde. La pensee se leve avec le vent, l'emotion devient une barque soulevee par la brise, puis retourne aux fleuves et a la mer.</p>
+    <p>Equilibrer le reel et la memoire revient toujours a reparer un mur avec les briques d'un autre. La vie offre beaucoup de peine et peu de bonheur. Je veux conserver le beau, mais je ne sais pas jouer cette aisance tant celebree. Sous le desir de simplifier demeure une quete de liberte, sans cesse confrontee au bruit. Je pense aux montagnes, aux lacs, a la beaute des phrases ; l'explosion d'informations me rejette pourtant dans un desert des sens.</p>
+    <p>Dans le bus du soir, les feux rouges, blancs et jaunes dessinent des rideaux d'ombre sur mes yeux. La lune traverse mes doigts et tombe sur la foule, revelant les pas qui arrivent. Mille gestes proclament l'impermanence du jour et de la nuit.</p>
+    <p>Le reverbere jaune n'a besoin de personne. Il demeure sous la pluie et le soleil, parcourant l'univers avec la rotation de la Terre. La vie pourrait etre une telle lumiere. Si quelqu'un s'arrete pour toi, ton eclat suffira peut-etre a l'illuminer. S'il faut partir, regarde seulement l'ombre s'allonger et le ciel s'eclaircir. La lumiere et la chaleur finissent toujours par avouer le destin d'une relation.</p>
+    <p>Quand la lumiere disparait et que la nuit devient longue, mes yeux ne peuvent plus affronter ce qui est la. Et alors ? Au moins, cela a existe. Meme si le souvenir se delave, le coeur rend de nouvelles couleurs a ses fragments. Peu importe combien de fois on le redessine, le souvenir reste lui-meme. Meme si tu as change, puisse-tu garder la forme du passe.</p>
+    <p>J'ai compris alors que le noir et blanc est lui aussi une couleur eclatante. C'est ainsi que je veux regarder la memoire.</p>
+  ja: |
+    <p>Anno Yeung</p>
+    <p>これまでの記憶の大部分で、白黒は死と消失の象徴だと教えられてきた。芸術表現を除けば、目にするのは亡き人の遺影が多かった。鮮やかな命も色彩の世界も、動きも息遣いも失えば、炎が肉体を連れ去る。一部は淡い灰となって煙と雲に漂い、残りは白い粉となって小さな木箱に収められ、土に埋められる。</p>
+    <p>逝く者はこの世の最後の痕跡を脱ぎ捨てる。色彩は消え、白黒が残された者の畏敬と悲しみを語る。</p>
+    <p>では、記憶はどうだろう。人生は短く、歳月は水のように流れる。思い出すことをやめ、少しずつ忘れたなら、過去は本当に消えるのか。時間の線上に、その人だけの空白が生まれるのか。</p>
+    <p>人間は過去を自ら消すことができないのかもしれない。感情も意志も自由に消せるなら、無感覚な電子機械と何が違うのだろう。それでも私たちは、欠けた経験を前に悲しむのかもしれない。</p>
+    <p>結局、一つ一つの出来事は痛みや傷痕を残す。消えたのではなく、忘れることを選ぶのは、記憶が苦しみを運んでくるからなのだろう。</p>
+    <p>湖と林を望み、陽だまりの亭に一人で座る。そこには現実と過去を隔てる透明な壁がある。人は通り過ぎ、時折こちらを見るが、この世界へ入って分かち合う者はいない。思考は風とともに浮かび、感情は一艘の舟となって白波を立て、やがて川と海の故郷へ戻っていく。</p>
+    <p>現実と記憶の均衡を取ることは、いつも一方を壊してもう一方を繕う作業だ。人生には苦しみが多く、幸福は少ない。美しい瞬間を記録したいのに、世間が讃える余裕を演じられず、空虚な見せかけを疑い続ける。単純さの奥には自由への憧れがあるが、周囲の騒音に抗えない。山や湖、文章の美を思っても、情報の爆発が感覚を荒野へ引きずり込む。</p>
+    <p>夕方のバスでは、赤、白、黄の灯りが街を巡り、瞳に幾重もの影を描く。手を広げると月光が指の間を抜け、人混みと無数の足音を照らす。それらは昼と夜の無常を宣言している。</p>
+    <p>黄昏色の街灯は誰の同伴も必要とせず、雨にも陽光にも立ち続け、地球の自転とともに宇宙を旅する。命もそんな光であればいい。誰かが立ち止まってくれたなら、言葉はいらない。あなたの光がその人を照らすだろう。去るのなら追わず、影が長くなり空が明るくなるまで見送ればいい。光と熱は、あらゆる関係の行方を最後には告白する。</p>
+    <p>光が完全に消え、夜が本当に長くなったとき、目の前のものを見られなくなる。それでもいい。少なくとも経験した。直前の記憶が色褪せても、心は断片に新しい色を与える。何千回描き直しても記憶は記憶のままだ。あなたが変わってしまっても、過去の姿を覚えていてほしい。</p>
+    <p>そこでようやく、白黒もまた鮮やかな色なのだと知った。記憶について、私はそう考えたい。</p>
+随笔004:
+  en: |
+    <p>Anno Yeung</p>
+    <p>The rhythm in my headphones flows like water, like tears, through the steel bones of the city, cool and damp. I stand on a pedestrian bridge beneath silent starlight while traffic roars like a sea below, ready to swallow me. Earth and sky are two crossed strings, each playing its own key, unaware of harmony or where feeling runs deepest.</p>
+    <p>In the distance, towers stand like sleeping giants. They look down on the city and watch ten thousand lights slide away, permitting everything to happen without a word. When the wind rises, I pull my coat tight, as if I could sew a wandering child into the cloth and hide the confusion inside. What is drifting? It is light yet unbearably heavy, empty yet leaving no space. Longing passes through my arms like wind, leaving a cold mark without revealing where it came from or where it goes.</p>
+    <p>I ask myself what solitude is: an extinguished lamp in a long night, or a few words on a screen that failed to hold your gaze? Its clothing is graceful but folded to conceal soft wounds. Is the noise of the city not a masked ball of loneliness? Everyone dances, yet among the rainlike footsteps no one takes your hand.</p>
+    <p>The cars beneath the bridge are countless tired hearts, pushed and crowded around towers toward an unknown distance. I keep looking back in my mind: the river of my hometown winding past the old pagoda. The pagoda says nothing, but has watched me grow with calm and kindly eyes. As long as it remains, my hometown remains, and my home can drift after me with the clouds.</p>
+    <p>Home and hometown: two words that pull my thoughts into a long thread. I once wanted so badly to escape that small city, its ordinary streets and the torn papers in my school desk. Yet in a strange city I remember its mottled walls and slow river again and again. Why flee, and why wish to return? The future deceives the past; lies fail to hide themselves. I should have ended this play before it began.</p>
+    <p>The sea breeze comes and I stop. Heart, go on: cross the sleeping trees and birds, skim the lonely fish by the lake, and land at the familiar foot of the mountain, at my blue-brick, red-tiled school. Youth was a dawn dream that vanished on waking, yet returns on countless later nights. If I could live it again, I would walk those years once more and reread the diary of my younger self. Her thin wings wanted love and feared injury. Now I only want to hold that child and tell her: everything will be all right; do not be sad.</p>
+    <p>When the traffic thins, I rub the shine from my eyes and leave the bridge. My numb body drags its tired sorrow through watery night light. On the empty street I finally lower my guard and let my steps dance. Yet I still look around, needing to know this vision is not a dream but an unreachable reality, and that the person growing indistinct is me.</p>
+    <p>I open and close my phone. On the polished surface of a social app, I write a message, but the send button grows heavier the longer I stare. It remains a draft, a secret left in the night. By morning it will vanish like a dream. At the corner, a small bar glows amber. Its door is half open; a wind chime disturbs the stillness. The cool night will not let me pass, so I push the wooden door.</p>
+    <p>The air holds malt and quiet jazz. Light falls reluctantly across every face, like a silent girl's hand brushing the world's dust from the skin until the soul almost appears. By the window, rhythm returns to my mind. Neon on rain-washed glass dissolves into tender colour; the drink ripples, and my thoughts spread with it, flowing toward the distant river and telling how long the night fields are.</p>
+  fr: |
+    <p>Anno Yeung</p>
+    <p>Le rythme dans mes ecouteurs coule comme l'eau, comme les larmes, a travers l'ossature d'acier de la ville. Je reste sur la passerelle sous des etoiles silencieuses, tandis que la circulation rugit comme une mer prete a m'avaler. Le ciel et la terre sont deux cordes croisees, chacune jouant son propre air sans connaitre l'harmonie.</p>
+    <p>Au loin, les tours sont des geants endormis. Elles regardent les lumieres glisser sans rien dire. Quand le vent se leve, je serre mon manteau comme pour y coudre l'enfant errant et cacher sa confusion. L'errance est legere et pourtant lourde, vide et pourtant sans espace. Le manque traverse mon corps comme le vent, laissant une marque froide sans dire d'ou il vient.</p>
+    <p>Qu'est-ce que la solitude : une lampe eteinte dans la longue nuit, ou quelques mots sur un ecran incapables de retenir ton regard ? Elle porte une robe gracieuse dont les plis cachent des blessures. Le bruit de la ville n'est-il pas un bal masque de solitudes ? Tout le monde danse, mais personne ne prend ta main.</p>
+    <p>Les voitures sous le pont sont des coeurs fatigues, pousses vers une destination inconnue. Je regarde en arriere : la riviere de ma ville natale contourne la vieille pagode. Silencieuse, elle m'a vue grandir. Tant qu'elle reste debout, mon pays demeure, et ma maison peut me suivre avec les nuages.</p>
+    <p>Maison, pays natal : deux mots qui tirent mes pensees comme un fil. Je voulais autrefois fuir cette petite ville et ses rues ordinaires. Dans une ville inconnue, je me souviens pourtant de ses murs taches et de son fleuve lent. Pourquoi partir, puis vouloir revenir ? L'avenir trompe le passe. J'aurais du interrompre la piece des le debut.</p>
+    <p>La brise marine arrive et je m'arrete. Coeur, va : traverse les arbres et les oiseaux endormis, longe les poissons du lac, puis reviens au pied familier de la montagne, dans mon lycee de briques bleues et de tuiles rouges. La jeunesse etait un reve du matin, dissipe au reveil mais revenu dans tant de nuits. Si je pouvais recommencer, je parcourrais encore ces annees et relirais mon journal. Je voudrais enlacer l'enfant que j'etais et lui dire : tout ira bien, ne sois pas triste.</p>
+    <p>Quand la circulation se vide, je descends de la passerelle. Dans la rue deserte, je baisse enfin la garde et laisse mes pas danser. Pourtant je regarde encore autour de moi, pour verifier que ce mirage n'est pas un reve mais une realite inaccessible, et que la silhouette qui s'efface est bien la mienne.</p>
+    <p>J'ouvre et referme mon telephone. J'ecris un message, mais le bouton d'envoi devient trop lourd. Le texte reste un brouillon, un secret de la nuit qui disparaitra au matin. Au coin de la rue, un petit bar brille d'une lumiere jaune. La porte est entrouverte, un carillon trouble le silence. Je pousse la porte.</p>
+    <p>L'air sent le malt et le jazz discret. La lumiere effleure les visages comme la main d'une jeune fille silencieuse qui retire la poussiere du monde. Pres de la fenetre, le neon se dissout sur la vitre mouillee. Le verre fremit ; mes pensees s'elargissent et coulent vers le fleuve lointain, racontant la longueur de la nuit.</p>
+  ja: |
+    <p>Anno Yeung</p>
+    <p>イヤホンのリズムは水のように、涙のように、冷たさと湿り気を帯びて都市の鉄骨を流れる。歩道橋に立つと星は沈黙し、足下の車列は海のように私を呑もうと騒ぐ。天と地は交差した二本の弦で、それぞれ別の調べを奏で、合奏も感情の深さも知らない。</p>
+    <p>遠くの高層ビルは眠る巨人だ。街を見下ろし、無数の灯りが遠くへ滑るのを黙って見送る。風が吹けば上着を締め、漂泊する子どもを布に縫い込んで迷いを隠そうとする。漂泊とは軽くて重く、空っぽなのに隙間がない。思いは風のように腕を通り抜け、冷たい痕だけを残す。</p>
+    <p>孤独とは何か。長い夜に消えた灯りか、あなたの目を止められなかった画面上の短い言葉か。優雅な衣のひだには柔らかな傷が隠れている。街の喧騒も孤独の仮面舞踏会ではないか。皆が踊っているのに、誰もあなたの手を取らない。</p>
+    <p>橋の下を流れる車は、押され、混み合い、行き先も知らずに進む疲れた心だ。私は心の中で故郷を振り返る。古い塔を巡る川。塔は何も言わず、穏やかな目で私の成長を見てきた。それが立つ限り故郷はあり、家も雲に乗って私を追ってくる。</p>
+    <p>家、故郷。その二語は細い糸のように思考を長く引く。かつては平凡な路地や高校の机から逃げたかった。今、見知らぬ街で、まだらな壁とゆっくり流れる川を何度も思い出す。なぜ逃げ、なぜ戻りたいのか。未来は過去を欺き、嘘は隠しきれない。この芝居は最初に終わらせるべきだった。</p>
+    <p>海風が来て、私は止まる。心よ、行きなさい。眠る木々と鳥を越え、湖畔の魚をかすめ、青い煉瓦と赤い瓦の母校へ降り立ちなさい。青春は朝の夢のように目覚めれば消えるが、その後の夜に何度も戻る。もう一度歩けるなら、あの年月を歩き、若い日の手帳を読みたい。愛を求め傷を恐れた子を抱きしめて、すべて大丈夫、悲しまないで、と伝えたい。</p>
+    <p>車が減ると目の光を拭い、橋を下りる。無人の通りでようやく警戒を解き、足を躍らせる。それでも周囲を見回し、この幻が夢ではなく触れられない現実であり、ぼやけていくのが自分だと確かめる。</p>
+    <p>携帯を開いては閉じる。メッセージを書くが、送信ボタンは見つめるほど重くなる。それは下書きのまま、夜の秘密となり、朝には夢のように消える。街角の小さな酒場は黄昏色に灯り、半開きの扉で風鈴が鳴る。私は木の扉を押した。</p>
+    <p>空気には麦の香りと静かなジャズがある。光は無言の少女の手のように顔をなで、世界の埃を拭って魂を浮かび上がらせる。窓辺で、雨に濡れたガラスのネオンが柔らかな色に溶ける。グラスの波紋とともに思考は遠い川へ流れ、この夜の長さを語る。</p>
+随笔005:
+  en: |
+    <p>Anno Yeung</p>
+    <p>A raindrop struck the window like a falling pearl, and she woke.</p>
+    <p>Lin sat by the window, watching a dense stand of pines sway in the wind like green needles pricking the air. Leaves fell from the tree by the door, rose again, then dropped without end. She wondered whether one of them was a maple or an acer.</p>
+    <p>She had once assumed every palm-shaped leaf was a maple. Her boyfriend first told her about acers during a walk in the park, and from then on she noticed this ordinary leaf. Then one day he left after placing a letter behind. It contained nothing but blank paper. The following day a friend messaged to say that his body had spent the night in the sea.</p>
+    <p>She had forgotten how many nights she cried. Pain had blurred most of the memory, yet seeing the split leaf again still brought the old question to her face. She moved her lips but could not tell. Perhaps it did not matter. Let a leaf be a leaf; if she was wrong, time would teach her.</p>
+    <p>Silence had become her favourite language. She could look at someone for a few seconds and let them construct what she might say next. As long as she did not speak, the final right to interpret her words remained with her.</p>
+    <p>When she truly wished to say something, she wrote with the gel pen on her desk or typed it into a keyboard, pretending it had been spoken. A spoken sentence lived in the air for seconds; written strokes endured, black on white, beyond anyone's power to rewrite the language of her heart.</p>
+    <p>For months, restaurants had let her order by QR code, and screens had allowed every exchange to happen through a few taps. She imagined becoming voluntarily mute in the electronic age, leaving words inside while thoughts flowed into streams and tides, until no one remembered that she could speak.</p>
+    <p>Her gaze returned to the leaf. Water seemed to move through its crossing veins.</p>
+    <p>The bedroom door struck the wall. Lin trembled. Who could visit this hidden cabin? In the mirror to her left, the dim light revealed a face she could not make out. Unable to escape the unexpected guest, she kept looking into the thick forest and closed her eyes, imagining she had passed through it.</p>
+    <p>Two gentle taps landed on her shoulder. The stranger was already behind her. She turned, knocked his hand away and tried to run, but he caught her arm and pulled her against his chest. Her brown eyes opened wide. Who was he? Her mouth formed a scream without sound. He too remained silent, led her back to the window, and pointed to the wooden chair.</p>
+    <p>He offered a pen in both hands. Lin reached out, withdrew as if its warmth might burn her, then tried again after the clock completed a circuit. She took it and held it tightly. The man smiled.</p>
+    <p>What was she meant to do with it? The ordinary Pilot gel pen seemed almost tender. Because she loved living inside words, the gift lowered a little of her fear. She caught herself thinking that she had an obsession with such gestures, as if naming an obsession meant opening her heart. Yet affection, like money, is not limitless. To reserve all sincerity for an unseen, solitary bird and still call it love might only invite laughter.</p>
+    <p>The man unfolded a blank sheet and pointed. Lin prepared to write like a wandering poet, but a hand closed around hers.</p>
+    <p>Was he asking her to stop?</p>
+    <p>"Please don't hurry. In a while, you will know what to write."</p>
+    <p>His voice startled her. So he could speak.</p>
+    <p>"I know you are not unable to speak. You simply like meeting people with silence. It feels good, doesn't it?" Sweat misted the pen in her clenched hand.</p>
+    <p>Before she could ask anything, he said, "You don't need to. Even without your words, I know the question." She wondered where he came from and how he could answer each silence as if she had spoken.</p>
+    <p>Lin rose and left the room. The man did not follow; he sat like wood, looking out as she had an hour earlier. She told herself he might be a traveller seeking warmth after the snow. He had not harmed her; perhaps he was not dangerous.</p>
+    <p>Still, why had he given her the pen? She searched her memory and found no trace of him, yet his face felt strangely familiar. When she turned back, only the usual furniture remained. There was no one in the room.</p>
+    <p>Worried, she hurried downstairs. Light slipped through a gap at the front door, which opened without the handle. He must have left.</p>
+    <p>Snow fell softly outside. No figure marked the white landscape. Her eyes found the leaf again and tears gathered. This time she could not tell herself it did not matter. Barefoot, she stepped into the snow and picked it up. Three exposed lobes were yellow; two hidden beneath the snow were green.</p>
+    <p>She studied it as she walked inside, ignoring the pink cold rising in her feet. On the stairs to the storeroom, numbness made every step uncertain.</p>
+    <p>When she looked up, the man stood there. Startled, she stumbled backward. Her fingers stopped just short of the rail and her body fell, hair opening in the air, feet lifting above her head. The acer leaf floated from her hand.</p>
+    <p>She struck the floor. Pain in the back of her head blurred her sight. The man remained motionless above.</p>
+    <p>Her eyelids fluttered faster, then would no longer open. As sleep overtook her, she heard rain outside the window and maple leaves rattling beneath it.</p>
+  fr: |
+    <p>Anno Yeung</p>
+    <p>Une goutte frappa la vitre comme une perle, et elle se reveilla.</p>
+    <p>Lin observait les pins agites par le vent, aiguilles vertes qui semblaient piquer l'air. Pres de la porte, une feuille tombait, remontait, puis retombait. Etait-ce une feuille d'erable ou d'acer ?</p>
+    <p>Elle avait longtemps cru que toute feuille en forme de main etait une feuille d'erable. Son compagnon lui avait parle des acers au parc. Puis, un jour, il etait parti en laissant une lettre absolument blanche. Le lendemain, une amie lui annonca que son corps avait passe la nuit dans la mer.</p>
+    <p>Elle avait oublie combien de nuits elle avait pleure. La douleur avait brouille la memoire, mais la feuille fendue faisait revenir la question. Elle ne savait toujours pas. Peut-etre fallait-il laisser la feuille etre simplement une feuille ; le temps lui apprendrait son erreur.</p>
+    <p>Le silence etait devenu sa langue preferee. Il suffisait de regarder quelqu'un pour qu'il imagine la phrase suivante. Tant qu'elle ne parlait pas, le dernier droit d'interpreter ses mots lui appartenait.</p>
+    <p>Lorsqu'elle voulait vraiment dire quelque chose, elle ecrivait avec son stylo ou sur un clavier. Une phrase prononcee ne vit que quelques secondes ; les traits noirs sur le papier demeurent et personne ne peut reecrire le langage du coeur.</p>
+    <p>Les codes QR et les ecrans lui permettaient desormais de vivre sans parler. Elle imaginait devenir muette par choix dans l'ere electronique, gardant les mots en elle jusqu'a ce que personne ne se souvienne qu'elle savait parler.</p>
+    <p>Elle revint a la feuille. De l'eau semblait circuler dans ses nervures.</p>
+    <p>La porte heurta le mur. Lin trembla. Qui pouvait visiter cette maison cachee dans la foret ? Dans le miroir, une silhouette restait impossible a distinguer. Elle ferma les yeux et imagina traverser les arbres pour fuir.</p>
+    <p>Deux tapes legeres toucherent son epaule. L'inconnu etait derriere elle. Elle repoussa sa main et voulut courir ; il attrapa son bras et elle tomba contre sa poitrine. Elle voulut crier, sans voix. Lui aussi resta silencieux, la ramena pres de la fenetre et lui indiqua la chaise.</p>
+    <p>Il lui tendit un stylo a deux mains. Elle recula d'abord, puis le prit apres un long tour de l'horloge. L'homme sourit.</p>
+    <p>Que devait-elle en faire ? Ce simple stylo avait quelque chose de doux. Parce qu'elle aimait vivre dans les mots, sa peur diminua. Mais l'affection, comme l'argent, n'est pas infinie ; offrir toute sa sincerite a un oiseau invisible et appeler cela amour ferait peut-etre rire le monde.</p>
+    <p>L'homme deploya une feuille blanche. Lin allait ecrire, telle une poete errante, lorsqu'une main arreta la sienne.</p>
+    <p>« Ne sois pas pressee. Bientot, tu sauras quoi ecrire. »</p>
+    <p>Sa voix la fit sursauter. Il savait donc parler.</p>
+    <p>« Je sais que tu n'es pas muette. Tu aimes seulement repondre par le silence. C'est agreable, n'est-ce pas ? » La sueur voila le stylo serre dans sa paume.</p>
+    <p>Avant qu'elle ne parle, il ajouta qu'il connaissait deja sa question. Il repondait a chaque silence comme si elle avait prononce les mots.</p>
+    <p>Lin quitta la piece. L'homme ne la suivit pas ; il resta devant la fenetre, immobile comme elle l'avait ete. Elle se rassura : peut-etre n'etait-il qu'un voyageur venu chercher la chaleur apres la neige. Il ne lui avait fait aucun mal.</p>
+    <p>Mais pourquoi ce stylo ? Aucun souvenir de cet homme, et pourtant aucune etrangete dans son visage. Lorsqu'elle revint, il avait disparu ; seuls les meubles habituels demeuraient.</p>
+    <p>Elle descendit en courant. Une lumiere passait sous la porte, qui s'ouvrit sans poignee. Il etait parti.</p>
+    <p>La neige retombait doucement. Elle apercut la feuille et les larmes monterent. Pieds nus, elle la ramassa : trois lobes jaunes etaient visibles, deux autres, verts, etaient caches sous la neige.</p>
+    <p>Elle l'examina en rentrant, sans sentir le froid rougir ses pieds. Dans l'escalier, chaque marche devint incertaine.</p>
+    <p>En levant la tete, elle vit l'homme. Elle recula, manqua la rampe et tomba, les cheveux ouverts dans l'air, la feuille d'acer flottant hors de sa main.</p>
+    <p>Sa tete heurta le sol. Sa vue se brouilla. L'homme demeurait la, immobile.</p>
+    <p>Ses paupieres se fermerent. Dans l'inconscience, elle entendit la pluie contre la fenetre et les feuilles d'erable frappees par les gouttes.</p>
+  ja: |
+    <p>Anno Yeung</p>
+    <p>真珠のような雨粒が窓を打ち、彼女は目を覚ました。</p>
+    <p>林は窓辺で、風に揺れる針葉樹を見ていた。扉の前では葉が落ち、舞い上がり、また落ちる。その葉はカエデなのか、モミジなのか。</p>
+    <p>以前は手のひらの形ならすべて楓だと思っていた。公園で恋人が別の種類を教えてくれてから、見慣れた葉を気にするようになった。だがある日、彼は何も書かれていない手紙を残して去った。翌日、友人から、彼の身体が一晩海に浸かっていたと知らされた。</p>
+    <p>何晩泣いたかは忘れ、痛みが記憶を曖昧にした。それでも裂けた葉を見ると疑問が戻る。結局わからない。葉はただ葉であればよく、間違いなら時間が教えてくれる。</p>
+    <p>沈黙は彼女の好きな言語になった。数秒見つめれば、相手は次の言葉を勝手に組み立てる。口にしない限り、言葉の最終的な解釈権は彼女に残る。</p>
+    <p>本当に何かを言いたいときは、ペンやキーボードで書いた。声は数秒で虚空に消えるが、紙の黒い筆跡は残り、心の言葉を誰にも書き換えられない。</p>
+    <p>QRコードと画面だけで暮らせる時代、彼女は自ら電子時代の唖者になり、言葉を胸に残し、思考を水へ流し、誰も彼女が話せることを知らなくなる未来を想像した。</p>
+    <p>視線を葉へ戻すと、交差する葉脈に水が流れているようだった。</p>
+    <p>扉が壁に当たった。森の奥の家に誰が来たのか。鏡には薄暗い人影が映る。逃げられないと悟り、目を閉じて森を通り抜ける自分を想像した。</p>
+    <p>肩を二度、優しく叩かれた。男はすでに背後にいた。彼女は手を払い逃げようとしたが、腕を掴まれ胸元へ引き戻された。叫びは声にならない。男も黙ったまま彼女を窓辺へ連れ、木の椅子を指した。</p>
+    <p>男は両手でペンを差し出した。林は熱に焼かれるように一度手を引き、時計が一周してから受け取った。男は笑った。</p>
+    <p>何を書くのか。普通のゲルペンなのに、どこか優しい。文字の中に浸ることを愛していたため、彼への警戒が少し解けた。けれど愛情も金銭のように無限ではない。見えない孤鳥へ真心をすべて捧げて愛と呼べば、世間には笑われるだろう。</p>
+    <p>男は白紙を広げた。吟遊詩人のように書こうとした瞬間、彼の手が彼女の手を止めた。</p>
+    <p>「急がないで。しばらくすれば、何を書くべきかわかる。」</p>
+    <p>声に驚いた。彼は話せたのだ。</p>
+    <p>「話せないのではない。沈黙で人に向き合うのが好きなんだ。話さないのは心地いいだろう？」握ったペンが汗で曇った。</p>
+    <p>質問する前に、男は問いを知っていると言った。彼女が声にしたかのように、沈黙の一つ一つへ答えていく。</p>
+    <p>林が部屋を出ても男は追わず、先ほどの彼女のように窓を見ていた。雪のあとに暖を求めた旅人かもしれない。害を与えなかったのだから悪人ではない、と自分を安心させた。</p>
+    <p>それでも、なぜペンをくれたのか。記憶には痕跡がないのに、顔には不思議な親しさがある。戻ると、いつもの家具だけがあり、男はいなかった。</p>
+    <p>心配になって階下へ走る。玄関の隙間から光が入り、取っ手を使わず扉が開いた。彼は去ったのだ。</p>
+    <p>外では雪が柔らかく降っていた。人影はない。葉を見つけ、涙が浮かぶ。今度はどうでもいいとは思えず、裸足で雪へ出て拾った。外に出た三つの裂片は黄色で、雪の下の二つは緑だった。</p>
+    <p>葉を見つめたまま家へ戻り、冷えた足が桃色になるのも気にしなかった。物置へ上る階段では、痺れた足に一歩ずつ不安があった。</p>
+    <p>顔を上げると男が立っていた。驚いて後ろへよろめき、指は手すりに届かず、髪を広げて落ちた。楓の葉が手から離れ、空中に浮かんだ。</p>
+    <p>床に激しく打ちつけられ、後頭部の痛みで視界がぼやける。男は動かず立っていた。</p>
+    <p>まぶたは開かなくなった。意識が沈むなか、窓の外の雨音と、雨に打たれる楓の葉の音が聞こえた。</p>
+随笔006:
+  en: |
+    <p>Anno Yeung</p>
+    <p>One person's body houses two people's hearts.</p>
+    <p>When I am gone, you arrive to take my place, coming without wind and leaving without a shadow.</p>
+    <p>Following that faint scent of peach, my dear, I find that you have disappeared into the old park at night.</p>
+    <p>I can only pursue with my footsteps that invisible silhouette which belongs to you.</p>
+    <p>The sky is no longer as cool as it was at first, and the rain did not continue as hope wished.</p>
+    <p>Look, this is the remnant summer I told you about.</p>
+    <p>The brocade flowers of midsummer are about to bloom, but spring and the cherry trees can never return.</p>
+    <p>Is it you, telling the stars of love with your tears, or turning thought into longing so it may flow softly into my dreams?</p>
+    <p>The traces of your love are always gentle, so gentle.</p>
+    <p>A rooster calls from somewhere in the city, transforming itself into a village path from home.</p>
+    <p>Ah, there it is: morning mist among the trees, water gathering in the air, and a hazy, solitary moon leading me into a place without people.</p>
+    <p>Dark, then bright, forever changing, moving through the city beside me like light and shadow.</p>
+    <p>If I could, I would stop on the parallel line.</p>
+    <p>Every step I take moves backward, returning toward you.</p>
+  fr: |
+    <p>Anno Yeung</p>
+    <p>Dans le corps d'une personne vivent deux coeurs.</p>
+    <p>Quand je ne suis plus la, tu viens prendre ma place, sans vent a l'arrivee, sans ombre au depart.</p>
+    <p>En suivant le parfum leger de la peche, je decouvre, ma chere, que tu as disparu dans l'ancien parc nocturne.</p>
+    <p>Je ne peux que poursuivre de mes pas cette silhouette invisible qui t'appartient.</p>
+    <p>Le ciel n'a plus la fraicheur du debut, et la pluie n'a pas continue comme l'espoir le voulait.</p>
+    <p>Regarde : voici la fin d'ete dont je te parlais.</p>
+    <p>Les fleurs brodees de l'ete vont s'ouvrir, mais le printemps et les cerisiers ne reviendront plus.</p>
+    <p>Est-ce toi qui racontes ton amour aux etoiles avec tes larmes, ou qui transformes la pensee en manque pour la laisser couler dans mes reves ?</p>
+    <p>Les traces de ton amour sont toujours legeres, si legeres.</p>
+    <p>Le chant d'un coq, quelque part dans la ville, fait apparaitre un sentier de mon village natal.</p>
+    <p>Voila la brume matinale, l'eau suspendue dans l'air et la lune solitaire qui me conduit la ou personne ne marche.</p>
+    <p>Ombre puis lumiere, sans cesse changeantes, elles traversent la ville a mes cotes.</p>
+    <p>Si je le pouvais, je m'arreterais sur cette ligne parallele.</p>
+    <p>Chaque pas en avant revient en arriere, vers toi.</p>
+  ja: |
+    <p>Anno Yeung</p>
+    <p>一人の身体に、二人分の心が住んでいる。</p>
+    <p>私がいないとき、あなたが代わりに現れる。風を連れずに来て、影も残さず去る。</p>
+    <p>ほのかな桃の香りをたどると、愛しい人よ、あなたは夜の古い公園に消えていた。</p>
+    <p>私は足音だけで、あなたの見えない後ろ姿を追う。</p>
+    <p>空は初めの涼しさを失い、雨も願ったほど長くは降らなかった。</p>
+    <p>ほら、これが話していた残夏だ。</p>
+    <p>真夏の錦の花はこれから咲くのに、春と桜の木にはもう戻れない。</p>
+    <p>涙で星に愛を語るのはあなたか。それとも思いを恋しさに変え、そっと私の夢へ流し込むのか。</p>
+    <p>あなたが愛した痕跡はいつも軽く、あまりにも軽い。</p>
+    <p>街のどこかの鶏の声が、故郷の村道を幻にする。</p>
+    <p>ああ、朝の林の霧、水気を含む空気、朧で寂しい月が、誰もいない場所へ私を導く。</p>
+    <p>暗くなり、明るくなり、変わり続け、光と影のように街をともに抜けていく。</p>
+    <p>できるなら、平行線の上で止まりたい。</p>
+    <p>踏み出す一歩一歩を引き返し、あなたへ歩いていく。</p>
+随笔007:
+  en: |
+    <p>Title inspired by <em>L'Amour, Les Baguettes, Paris</em> (Stella Jang)</p>
+    <p>Anno Yeung</p>
+    <p>Summer rain and rolling thunder rise and fall beneath a sombre sky, drawing scattered thoughts into the mind: what is suffering? People used to bless me by saying, "You will be happy."</p>
+    <p>Too many things in this world can be explained by one word: suffering. It is neither elegant nor far from the Buddhist idea that all beings suffer. Beauty does not remain linked to us forever, yet pain appears without warning in every corner of life.</p>
+    <p>Experience changes lanes between variables; feeling skims the edge of love and pain, sounding the unbearable lightness of being and urging us toward an unknowable end. We may love, hate, blame heaven or other people, but none of it changes life's conclusion. Life grows beside pain, while the will to live hardens within it.</p>
+    <p>How many sighs, how many attempts to gather up a nameless sadness and doubt the wounded path behind us? Is it inborn pessimism, or a hysterical optimism not yet awakened?</p>
+    <p>"There is no eternal spring, nor an everlasting winter."</p>
+    <p>Perhaps we do not need to draw strict boundaries around every passing feeling. Only then can we accept an ordinary, fragile life whose hopes are so often broken by reality.</p>
+    <p>Love and pain, affection and injury, are always paired: intimate and yet most distant. Pain outlines itself clearly in words, while love grows heavier in a hurried world. Hatred born from love is familiar, but the power that breaks hatred also comes from love. This is not a simple binary, guided by reason or contained by theory.</p>
+    <p>"Those who love will inevitably clash and quarrel; those who truly love will forgive after the conflict and understand each other more deeply."</p>
+    <p>Such lovers' words drift across electronic screens and return to my mind from morning to night.</p>
+    <p>Sometimes I want to strike back, turning the pen into a sword and writing fiercely in my diary, hoping to construct a warrior who will fight for me. Yet every time it collapses before the battle ends. Human fragility is dry cotton: we resist tears because, once soaked in their bitter salt, even we cannot bear the weight.</p>
+    <p>So I let the river of emotion run. I do not know where it ends. Whether good or bad, writing and language are pale and powerless. Distance does not define love: between France and Mong Kok, or even exile in Siberia, saying less does not make love smaller. Without love, even two people tied together through every night cannot manufacture it.</p>
+    <p>So it is.</p>
+  fr: |
+    <p>Titre inspire de <em>L'Amour, Les Baguettes, Paris</em> (Stella Jang)</p>
+    <p>Anno Yeung</p>
+    <p>La pluie d'ete et le tonnerre se succedent sous un ciel sombre, faisant surgir une question : qu'est-ce que la souffrance ? On m'a souvent souhaite : « Tu seras heureuse. »</p>
+    <p>Trop de choses en ce monde se laissent expliquer par un seul mot : souffrir. Rien d'elegant, mais l'idee que tous les etres souffrent n'est pas nee de rien. Le beau ne nous accompagne pas toujours ; la douleur, elle, surgit sans prevenir dans chaque recoin de la vie.</p>
+    <p>L'experience change de voie parmi les incertitudes ; le sentiment glisse entre amour et douleur et sonne l'insoutenable legerete de l'etre. On peut aimer, hair, accuser le ciel ou les autres, sans changer la fin. La vie grandit avec la douleur, et la volonte de vivre s'y fortifie.</p>
+    <p>Combien de soupirs, combien de tentatives pour rassembler une tristesse sans nom et douter du chemin blesse derriere soi ? Pessimisme inne, ou optimisme encore endormi ?</p>
+    <p>« Il n'existe ni printemps eternel, ni hiver sans fin. »</p>
+    <p>Peut-etre ne faut-il pas delimiter chaque sensation. Nous pouvons alors accepter une vie ordinaire et fragile, dont les espoirs sont souvent brises par le reel.</p>
+    <p>L'amour et la douleur, l'affection et la blessure sont toujours lies, proches et pourtant lointains. La douleur sait se dessiner avec des mots ; l'amour devient plus lourd dans un monde rapide. La haine nait parfois de l'amour, mais la force qui la brise vient elle aussi d'une forme d'amour. Ce n'est pas un simple dualisme.</p>
+    <p>« Ceux qui s'aiment se heurtent inevitablement ; ceux qui s'aiment vraiment se pardonnent ensuite et se comprennent davantage. »</p>
+    <p>Ces paroles d'amants traversent les ecrans et reviennent sans cesse dans mon esprit.</p>
+    <p>Parfois je transforme le stylo en epee et j'ecris avec rage, voulant creer un guerrier qui se batte pour moi. Mais tout s'effondre avant la fin. La fragilite humaine ressemble a du coton sec : si nous evitons de pleurer, c'est que le poids des larmes salees devient parfois impossible a porter.</p>
+    <p>Alors je laisse couler la riviere des emotions. Je ne sais pas ou elle finit. L'ecriture et la langue restent pales. La distance ne definit pas l'amour : entre la France et Mong Kok, ou jusque dans l'exil siberien, parler moins ne diminue pas l'amour. Sans amour, meme deux corps lies chaque nuit ne sauraient le fabriquer.</p>
+    <p>Ainsi soit-il.</p>
+  ja: |
+    <p>タイトルは Stella Jang の <em>L'Amour, Les Baguettes, Paris</em> に着想を得た。</p>
+    <p>Anno Yeung</p>
+    <p>夏の雨と雷が暗い空の下で続き、「苦」とは何かという断片的な考えを呼び起こす。以前、人はよく「あなたは幸せになる」と祝ってくれた。</p>
+    <p>この世の多くは「苦」の一字で説明できる。優雅ではないが、「衆生皆苦」という言葉が根拠なく生まれたとは思えない。美しいものがいつも寄り添うわけではないが、痛みは人生のあらゆる瞬間に不意に現れる。</p>
+    <p>経験は変数のあいだで進路を変え、感情は愛と痛みの縁を滑る。愛しても憎んでも、天や人を責めても、命がいつか終わる結末は変わらない。命は苦しみとともに育ち、生きる意志はその中で強くなる。</p>
+    <p>名づけられない悲しみを片づけ、傷だらけの過去を疑ったことが何度あっただろう。生まれつきの悲観か、まだ目覚めていない激しい楽観か。</p>
+    <p>「永遠の春も、終わらない冬もない。」</p>
+    <p>一時の感情に厳密な境界を引かなくてもいい。そうして初めて、希望が現実に破られる平凡で脆い生活を受け入れられる。</p>
+    <p>愛と痛み、情と傷はいつも結びつけられ、親しくて最も遠い。痛みは言葉で姿を描けるが、速い世界では愛のほうが重い。愛から憎しみが生まれる一方、憎しみを壊す力も愛から来る。単純な二元論ではなく、理性にも理論にも定義できない。</p>
+    <p>「愛し合う人は必ず衝突する。本当に愛する人は、衝突のあとに許し合い、理解を深める。」</p>
+    <p>画面に現れる恋人たちの言葉が、朝から夜まで頭に浮かぶ。</p>
+    <p>ペンを剣にして日記へ激しく書き、自分の代わりに戦う戦士を作りたいことがある。だが戦いが終わる前に崩れてしまう。人の脆さは乾いた綿だ。涙をこらえるのは、塩辛い水を含んだとき、その重さに自分さえ耐えられないからだ。</p>
+    <p>だから感情の川を流れるままにする。行き先は知らない。善悪を問わず、文章も言葉もあまりに青白い。距離が愛を決めるのではない。フランスと旺角ほど離れても、シベリアへ送られても、言葉が少ないから愛が減るわけではない。愛がなければ、毎晩結ばれても愛は生まれない。</p>
+    <p>そういうことだ。</p>
+随笔008:
+  en: |
+    <p>Anno Yeung</p>
+    <p>The turbine spins at high speed, producing a rolling roar. Ten thousand metres above the earth, only the thinnest air drifts. Beyond blue and dazzling light, what can be known of everything below except that it is unknown?</p>
+    <p>I do not know, and cannot firmly pursue an answer. For some, a question must have a solution, a result that proves why it deserved to be asked. I have thought about it for a long time and begun to feel that a question without an answer is no longer merely a question. Questions and answers do not need to form a pair.</p>
+    <p>If there is no answer, only a question, is that not fantasy rather than resolution? Yet when I do not know where the next step leads, I can only say that I know and do not know. What I can do is use my mind and what I understand to hatch a direction. What I want to see, I try to make real. What I cannot touch, I keep as an unknown dream suspended in this incomplete present.</p>
+    <p>A dream may linger but will not recur. Thinking too much about certain things in life means missing them. If the dream is a clear sky, I want it wrapped in white cloud; if it is night, I want it hidden in moonlight's shadow. Return the dream to the dream.</p>
+    <p>Not long ago, I stopped placing expectations on what might happen. I give no hope to things that have not yet occurred. People say the higher the expectation, the greater the disappointment. Perhaps this is not simply optimism, but the satisfaction of possession embedded in human nature.</p>
+    <p>In relationships, some sacrifice themselves and yield in order to keep another person present; others sacrifice the other person's feelings to obtain the result they want. Both follow a cost-and-purpose logic and conceal private desire. Emotional thinking cannot consider everything, while rational thinking measures its way through humanity. Neither can reach perfection.</p>
+    <p>Respecting imperfection is what gives life resilience. Doing something well is within my control; what follows, the response and result, is unknown. Another person or thing may add beauty, cancel the effort, or abandon it halfway. Choices large and small keep turning a person's fate. Life is difficult not merely because money is hard to earn, but because being human is hard.</p>
+    <p>My favourite film of the past two years is <em>Past Lives</em>, whose music I still replay. Childhood sweethearts meet again around thirty and finally loosen the knot of fate. The Korean director expresses the East Asian sense of destined connection: love is restrained, thought becomes excessive, and regret turns toward past and future lives. Yet meeting and parting are ordinary. I believe every encounter carries its own meaning; departure does not erase it. Some meetings are brief but profound, steady and sincere, allowing life to bloom. As I often say, life is everything founded on aesthetics.</p>
+    <p>Someday, somewhere, someone: none of these elements can be known in advance. Questions without answers are the true pattern repeated by everyday life. We can imagine boldly. Before something arrives, not daring even to imagine it is the real cowardice. Courage and sincerity are my best way of answering.</p>
+    <p>There is no perfect farewell, but it can still be all too well.</p>
+  fr: |
+    <p>Anno Yeung</p>
+    <p>La turbine tourne a grande vitesse dans un grondement continu. A dix mille metres, seul un air presque inexistant derive. Au-dela du bleu et de la lumiere eblouissante, que peut-on savoir de ce qui se trouve sous nos pieds, sinon que cela demeure inconnu ?</p>
+    <p>Je ne connais pas la reponse et ne peux pas la poursuivre avec certitude. Pour certains, une question doit trouver une solution qui justifie sa formulation. Apres y avoir longtemps pense, il me semble qu'une question sans reponse cesse d'etre seulement une question. Question et reponse ne forment pas necessairement un couple.</p>
+    <p>S'il n'y a qu'une question, n'est-ce pas de l'imagination plutot qu'une resolution ? Pourtant, ignorant ou poser le prochain pas, je peux seulement dire que je sais et ne sais pas. J'utilise ce que je comprends pour faire naitre une direction. Ce que je veux voir, j'essaie de le rendre reel ; ce que je ne peux toucher reste un reve inconnu suspendu dans un present incomplet.</p>
+    <p>Le reve peut s'attarder mais ne revient pas. Trop penser a certaines choses, c'est les manquer. Si le reve est un ciel clair, je le veux enveloppe de nuages ; s'il est nuit, cache dans l'ombre de la lune. Rendons le reve au reve.</p>
+    <p>Depuis peu, je n'attends plus rien de ce qui pourrait arriver. Je ne donne pas d'espoir a l'evenement qui n'a pas encore eu lieu. Plus l'attente est grande, dit-on, plus la chute est profonde. Ce n'est peut-etre pas l'optimisme, mais la satisfaction de posseder, inscrite au fond de l'humain.</p>
+    <p>Dans une relation, certains se sacrifient pour conserver la presence de l'autre ; d'autres sacrifient les sentiments d'autrui pour obtenir le resultat voulu. Les deux suivent une logique de cout et d'objectif, et dissimulent le desir personnel. La sensibilite ne peut tout embrasser ; la raison ne fait que mesurer l'humain. Aucune n'atteint la perfection.</p>
+    <p>Respecter l'imperfection donne a la vie sa resistance. Je peux controler le soin apporte a une action, non la reponse qui suivra. L'autre peut embellir l'effort, l'annuler ou l'abandonner. Chaque choix deplace le destin. La vie est difficile non seulement parce que l'argent l'est, mais parce qu'etre humain l'est davantage.</p>
+    <p>Mon film prefere de ces deux dernieres annees reste <em>Past Lives</em>. Deux amis d'enfance se retrouvent vers trente ans et denouent enfin le lien du destin. La realisatrice exprime ce sentiment est-asiatique de la rencontre predestinee : l'amour reste discret, la pensee excessive, et le regret imagine les vies passees. Pourtant, se rencontrer et se separer est la norme. Chaque rencontre porte son sens ; le depart ne l'efface pas. Certaines sont breves mais profondes et font fleurir la vie. Comme je le dis souvent, la vie est tout ce qui repose sur l'esthetique.</p>
+    <p>Someday, somewhere, someone : aucun de ces elements n'est connu d'avance. Les questions sans reponse sont le vrai visage du quotidien. Imaginons avec audace ; avant que les choses arrivent, ne pas oser les imaginer serait la vraie lachete. Le courage et la sincerite sont ma meilleure reponse.</p>
+    <p>Il n'existe pas d'adieu parfait, mais tout peut pourtant etre intensément juste.</p>
+  ja: |
+    <p>Anno Yeung</p>
+    <p>タービンは高速で回り、轟音を立てる。一万メートル上空にはごく薄い空気だけが漂う。青と眩しい光のほか、足下のすべてについて知り得るものは「未知」以外に何があるだろう。</p>
+    <p>私は答えを知らず、確信をもって探すこともできない。問いには解があり、結果が問いの価値を証明すると考える人もいる。長く考えた末、答えのない問いはもはや単なる問いではないと思った。問いと答えは対である必要がない。</p>
+    <p>答えがなく問いだけなら、解決ではなく幻想ではないか。それでも次の一歩がどこへ向かうかわからない私は、知っていて知らないとしか言えない。できるのは、自分の頭と知識から方向を孵すこと。見たいものは実現し、触れられない現実は未知の夢として、不完全な現在に吊るしておく。</p>
+    <p>夢は残っても再現しない。人生のあるものは、考えすぎれば逃してしまう。夢が晴天なら白い雲に包み、夜なら月光の影に隠したい。夢を夢へ返そう。</p>
+    <p>少し前から、起こるかもしれないことに期待しないようになった。まだ起きていないことへ希望を与えない。期待が大きいほど落差も大きいという。それは善を望む心より、人間の底にある「所有の満足」なのかもしれない。</p>
+    <p>関係のなかで、相手の存在を保つため自分を犠牲にする人もいれば、望む結果のため相手の感情を犠牲にする人もいる。どちらも費用と目的の論理であり、私欲を隠している。感情はすべてに配慮できず、理性は人間性を計量するだけだ。どちらも完璧には届かない。</p>
+    <p>不完全を尊重することが、命にしなやかさを与える。うまく行うことは制御できても、その後の反応と結果は未知だ。相手が花を添えることも、努力を打ち消すことも、途中でやめることもある。大小の選択が運命を変える。生きるのが難しいのは、金を稼ぐより人でいることが難しいからだ。</p>
+    <p>この二年で最も好きな映画は <em>Past Lives</em> で、今も音楽を繰り返し聴く。幼なじみが三十歳ごろ再会し、ようやく縁をほどく。監督は東アジアの宿命的な縁を描いた。愛は控えめで、考えすぎ、後悔の中で前世と来世を思う。だが出会いと別れは人生の常だ。すべての出会いには意味があり、別れで消えはしない。短くても深く、確かで誠実な出会いが命を咲かせる。私がよく言うように、命とは美学に基づくすべてだ。</p>
+    <p>Someday, somewhere, someone。その三要素は前もって知ることができない。答えのない問いこそ、毎日の生活が繰り返す本当の姿だ。大胆に想像すればいい。来る前から想像さえ恐れることこそ、生活への臆病だ。勇気と誠実さが、私の最良の答えになる。</p>
+    <p>完璧な別れはない。それでも、すべてはあまりにも鮮明に残る。</p>
+随笔009:
+  en: |
+    <p>Anno Yeung</p>
+    <p>The ninth essay I meant to publish had another title and another body. It was a three-thousand-word piece called <em>Bai Yun Told Me a Dream</em>, but somewhere during the writing it disappeared. My last memory of it is eagerly showing it to a friend while travelling, hoping for advice. He handed the phone back quickly, still on the first page, unaware there was a second. He said reading it was not his strength and that I should make my own decisions.</p>
+    <p>He closed his eyes again. I shut the document, answered quietly, and continued our conversation. I told myself not to let the disappointment ruin what came next. When I later returned to finish the essay, I could no longer find it. Only the memory of that moment remained.</p>
+    <p>The draft had not been autosaved. I had slowly typed it alone, while the person I showed did not care much. Perhaps my writing was an amateur display that put him in an awkward position. My full expectation collided with his honesty and left nothing. The essay itself may have hidden in the clouds and drifted away. Let it drift to the edge of the sea and the end of time. Nothing remains forever in one place. Nothing lasts forever, but flows like water.</p>
+    <p>Fortunately, the dream remains. Even if parts have fallen away and waking leaves emptiness, the dream does not lose its beauty. I often tell people about my strange dreams: nightmares, sweet dreams, daydreams. That probably makes me a fool, as the old phrase pairs foolishness with dreams.</p>
+    <p>The lost essay and the friend who would not read it are evidence enough. More absurdly, even my measurable IQ was low. A teacher posted a Raven test result above 110 and called himself ordinary; mine was only above 80, well below average. Combined with my habit of dreaming, the result seemed to prove I was entirely a fool. What a perfect act of reverse self-verification.</p>
+    <p>In daily life, the more fiercely others pursue honour and achievement, the more I want to oppose meritocracy and ask why we cannot be ordinary. When others rush toward one place, I walk the opposite way and ask why a house, a car and children must define success. Must I surpass a percentage of people before my existence has meaning? If this fool needs an adjective, I want to be a truthful fool.</p>
+    <p>Everyone knows <em>The Emperor's New Clothes</em>: while adults flatter, only a child speaks honestly about an ugly social distortion. Though physically grown, I still feel timid, not because I lack courage but because I cannot find value in the performance. I am a foolish child, and heaven has not been especially kind. My mother used to call me naive because I told people everything. Later I learned that society seldom needs truth; reality survives more often in cinema and literature. Human hearts are not necessarily ugly, but reality is cruel, while relationships woven from polite falsehood look respectable. Respectability lets people forget themselves and creates an orderly life. Order creates control, and control is another name for safety.</p>
+    <p>In short, words may be false and actions may be performed, but the heart must remain true. Hidden, but not forgotten.</p>
+  fr: |
+    <p>Anno Yeung</p>
+    <p>Le neuvieme essai que je voulais publier avait un autre titre et un autre texte. Il s'appelait <em>Bai Yun m'a raconte un reve</em> et comptait plus de trois mille mots, mais il s'est perdu en cours d'ecriture. Mon dernier souvenir est de l'avoir montre avec enthousiasme a un ami pendant un voyage. Il me rendit vite le telephone, toujours a la premiere page, sans avoir remarque la seconde. Lire ce genre de texte n'etait pas son domaine, dit-il ; je devais prendre mes propres decisions.</p>
+    <p>Il referma les yeux. Je fermai le document, repondis calmement et poursuivis la conversation. Plus tard, quand je voulus terminer le texte, il avait disparu. Il ne restait que le souvenir de cet instant.</p>
+    <p>Le brouillon n'avait pas ete sauvegarde. Je l'avais tape seule, lentement, et la personne a qui je le montrais s'en souciait peu. Peut-etre mon ecriture maladroite l'avait-elle mis mal a l'aise. Mon attente et sa franchise s'etaient heurtees, laissant le vide. Le texte s'est peut-etre cache dans les nuages. Qu'il derive jusqu'au bout de la mer et du temps : rien ne demeure eternellement au meme endroit. Nothing lasts forever, but flows like water.</p>
+    <p>Heureusement, le reve reste. Meme si des morceaux sont tombes et que le reveil laisse un vide, le reve ne perd pas sa beaute. Je raconte souvent mes reves etranges : cauchemars, beaux reves, reveries. Je suis donc sans doute une reveuse un peu folle.</p>
+    <p>Le texte perdu et l'ami qui ne le lit pas en sont des preuves. Meme mon QI mesure etait bas. Un professeur publia un score de Raven superieur a 110 en se disant ordinaire ; le mien depassait a peine 80. Ajoute a mon habitude de rever, le resultat semblait demontrer que j'etais entierement idiote. Une parfaite demonstration inversee.</p>
+    <p>Plus les autres poursuivent honneurs et performances, plus je veux contester la meritocratie : pourquoi ne pas etre ordinaire ? Quand tous se precipitent vers un lieu, je marche dans l'autre sens. Pourquoi maison, voiture et enfants definiraient-ils la reussite ? Faut-il depasser un pourcentage des autres pour donner un sens a son existence ? Si cette idiote doit porter un adjectif, je veux etre une idiote sincere.</p>
+    <p>Tout le monde connait <em>Les Habits neufs de l'empereur</em> : lorsque les adultes flattent, seul l'enfant nomme honnetement la laideur sociale. Adulte, je reste timide, non par manque de courage mais parce que je ne vois aucune valeur dans cette representation. Ma mere me disait naive parce que je racontais tout. J'ai compris ensuite que la societe demande rarement la verite ; celle-ci vit davantage dans le cinema et la litterature. Le coeur humain n'est pas forcement laid, mais la realite est cruelle, tandis que les relations tissees de mensonges polis paraissent respectables. Cette respectabilite donne un ordre a la vie ; l'ordre apporte le controle, et le controle, la securite.</p>
+    <p>En bref, les paroles peuvent mentir et les gestes jouer un role, mais le coeur doit rester vrai. Hidden, but not forgotten.</p>
+  ja: |
+    <p>Anno Yeung</p>
+    <p>九本目として公開するはずの随筆は、題名も内容も別のものだった。『白芸が夢を話してくれた』という三千字ほどの文章だったが、書いている途中で失くした。最後の記憶は、旅の途中で友人に嬉しそうに見せ、助言を求めたことだ。携帯はすぐ返され、画面は一ページ目のまま。二ページ目に気づいてさえいなかった。こういうことは得意ではなく、適切な助言もできないから、自分で決めればいいと言われた。</p>
+    <p>彼はまた目を閉じた。私は文書を閉じ、静かに返事をして、いつものように話を続けた。落胆でその後の気分を壊さないよう自分を励ました。後日、文章を完成させようとすると、どこを探しても見つからず、その時の記憶だけが残っていた。</p>
+    <p>自動保存されていない下書きを、一人で少しずつ打ったのに、見せた相手は気に留めなかった。私の文章が未熟で、相手を困らせたのかもしれない。大きな期待と率直さが衝突し、空っぽになった。文章は題名のように白い雲へ隠れ、流れていったのだろう。海の果て、時の終わりまで流れればいい。永遠に同じ場所に留まるものはない。Nothing lasts forever, but flows like water.</p>
+    <p>幸い、夢は残っている。いくつか欠けても、目覚めたあと空虚でも、夢としての美しさは失われない。私はよく、悪夢、美夢、白昼夢など、奇妙な夢を人に話す。だからきっと夢見る愚か者なのだ。</p>
+    <p>文章を失くし、友人が読まなかったことも証拠になる。さらに可笑しいのは、数値化されたIQまで低かったことだ。先生は110以上のレーヴンテスト結果を載せ、自分も普通の頭だと書いた。私の結果は80以上にすぎず、平均を大きく下回った。夢を見る習慣と合わせれば、私は完全な愚か者らしい。見事な逆向きの自己証明だ。</p>
+    <p>日常で人が名誉や成績を強く求めるほど、私は能力主義に反対して、なぜ平凡ではいけないのかと問いたくなる。皆が群がる場所から逆へ歩き、なぜ家、車、子どもが成功した人生の条件なのかと問う。何パーセントの人を超えれば存在に意味が生まれるのか。この愚か者に形容詞をつけるなら、私は「誠実な愚か者」になりたい。</p>
+    <p>『裸の王様』は誰もが知る。大人が媚びるなか、子どもだけが歪んだ社会の醜さを正直に口にする。身体は大人でも、私はまだ臆病だ。勇気がないのではなく、その演技に価値を見いだせない。母は、何でも人に話す私を世間知らずと言った。やがて、社会が真実を必要とすることは少なく、真実は映画や文学の表現に生きるのだと知った。人の心が醜いのではなく、現実があまりに残酷なのだ。礼儀正しい嘘で編まれた人間関係のほうが体面を保ち、秩序ある生活を作る。秩序は制御感を増し、制御感とは結局、安心感だ。</p>
+    <p>要するに、言葉や行為は偽れても、心だけは真実でなければならない。Hidden, but not forgotten.</p>

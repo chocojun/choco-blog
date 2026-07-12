@@ -31,9 +31,18 @@
     <p class="cinema-article-deck" data-journal-summary>{{ with .Description }}{{ . }}{{ else }}{{ .Summary | plainify | htmlUnescape | truncate 210 }}{{ end }}</p>
   </header>
 
-  <div class="cinema-article-body post-content" data-journal-body data-journal-slug="{{ .File.BaseFileName }}">
+  {{- $journalSlug := .File.BaseFileName -}}
+  {{- $bodyTranslations := index hugo.Data.journal_bodies $journalSlug -}}
+  <div class="cinema-article-body post-content" data-journal-body data-journal-slug="{{ $journalSlug }}">
     <p class="journal-translation-status" data-journal-translation-status hidden></p>
-    <div data-journal-original>{{ .Content }}</div>
+    <div data-journal-original data-journal-localized="zh-Hans" lang="zh-CN">{{ .Content }}</div>
+    {{- with $bodyTranslations }}
+      {{- range $lang, $translatedBody := . }}
+        {{- if ne $lang "zh-Hans" }}
+        <div data-journal-localized="{{ $lang }}" lang="{{ $lang }}" hidden>{{ $translatedBody | safeHTML }}</div>
+        {{- end }}
+      {{- end }}
+    {{- end }}
   </div>
 
   <nav class="cinema-article-nav cinema-container" aria-label="Adjacent articles" data-i18n-aria-label="article.adjacent">

@@ -494,12 +494,6 @@
 
   const t = (key, lang = getLanguage()) => I18N[lang]?.[key] || I18N.en[key] || key;
 
-  const JOURNAL_LANGUAGE_CODES = { en: "en", "zh-Hans": "zh", fr: "fr", ja: "ja" };
-  const journalOriginalBodies = new WeakMap();
-  const journalTranslationCache = new Map();
-  const localTranslators = new Map();
-  let journalTranslationRequest = 0;
-
   const journalField = (node, field, lang) => {
     const entry = node.closest("[data-journal-entry]");
     if (!entry) return "";
@@ -530,122 +524,44 @@
     }
   };
 
-  const getLocalTranslator = async (sourceLanguage, targetLanguage) => {
-    if (sourceLanguage === targetLanguage) return null;
-    const key = `${sourceLanguage}:${targetLanguage}`;
-    if (localTranslators.has(key)) return localTranslators.get(key);
-
-    let pending;
-    if (globalThis.Translator?.create) {
-      pending = globalThis.Translator.create({ sourceLanguage, targetLanguage });
-    } else if (globalThis.ai?.translator?.create) {
-      pending = globalThis.ai.translator.create({ sourceLanguage, targetLanguage });
-    } else {
-      throw new Error("Local Translator API unavailable");
-    }
-
-    localTranslators.set(key, pending);
-    try {
-      const translator = await pending;
-      localTranslators.set(key, translator);
-      return translator;
-    } catch (error) {
-      localTranslators.delete(key);
-      throw error;
-    }
-  };
-
-  const sourceLanguageFor = (text) => {
-    const compact = text.replace(/\s/g, "");
-    if (!compact) return "zh";
-    const han = (compact.match(/[\u3400-\u9fff]/g) || []).length;
-    return han / compact.length > 0.12 ? "zh" : "en";
-  };
-
-  const translateJournalElement = async (element, targetLanguage) => {
-    const text = element.textContent.trim();
-    if (!text) return;
-    const sourceLanguage = sourceLanguageFor(text);
-    if (sourceLanguage === targetLanguage) return;
-    const translator = await getLocalTranslator(sourceLanguage, targetLanguage);
-    element.textContent = await translator.translate(text);
-  };
-
-  const translateInBatches = async (elements, targetLanguage) => {
-    const queue = [...elements];
-    const workers = Array.from({ length: Math.min(3, queue.length) }, async () => {
-      while (queue.length) {
-        const element = queue.shift();
-        await translateJournalElement(element, targetLanguage);
-      }
-    });
-    await Promise.all(workers);
-  };
-
-  const prepareBilingualPoem = (root, lang) => {
-    const paragraphs = [...root.querySelectorAll("p")];
-    paragraphs.forEach((paragraph, index) => {
-      const isChineseLine = index % 2 === 1;
-      if ((lang === "zh-Hans" && !isChineseLine) || (lang !== "zh-Hans" && isChineseLine)) {
-        paragraph.remove();
-      }
-    });
-  };
-
   const setJournalStatus = (status, key, lang) => {
     if (!status) return;
     status.hidden = !key;
     status.textContent = key ? t(key, lang) : "";
   };
 
-  const applyJournalBody = async (lang) => {
-    const body = document.querySelector("[data-journal-body]");
-    if (!body) return;
-    const request = ++journalTranslationRequest;
-    const status = body.querySelector("[data-journal-translation-status]");
-    const original = body.querySelector("[data-journal-original]");
-    if (!original) return;
+  const STATIC_TRANSLATION_NOTICE = {
+    en: "This translation was prepared by ChatGPT. The Chinese original remains the reference text.",
+    "zh-Hans": "",
+    fr: "Cette traduction est fournie par ChatGPT. Le texte chinois original reste la reference.",
+    ja: "この訳文は ChatGPT によるものです。中国語原文を正式な参照テキストとします。",
+  };
 
-    if (!journalOriginalBodies.has(body)) journalOriginalBodies.set(body, original.innerHTML);
-    const originalHTML = journalOriginalBodies.get(body);
-    const slug = body.dataset.journalSlug || "article";
+  const applyJournalBody = (lang) => {
+    document.querySelectorAll("[data-journal-body]").forEach((body) => {
+      const status = body.querySelector("[data-journal-translation-status]");
+      const blocks = [...body.querySelectorAll("[data-journal-localized]")];
+      if (!blocks.length) return;
 
-    if (lang === "zh-Hans") {
-      original.innerHTML = originalHTML;
-      original.setAttribute("lang", "zh-CN");
-      setJournalStatus(status, "", lang);
-      return;
-    }
+      const original = blocks.find((block) => block.dataset.journalLocalized === "zh-Hans");
+      const localized = blocks.find((block) => block.dataset.journalLocalized === lang);
+      const active = localized || original || blocks[0];
 
-    const cacheKey = `${slug}:${lang}`;
-    if (journalTranslationCache.has(cacheKey)) {
-      original.innerHTML = journalTranslationCache.get(cacheKey);
-      original.setAttribute("lang", JOURNAL_LANGUAGE_CODES[lang]);
-      setJournalStatus(status, "translation.source", lang);
-      return;
-    }
+      blocks.forEach((block) => {
+        const visible = block === active;
+        block.hidden = !visible;
+        block.setAttribute("aria-hidden", String(!visible));
+      });
 
-    setJournalStatus(status, "translation.loading", lang);
-    const translated = document.createElement("div");
-    translated.innerHTML = originalHTML;
-    if (slug === "ms-solitude-with-lady-love") prepareBilingualPoem(translated, lang);
-
-    const blocks = [...translated.querySelectorAll("h1, h2, h3, h4, p, li, blockquote")]
-      .filter((node) => !node.parentElement?.closest("p, li, blockquote"));
-
-    try {
-      await translateInBatches(blocks, JOURNAL_LANGUAGE_CODES[lang]);
-      if (request !== journalTranslationRequest) return;
-      journalTranslationCache.set(cacheKey, translated.innerHTML);
-      original.innerHTML = translated.innerHTML;
-      original.setAttribute("lang", JOURNAL_LANGUAGE_CODES[lang]);
-      setJournalStatus(status, "translation.source", lang);
-    } catch (error) {
-      if (request !== journalTranslationRequest) return;
-      original.innerHTML = originalHTML;
-      original.setAttribute("lang", "zh-CN");
-      setJournalStatus(status, "translation.unavailable", lang);
-    }
+      if (lang === "zh-Hans") {
+        setJournalStatus(status, "", lang);
+      } else if (localized) {
+        status.hidden = false;
+        status.textContent = STATIC_TRANSLATION_NOTICE[lang] || STATIC_TRANSLATION_NOTICE.en;
+      } else {
+        setJournalStatus(status, "translation.unavailable", lang);
+      }
+    });
   };
 
   const applyCopy = (lang = getLanguage()) => {
