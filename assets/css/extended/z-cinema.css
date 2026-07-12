@@ -37,6 +37,13 @@ body.cinema-body {
   line-height: 1.65;
 }
 
+/* The legacy redesign stylesheet draws fixed layout guides on body::before.
+   Cinema pages use their own responsive container and must not inherit them. */
+body.cinema-body::before {
+  content: none;
+  display: none;
+}
+
 body.cinema-kind-section.cinema-section-posts,
 body.cinema-kind-section.cinema-section-essays {
   color: var(--color-white);
@@ -233,7 +240,7 @@ body.cinema-section-gallery {
 }
 
 .cinema-film-title-inner > * {
-  opacity: 0;
+  opacity: 1;
   transform: translateY(8px);
   animation: cinema-title-enter 650ms var(--ease-cinema) forwards;
 }
