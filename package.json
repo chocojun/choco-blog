@@ -1,0 +1,13 @@
+{
+  "name": "choco-blog",
+  "private": true,
+  "scripts": {
+    "build": "hugo --gc --minify",
+    "cf:dev": "wrangler pages dev public",
+    "cf:inspect": "wrangler pages deployment list --project-name choco-blog",
+    "cf:deploy": "wrangler pages deploy public --project-name choco-blog"
+  },
+  "devDependencies": {
+    "wrangler": "4.110.0"
+  }
+}
