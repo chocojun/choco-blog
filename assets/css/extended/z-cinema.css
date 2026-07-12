@@ -266,6 +266,7 @@ body.cinema-section-gallery {
 .cinema-film-title h1 {
   max-width: 14ch;
   margin: 44px auto 36px;
+  color: var(--color-text);
   font-size: clamp(3rem, 6vw, 5.2rem);
   font-weight: 400;
   letter-spacing: 0.14em;
@@ -1219,6 +1220,7 @@ body.cinema-section-gallery {
 }
 
 @keyframes cinema-title-enter {
+  from { opacity: 1; transform: translateY(8px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
