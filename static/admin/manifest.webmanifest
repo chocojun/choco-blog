@@ -1,0 +1,9 @@
+{
+  "name": "Floscas Studio",
+  "short_name": "Studio",
+  "start_url": "/admin/",
+  "display": "standalone",
+  "background_color": "#0f1916",
+  "theme_color": "#0f1916",
+  "description": "Floscas mobile publishing studio"
+}

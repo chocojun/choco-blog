@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#0f1916">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Floscas Studio</title>
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="stylesheet" href="./studio.css">
+</head>
+<body>
+  <div class="ambient" aria-hidden="true"></div>
+  <div class="app-shell">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">FLOSCAS</p>
+        <h1>Studio</h1>
+      </div>
+      <button class="icon-button" id="settings-button" type="button" aria-label="连接设置" title="连接设置">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 15.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Z"/><path d="M19.4 15a1.7 1.7 0 0 0 .34 1.88l.06.06-2.83 2.83-.06-.06a1.7 1.7 0 0 0-1.88-.34 1.7 1.7 0 0 0-1.03 1.56V21h-4v-.08a1.7 1.7 0 0 0-1.04-1.56 1.7 1.7 0 0 0-1.88.34l-.06.06-2.83-2.83.06-.06A1.7 1.7 0 0 0 4.6 15 1.7 1.7 0 0 0 3.08 14H3v-4h.08A1.7 1.7 0 0 0 4.6 9a1.7 1.7 0 0 0-.34-1.88l-.06-.06 2.83-2.83.06.06A1.7 1.7 0 0 0 9 4.6 1.7 1.7 0 0 0 10 3.08V3h4v.08A1.7 1.7 0 0 0 15 4.6a1.7 1.7 0 0 0 1.88-.34l.06-.06 2.83 2.83-.06.06A1.7 1.7 0 0 0 19.4 9 1.7 1.7 0 0 0 20.92 10H21v4h-.08A1.7 1.7 0 0 0 19.4 15Z"/></svg>
+      </button>
+    </header>
+
+    <main>
+      <section class="status-panel" id="connection-panel">
+        <span class="status-dot" id="status-dot"></span>
+        <div>
+          <strong id="status-title">尚未连接</strong>
+          <p id="status-detail">请先配置管理接口与密钥</p>
+        </div>
+        <button class="text-button" id="connect-button" type="button">连接</button>
+      </section>
+
+      <nav class="tabbar" aria-label="内容管理">
+        <button class="tab is-active" type="button" data-tab="articles">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h9l3 3v15H6V3Z"/><path d="M14 3v4h4M9 12h6M9 16h6M9 8h2"/></svg>
+          <span>文章</span>
+        </button>
+        <button class="tab" type="button" data-tab="films">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m8 5 2 4m4-4 2 4M3 9h18"/></svg>
+          <span>电影</span>
+        </button>
+        <button class="tab" type="button" data-tab="images">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8.5" cy="9" r="1.5"/><path d="m4 17 5-5 4 4 2-2 5 4"/></svg>
+          <span>图片</span>
+        </button>
+      </nav>
+
+      <section class="workspace is-active" id="articles-workspace" data-workspace="articles">
+        <div class="section-heading">
+          <div><p class="eyebrow">WRITING</p><h2>文章管理</h2></div>
+          <button class="primary compact" id="new-article-button" type="button">新建</button>
+        </div>
+        <label class="search-field">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m16 16 4 4"/></svg>
+          <input id="article-search" type="search" placeholder="搜索文件名">
+        </label>
+        <div class="item-list" id="article-list"><p class="empty-state">连接后读取文章</p></div>
+      </section>
+
+      <section class="workspace" id="films-workspace" data-workspace="films">
+        <div class="section-heading">
+          <div><p class="eyebrow">CINEMA</p><h2>电影推荐</h2></div>
+          <button class="primary compact" id="new-film-button" type="button">添加</button>
+        </div>
+        <label class="search-field">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m16 16 4 4"/></svg>
+          <input id="film-search" type="search" placeholder="搜索片名或导演">
+        </label>
+        <div class="item-list" id="film-list"><p class="empty-state">连接后读取电影列表</p></div>
+        <div class="sticky-action is-hidden" id="film-save-bar">
+          <span id="film-change-count">尚未修改</span>
+          <button class="primary" id="save-films-button" type="button">发布电影列表</button>
+        </div>
+      </section>
+
+      <section class="workspace" id="images-workspace" data-workspace="images">
+        <div class="section-heading">
+          <div><p class="eyebrow">MEDIA</p><h2>图片上传</h2></div>
+        </div>
+        <form class="editor-card" id="image-form">
+          <label class="upload-drop" for="image-file" id="image-drop">
+            <img id="image-preview" alt="图片预览" hidden>
+            <span id="upload-placeholder">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16V4m0 0L7 9m5-5 5 5"/><path d="M5 15v4h14v-4"/></svg>
+              <strong>选择图片</strong>
+              <small>JPG、PNG、WebP、AVIF 或 GIF，最大 8 MB</small>
+            </span>
+          </label>
+          <input id="image-file" type="file" accept="image/jpeg,image/png,image/webp,image/avif,image/gif" hidden>
+          <label class="field"><span>保存目录</span><select id="image-folder"><option value="uploads">通用上传</option><option value="gallery">摄影图集</option><option value="article-images">文章图片</option><option value="cinema-posters/library">电影海报</option></select></label>
+          <label class="field"><span>文件名</span><input id="image-name" type="text" autocomplete="off" placeholder="例如 rainy-window.jpg"></label>
+          <button class="primary full" type="submit">上传并发布</button>
+        </form>
+      </section>
+    </main>
+  </div>
+
+  <dialog id="settings-dialog">
+    <form method="dialog" class="dialog-card" id="settings-form">
+      <div class="dialog-heading"><div><p class="eyebrow">SECURITY</p><h2>连接设置</h2></div><button class="icon-button close-dialog" value="cancel" aria-label="关闭" type="submit">×</button></div>
+      <p class="dialog-note">管理密钥只保存在当前会话，关闭应用后会清除。GitHub Token 永远留在 Cloudflare。</p>
+      <label class="field"><span>API 地址</span><input id="api-url" type="url" inputmode="url" required value="https://choco-blog-20l.pages.dev/api/admin"></label>
+      <label class="field"><span>管理密钥</span><input id="admin-key" type="password" autocomplete="off" required placeholder="Cloudflare ADMIN_API_KEY"></label>
+      <button class="primary full" id="save-settings-button" value="default" type="submit">验证并连接</button>
+    </form>
+  </dialog>
+
+  <dialog id="article-dialog">
+    <form method="dialog" class="dialog-card editor-dialog" id="article-form">
+      <div class="dialog-heading"><div><p class="eyebrow">MARKDOWN</p><h2 id="article-dialog-title">编辑文章</h2></div><button class="icon-button close-dialog" value="cancel" aria-label="关闭" type="submit">×</button></div>
+      <label class="field"><span>文件名</span><input id="article-path" type="text" required placeholder="随笔010.md"></label>
+      <label class="field grow"><span>Markdown 内容</span><textarea id="article-content" required spellcheck="false" placeholder="---&#10;title: &quot;标题&quot;&#10;date: 2026-07-13&#10;draft: false&#10;---&#10;&#10;从这里开始写作。"></textarea></label>
+      <button class="primary full" id="save-article-button" value="default" type="submit">发布文章</button>
+    </form>
+  </dialog>
+
+  <dialog id="film-dialog">
+    <form method="dialog" class="dialog-card" id="film-form">
+      <div class="dialog-heading"><div><p class="eyebrow">FILM</p><h2 id="film-dialog-title">编辑电影</h2></div><button class="icon-button close-dialog" value="cancel" aria-label="关闭" type="submit">×</button></div>
+      <input id="film-index" type="hidden">
+      <div class="field-grid">
+        <label class="field"><span>Slug</span><input id="film-slug" required></label>
+        <label class="field"><span>年份</span><input id="film-year" type="number" min="1888" max="2100"></label>
+      </div>
+      <label class="field"><span>中文片名</span><input id="film-zh" required></label>
+      <label class="field"><span>英文片名</span><input id="film-en" required></label>
+      <label class="field"><span>法文片名</span><input id="film-fr"></label>
+      <label class="field"><span>日文片名</span><input id="film-ja"></label>
+      <label class="field"><span>导演 / 年份</span><input id="film-meta" placeholder="Director / 2026"></label>
+      <label class="field"><span>豆瓣链接</span><input id="film-douban" type="url" inputmode="url"></label>
+      <label class="field"><span>海报路径</span><input id="film-poster" placeholder="/images/cinema-posters/library/film.jpg"></label>
+      <div class="button-row"><button class="danger" id="delete-film-button" value="default" type="button">删除</button><button class="primary" value="default" type="submit">保存到草稿</button></div>
+    </form>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="./studio.js" defer></script>
+</body>
+</html>
