@@ -6,6 +6,10 @@ android {
     namespace "com.floscas.studio"
     compileSdk 35
 
+    buildFeatures {
+        buildConfig true
+    }
+
     defaultConfig {
         applicationId "com.floscas.studio"
         minSdk 26
