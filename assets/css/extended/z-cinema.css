@@ -1358,22 +1358,26 @@ body.cinema-section-gallery {
   }
 
   .cinema-film-title {
-    min-height: 92svh;
-    padding-top: 112px;
+    min-height: 82svh;
+    padding: 104px 24px 64px;
   }
 
   .cinema-film-title h1 {
-    margin-block: 36px 30px;
-    font-size: clamp(2rem, 10vw, 2.8rem);
-    letter-spacing: 0.1em;
+    max-width: 9.5em;
+    margin-block: 30px 26px;
+    font-size: clamp(2rem, 8.6vw, 2.4rem);
+    letter-spacing: 0.07em;
+    line-height: 1.12;
   }
 
   .cinema-section-heading {
-    margin-bottom: 64px;
+    margin-bottom: 48px;
   }
 
   .cinema-section-heading h2 {
-    font-size: clamp(2.3rem, 12vw, 3.6rem);
+    max-width: 11ch;
+    font-size: clamp(2rem, 9vw, 2.65rem);
+    line-height: 0.98;
   }
 
   .cinema-editorial-list {
@@ -1410,7 +1414,9 @@ body.cinema-section-gallery {
   }
 
   .cinema-editorial-copy h3 {
-    font-size: clamp(2rem, 10vw, 3rem);
+    max-width: 15ch;
+    font-size: clamp(1.7rem, 7.6vw, 2.2rem);
+    line-height: 1.02;
   }
 
   .cinema-interlude {
@@ -1418,7 +1424,8 @@ body.cinema-section-gallery {
   }
 
   .cinema-interlude p {
-    font-size: clamp(2.4rem, 12vw, 4rem);
+    font-size: clamp(2.1rem, 9.5vw, 3rem);
+    line-height: 1.02;
   }
 
   .cinema-film-shelf {
@@ -1487,7 +1494,9 @@ body.cinema-section-gallery {
   .cinema-archive-hero h1,
   .cinema-gallery-hero h1,
   .cinema-about-title h1 {
-    font-size: clamp(3.4rem, 18vw, 5.6rem);
+    max-width: 10ch;
+    font-size: clamp(2.65rem, 11vw, 3.5rem);
+    line-height: 0.95;
   }
 
   .cinema-year-group {
@@ -1500,7 +1509,9 @@ body.cinema-section-gallery {
   }
 
   .cinema-article-header h1 {
-    font-size: clamp(2.25rem, 12vw, 3.6rem);
+    max-width: 15ch;
+    font-size: clamp(2rem, 9vw, 2.75rem);
+    line-height: 1.02;
   }
 
   .cinema-article-nav a:last-child {
