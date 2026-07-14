@@ -12,6 +12,7 @@
   --color-beige: #dec8aa;
   --color-brown: #58473c;
   --font-sans: "Inter", "Noto Sans SC", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  --color-title: #000000;
   --duration-fast: 180ms;
   --duration-base: 320ms;
   --duration-slow: 700ms;
@@ -42,6 +43,32 @@ body.cinema-body {
 body.cinema-body::before {
   content: none;
   display: none;
+}
+
+/* Keep display copy fully opaque on paper-colored pages. Explicit text fill
+   prevents deployment-time animation or inherited opacity from washing it out. */
+.cinema-home-page .cinema-film-title h1,
+.cinema-home-page .cinema-section-heading h2,
+.cinema-home-page .cinema-editorial-copy h3,
+.cinema-home-page .cinema-editorial-copy h3 a,
+.cinema-home-page .cinema-index-row h3,
+.cinema-home-page .cinema-index-row h3 a,
+.cinema-home-page .cinema-listening-intro h2,
+.cinema-article-header h1 {
+  color: var(--color-title);
+  -webkit-text-fill-color: var(--color-title);
+  opacity: 1;
+}
+
+.cinema-home-page .cinema-film-title-inner,
+.cinema-home-page #cinema-home-title {
+  opacity: 1 !important;
+  filter: none !important;
+}
+
+.cinema-home-page #cinema-home-title {
+  color: #000000 !important;
+  -webkit-text-fill-color: #000000 !important;
 }
 
 body.cinema-kind-section.cinema-section-posts,

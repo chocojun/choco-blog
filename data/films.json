@@ -40,14 +40,8 @@
   {"slug":"young-woman-sea","year":2024,"query":"Young Woman and the Sea","zh":"泳者之心","en":"Young Woman and the Sea","fr":"Face à la mer : l’histoire de Trudy Ederle","ja":"ヤング・ウーマン・アンド・シー","meta":"Joachim Rønning / 2024"},
   {"slug":"wet-season","year":2019,"query":"Wet Season","zh":"热带雨","en":"Wet Season","fr":"Wet Season","ja":"熱帯雨","meta":"Anthony Chen / 2019"},
   {"slug":"coda","year":2021,"query":"CODA","zh":"健听女孩","en":"CODA","fr":"CODA","ja":"コーダ あいのうた","meta":"Sian Heder / 2021"},
-  {"slug":"anyone-but-you","year":2023,"query":"Anyone But You","zh":"只想爱你","en":"Anyone But You","fr":"Tout sauf toi","ja":"恋するプリテンダー","meta":"Will Gluck / 2023"},
-  {"slug":"secretary","year":2002,"query":"Secretary","zh":"秘书","en":"Secretary","fr":"La Secrétaire","ja":"セクレタリー","meta":"Steven Shainberg / 2002"},
-  {"slug":"war-machine","year":2017,"query":"War Machine","zh":"战争机器","en":"War Machine","fr":"War Machine","ja":"ウォー・マシーン","meta":"David Michôd / 2017"},
   {"slug":"project-hail-mary","year":2026,"query":"Project Hail Mary","zh":"挽救计划","en":"Project Hail Mary","fr":"Projet Dernière Chance","ja":"プロジェクト・ヘイル・メアリー","meta":"Phil Lord & Christopher Miller / 2026"},
   {"slug":"hamnet","year":2025,"query":"Hamnet","zh":"哈姆奈特","en":"Hamnet","fr":"Hamnet","ja":"ハムネット","meta":"Chloé Zhao / 2025"},
-  {"slug":"pressure","year":2025,"query":"Pressure Brendan Fraser","zh":"诺曼底72小时","en":"Pressure","fr":"Pressure","ja":"プレッシャー","meta":"Anthony Maras / 2025"},
-  {"slug":"true-education","year":2025,"query":"True Education Korean drama","zh":"铁拳教育","en":"True Education","fr":"True Education","ja":"真の教育","meta":"Series / 2025","kind":"series"},
-  {"slug":"off-campus","year":2025,"query":"Off Campus TV series","zh":"校园之外 第一季","en":"Off Campus — Season 1","fr":"Off Campus — Saison 1","ja":"オフ・キャンパス シーズン1","meta":"Series / 2025","kind":"series"},
-  {"slug":"day-of-jackal","year":2024,"query":"The Day of the Jackal TV series","zh":"豺狼的日子 第一季","en":"The Day of the Jackal — Season 1","fr":"The Day of the Jackal — Saison 1","ja":"ジャッカルの日 シーズン1","meta":"Series / 2024","kind":"series"},
-  {"slug":"shared-table","year":2025,"query":"拼桌 Chinese movie 2025","zh":"拼桌","en":"Table for Two","fr":"Table pour deux","ja":"相席","meta":"China / 2025"}
+  {"slug":"pressure","year":2026,"query":"Pressure Anthony Maras 2026","zh":"诺曼底72小时","en":"Pressure","fr":"Pressure","ja":"プレッシャー","meta":"Anthony Maras / 2026"},
+  {"slug":"shared-table","year":2026,"query":"拼桌 王传君 江疏影 2026","zh":"拼桌","en":"A Table for Two","fr":"Une table pour deux","ja":"相席","meta":"Wu Jing / 2026"}
 ]
