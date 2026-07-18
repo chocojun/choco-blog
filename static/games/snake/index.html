@@ -1,37 +1,33 @@
 <!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Floscas Snake</title>
-  <link rel="stylesheet" href="../floscas-games.css">
-</head>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Floscas Snake</title><link rel="stylesheet" href="../floscas-games.css"></head>
 <body>
   <main class="game-shell">
-    <nav class="game-nav"><a href="/">Floscas</a><span>Offline game</span></nav>
-    <h1 class="game-title">Snake</h1>
-    <section class="game-panel">
-      <p class="muted">Arrow keys or swipe. A small neon line through glass.</p>
-      <div class="game-actions"><button id="new">Restart</button><strong id="score">Score 0</strong></div>
-      <canvas id="game" width="520" height="520"></canvas>
+    <nav class="game-nav"><a href="/">Floscas</a><span>Offline room / 02</span></nav>
+    <header class="game-header"><h1 class="game-title">Snake</h1><p class="muted">一条小小的线穿过深绿色棋盘。方向键或滑动控制。</p></header>
+    <section class="game-panel game-layout game-layout--square">
+      <div class="game-stage"><canvas id="game" width="520" height="520" aria-label="贪吃蛇棋盘"></canvas></div>
+      <aside class="game-sidebar">
+        <h2>Moving line</h2>
+        <div class="game-score"><span>Score</span><strong id="score">0</strong></div>
+        <div class="game-actions"><button class="primary" id="start" type="button">开始</button><button id="pause" type="button" disabled>暂停</button><button id="new" type="button">重置</button></div>
+        <div class="touch-controls"><button data-dir="up">↑</button><button data-dir="left">←</button><button data-dir="right">→</button><button data-dir="down">↓</button></div>
+        <p class="muted" id="status">Ready</p>
+      </aside>
     </section>
   </main>
   <script>
-  const canvas=document.getElementById("game"),ctx=canvas.getContext("2d"),scoreEl=document.getElementById("score");
-  const n=20,s=canvas.width/n; let snake,food,dir,next,score,start;
-  const spawn=()=>food={x:Math.floor(Math.random()*n),y:Math.floor(Math.random()*n)};
-  const reset=()=>{snake=[{x:8,y:10},{x:7,y:10},{x:6,y:10}]; dir={x:1,y:0}; next=dir; score=0; spawn();};
-  const drawCell=(p,c)=>{ctx.fillStyle=c;ctx.shadowColor=c;ctx.shadowBlur=14;ctx.fillRect(p.x*s+3,p.y*s+3,s-6,s-6);ctx.shadowBlur=0;};
-  const frame=()=>{dir=next; const head={x:(snake[0].x+dir.x+n)%n,y:(snake[0].y+dir.y+n)%n}; if(snake.some(p=>p.x===head.x&&p.y===head.y)) reset(); snake.unshift(head); if(head.x===food.x&&head.y===food.y){score++;spawn();} else snake.pop(); ctx.clearRect(0,0,canvas.width,canvas.height); drawCell(food,"rgba(235,242,235,.92)"); snake.forEach((p,i)=>drawCell(p,i?"rgba(128,170,150,.72)":"rgba(236,242,236,.95)")); scoreEl.textContent=`Score ${score}`;};
-  addEventListener("keydown",e=>{
-    const m={ArrowLeft:{x:-1,y:0},ArrowRight:{x:1,y:0},ArrowUp:{x:0,y:-1},ArrowDown:{x:0,y:1}}[e.key];
-    if(!m) return;
-    e.preventDefault();
-    if(m.x!==-dir.x||m.y!==-dir.y) next=m;
-  }, { passive: false });
-  addEventListener("touchstart",e=>start=[e.touches[0].clientX,e.touches[0].clientY],{passive:true});
-  addEventListener("touchend",e=>{const dx=e.changedTouches[0].clientX-start[0],dy=e.changedTouches[0].clientY-start[1]; next=Math.abs(dx)>Math.abs(dy)?{x:dx>0?1:-1,y:0}:{x:0,y:dy>0?1:-1};},{passive:true});
-  document.getElementById("new").onclick=reset; reset(); setInterval(frame,120);
+  (()=>{const canvas=document.getElementById("game"),ctx=canvas.getContext("2d"),scoreEl=document.getElementById("score"),status=document.getElementById("status"),startBtn=document.getElementById("start"),pauseBtn=document.getElementById("pause");const n=20,size=canvas.width/n;let snake,food,dir,next,score,touch,running=false,paused=false,timer;
+  const spawn=()=>{do{food={x:Math.floor(Math.random()*n),y:Math.floor(Math.random()*n)};}while(snake.some(p=>p.x===food.x&&p.y===food.y));};
+  const reset=()=>{snake=[{x:8,y:10},{x:7,y:10},{x:6,y:10}];dir={x:1,y:0};next=dir;score=0;running=false;paused=false;clearInterval(timer);spawn();draw();sync();};
+  const cell=(p,color)=>{ctx.fillStyle=color;ctx.fillRect(p.x*size+3,p.y*size+3,size-6,size-6);};
+  const draw=()=>{ctx.clearRect(0,0,canvas.width,canvas.height);cell(food,"#f4f1ea");snake.forEach((p,i)=>cell(p,i?"#73877a":"#f4f1ea"));scoreEl.textContent=score;};
+  const frame=()=>{if(!running||paused)return;dir=next;const head={x:(snake[0].x+dir.x+n)%n,y:(snake[0].y+dir.y+n)%n};if(snake.some(p=>p.x===head.x&&p.y===head.y)){reset();status.textContent="碰到自己了，再试一次。";return;}snake.unshift(head);if(head.x===food.x&&head.y===food.y){score++;spawn();}else snake.pop();draw();};
+  const sync=()=>{startBtn.disabled=running&&!paused;pauseBtn.disabled=!running;pauseBtn.textContent=paused?"继续":"暂停";status.textContent=paused?"Paused":running?"Playing":"Ready";};
+  const start=()=>{if(paused){paused=false;sync();return;}if(running)return;running=true;timer=setInterval(frame,120);sync();};
+  const setDir=name=>{if(!running||paused)return;const map={left:{x:-1,y:0},right:{x:1,y:0},up:{x:0,y:-1},down:{x:0,y:1}},move=map[name];if(move.x!==-dir.x||move.y!==-dir.y)next=move;};
+  addEventListener("keydown",e=>{const name={ArrowLeft:"left",ArrowRight:"right",ArrowUp:"up",ArrowDown:"down"}[e.key];if(!name)return;e.preventDefault();setDir(name);},{passive:false});
+  canvas.addEventListener("touchstart",e=>touch=[e.touches[0].clientX,e.touches[0].clientY],{passive:true});canvas.addEventListener("touchend",e=>{if(!touch)return;const dx=e.changedTouches[0].clientX-touch[0],dy=e.changedTouches[0].clientY-touch[1];setDir(Math.abs(dx)>Math.abs(dy)?(dx>0?"right":"left"):(dy>0?"down":"up"));touch=null;},{passive:true});
+  document.querySelectorAll("[data-dir]").forEach(button=>button.onclick=()=>setDir(button.dataset.dir));startBtn.onclick=start;pauseBtn.onclick=()=>{if(!running)return;paused=!paused;sync();};document.getElementById("new").onclick=reset;reset();})();
   </script>
-</body>
-</html>
+</body></html>

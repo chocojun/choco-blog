@@ -20,6 +20,8 @@
 <script defer src="{{ $floscas.RelPermalink }}" integrity="{{ $floscas.Data.Integrity }}"></script>
 {{- $cinema := resources.Get "js/cinema.js" | js.Build | minify | fingerprint }}
 <script defer src="{{ $cinema.RelPermalink }}" integrity="{{ $cinema.Data.Integrity }}"></script>
+{{- $message := resources.Get "js/message.js" | js.Build | minify | fingerprint }}
+<script defer src="{{ $message.RelPermalink }}" integrity="{{ $message.Data.Integrity }}"></script>
 <script>
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", () => navigator.serviceWorker.register("{{ "sw.js" | relURL }}").catch(() => {}));

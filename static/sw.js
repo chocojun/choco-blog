@@ -1,4 +1,4 @@
-const CACHE_NAME = "choco-games-v2";
+const CACHE_NAME = "choco-games-v4";
 const CORE_ASSETS = [
   "/games/floscas-games.css",
   "/games/2048/",
@@ -6,7 +6,10 @@ const CORE_ASSETS = [
   "/games/snake/",
   "/games/snake/index.html",
   "/games/tetris/",
-  "/games/tetris/index.html"
+  "/games/tetris/index.html",
+  "/games/sudoku/",
+  "/games/sudoku/index.html",
+  "/games/sudoku/sudoku.js"
 ];
 
 self.addEventListener("install", (event) => {
@@ -34,18 +37,25 @@ self.addEventListener("fetch", (event) => {
   const url = new URL(event.request.url);
   if (url.origin !== self.location.origin || !url.pathname.startsWith("/games/")) return;
 
-  event.respondWith(
-    caches.match(event.request).then((cached) => {
-      if (cached) return cached;
+  // Navigations are network-first so an old game shell never masks a new deployment.
+  if (event.request.mode === "navigate") {
+    event.respondWith(
+      fetch(event.request)
+        .then((response) => {
+          const copy = response.clone();
+          caches.open(CACHE_NAME).then((cache) => cache.put(event.request, copy));
+          return response;
+        })
+        .catch(() => caches.match(event.request).then((cached) => cached || caches.match("/games/sudoku/")))
+    );
+    return;
+  }
 
-      return fetch(event.request).then((response) => {
-        const copy = response.clone();
-        caches.open(CACHE_NAME).then((cache) => {
-          // Dynamic write-through keeps later visits instant without blocking the first response.
-          cache.put(event.request, copy);
-        });
-        return response;
-      });
-    })
+  event.respondWith(
+    caches.match(event.request).then((cached) => cached || fetch(event.request).then((response) => {
+      const copy = response.clone();
+      caches.open(CACHE_NAME).then((cache) => cache.put(event.request, copy));
+      return response;
+    }))
   );
 });

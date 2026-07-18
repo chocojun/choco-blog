@@ -1608,3 +1608,103 @@ body.cinema-section-gallery {
     transform: none;
   }
 }
+
+/* Daily puzzle and private message channel */
+.cinema-daily-game {
+  margin-top: clamp(90px, 12vw, 180px);
+  padding: clamp(72px, 9vw, 132px) 0;
+  color: var(--color-white);
+  background: #15251b;
+}
+
+.cinema-daily-game-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(240px, .65fr) minmax(210px, .55fr);
+  gap: clamp(34px, 6vw, 100px);
+  align-items: end;
+}
+
+.cinema-daily-game h2 {
+  max-width: 12ch;
+  margin: 14px 0 0;
+  color: inherit;
+  font-size: clamp(2.8rem, 6vw, 6.2rem);
+  font-weight: 400;
+  line-height: .9;
+  letter-spacing: 0;
+}
+
+.cinema-daily-game-copy { display: grid; gap: 30px; }
+.cinema-daily-game-copy p { margin: 0; color: rgba(248,247,243,.64); }
+.cinema-daily-game .cinema-text-link { color: inherit; justify-self: start; }
+.cinema-sudoku-mark {
+  display: grid;
+  aspect-ratio: 1;
+  grid-template-columns: repeat(9, 1fr);
+  border: 1px solid rgba(248,247,243,.7);
+}
+.cinema-sudoku-mark span { border-right: 1px solid rgba(248,247,243,.13); border-bottom: 1px solid rgba(248,247,243,.13); }
+.cinema-sudoku-mark span:nth-child(3n) { border-right-color: rgba(248,247,243,.55); }
+.cinema-sudoku-mark span:nth-child(n+19):nth-child(-n+27),
+.cinema-sudoku-mark span:nth-child(n+46):nth-child(-n+54) { border-bottom-color: rgba(248,247,243,.55); }
+
+.quick-message-trigger {
+  position: fixed;
+  z-index: 60;
+  right: max(20px, env(safe-area-inset-right));
+  bottom: max(20px, env(safe-area-inset-bottom));
+  display: flex;
+  min-height: 46px;
+  align-items: center;
+  gap: 10px;
+  padding: 0 17px;
+  border: 1px solid rgba(248,247,243,.28);
+  border-radius: 0;
+  color: var(--color-white);
+  background: rgba(17,17,15,.9);
+  box-shadow: none;
+  backdrop-filter: blur(14px);
+  cursor: pointer;
+  font: 500 11px/1 var(--font-sans);
+  letter-spacing: .08em;
+  transition: transform var(--duration-base) var(--ease-cinema), background var(--duration-base) var(--ease-cinema);
+}
+.quick-message-trigger img { width: 16px; height: 16px; filter: invert(1); }
+.quick-message-trigger:hover { background: #15251b; transform: translateY(-3px); }
+.quick-message-trigger:active { transform: scale(.97); }
+
+.quick-message-dialog {
+  width: min(600px, calc(100% - 28px));
+  max-height: calc(100dvh - 28px);
+  padding: 0;
+  border: 1px solid var(--color-text);
+  border-radius: 0;
+  color: var(--color-text);
+  background: rgba(243,240,233,.96);
+  box-shadow: none;
+  backdrop-filter: blur(22px) saturate(120%);
+}
+.quick-message-dialog::backdrop { background: rgba(17,17,15,.48); backdrop-filter: blur(5px); }
+.quick-message-form { display: grid; gap: 20px; overflow: auto; max-height: calc(100dvh - 30px); padding: clamp(24px, 5vw, 48px); }
+.quick-message-form header { display: flex; justify-content: space-between; gap: 24px; align-items: start; border-bottom: 1px solid var(--color-line); padding-bottom: 20px; }
+.quick-message-form h2 { max-width: 14ch; margin: 8px 0 0; font-size: clamp(1.8rem, 5vw, 3rem); font-weight: 400; line-height: .96; }
+.quick-message-form > p { margin: 0; color: var(--color-muted); font-size: 14px; }
+.quick-message-close { width: 38px; height: 38px; padding: 0; border: 1px solid var(--color-line); border-radius: 0; color: inherit; background: transparent; font-size: 24px; cursor: pointer; }
+.quick-message-form label { display: grid; gap: 7px; }
+.quick-message-form label span { color: var(--color-muted); font-size: 10px; letter-spacing: .1em; text-transform: uppercase; }
+.quick-message-form input,
+.quick-message-form textarea { width: 100%; border: 0; border-bottom: 1px solid var(--color-line); border-radius: 0; outline: 0; padding: 10px 0; color: inherit; background: transparent; font: inherit; resize: vertical; }
+.quick-message-form input:focus,
+.quick-message-form textarea:focus { border-bottom-color: var(--color-text); }
+.quick-message-form footer { display: flex; min-height: 42px; align-items: center; justify-content: space-between; gap: 18px; }
+.quick-message-form footer p { margin: 0; color: var(--color-muted); font-size: 12px; }
+.quick-message-form button[disabled] { opacity: .45; }
+.message-honeypot { position: absolute !important; left: -9999px !important; }
+
+@media (max-width: 760px) {
+  .cinema-daily-game-inner { grid-template-columns: 1fr; align-items: start; }
+  .cinema-sudoku-mark { width: min(58vw, 230px); margin-left: auto; }
+  .quick-message-trigger { right: 12px; bottom: 12px; width: 46px; padding: 0; justify-content: center; }
+  .quick-message-trigger span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  .quick-message-form footer { align-items: start; flex-direction: column; }
+}

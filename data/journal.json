@@ -64,5 +64,11 @@
     "en": { "title": "Essay 009 - A Fool’s Beautiful Dream", "summary": "A lost draft, an unread manuscript, and an IQ test become a defense of dreaming and staying true." },
     "fr": { "title": "Essai 009 - Le beau rêve d’un idiot", "summary": "Un brouillon perdu, un texte inachevé et un test de QI deviennent une défense du rêve et de la sincérité." },
     "ja": { "title": "随筆 009 - 愚か者の美しい夢", "summary": "失われた原稿、読まれなかった文章、知能テストが、夢見ることと真実でいることの擁護へ変わる。" }
+  },
+  "building-floscas": {
+    "zh-Hans": { "title": "关于 Floscas：我如何搭建这个网站", "summary": "关于 Floscas 的搭建过程、日常工作流、设计理念，以及正在发生的下一步。" },
+    "en": { "title": "Building Floscas: My Website and Workflow", "summary": "How I built Floscas, the workflow behind it, its design principles, and what I am making next." },
+    "fr": { "title": "Construire Floscas : mon site et ma méthode", "summary": "La création de Floscas, ma méthode de travail, ses principes graphiques et la suite du projet." },
+    "ja": { "title": "Floscasをつくる：サイトと制作の流れ", "summary": "Floscasの構築、日々のワークフロー、デザイン思想、そしてこれから始まることについて。" }
   }
 }

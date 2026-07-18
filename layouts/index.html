@@ -157,5 +157,21 @@
       </div>
     </div>
   </section>
+
+  <section class="cinema-daily-game" id="daily-sudoku" aria-labelledby="daily-game-title">
+    <div class="cinema-daily-game-inner cinema-container">
+      <div>
+        <p class="cinema-meta" data-i18n="sudoku.kicker">Daily pause / 04</p>
+        <h2 id="daily-game-title" data-i18n-html="sudoku.title">Nine quiet squares<br>for today.</h2>
+      </div>
+      <div class="cinema-daily-game-copy">
+        <p data-i18n="sudoku.description">A new deterministic puzzle every day. Your progress stays on this device.</p>
+        <a class="cinema-text-link" href="{{ "games/sudoku/" | relURL }}" data-i18n="sudoku.open">Open today's Sudoku</a>
+      </div>
+      <div class="cinema-sudoku-mark" aria-hidden="true">
+        {{- range seq 1 81 }}<span></span>{{- end }}
+      </div>
+    </div>
+  </section>
 </div>
 {{- end }}

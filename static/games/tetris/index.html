@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,35 +8,52 @@
 </head>
 <body>
   <main class="game-shell">
-    <nav class="game-nav"><a href="/">Floscas</a><span>Offline game</span></nav>
-    <h1 class="game-title">Tetris</h1>
-    <section class="game-panel">
-      <p class="muted">Arrow keys: move, rotate, drop. Quiet falling geometry.</p>
-      <div class="game-actions"><button id="new">Restart</button><strong id="score">Lines 0</strong></div>
-      <canvas id="game" width="300" height="600"></canvas>
+    <nav class="game-nav"><a href="/">Floscas</a><span>Offline room / 03</span></nav>
+    <header class="game-header"><h1 class="game-title">Tetris</h1><p class="muted">让几何缓慢落下。开始后方向键移动，上键旋转，空格直落。</p></header>
+    <section class="game-panel game-layout game-layout--tetris">
+      <div class="game-stage"><canvas id="game" width="300" height="600" aria-label="俄罗斯方块棋盘"></canvas></div>
+      <aside class="game-sidebar">
+        <h2>Falling geometry</h2>
+        <div class="game-score"><span>Status</span><strong id="status">Ready</strong></div>
+        <div class="game-score"><span>Lines</span><strong id="score">0</strong></div>
+        <div class="game-actions">
+          <button class="primary" id="start" type="button">开始</button>
+          <button id="pause" type="button" disabled>暂停</button>
+          <button id="new" type="button">重新开始</button>
+        </div>
+        <div class="touch-controls" aria-label="触屏控制">
+          <button data-move="left" aria-label="向左">←</button><button data-move="rotate" aria-label="旋转">↻</button><button data-move="right" aria-label="向右">→</button>
+          <button data-move="down" aria-label="向下">↓</button><button data-move="drop" class="wide">Drop</button>
+        </div>
+        <p class="muted">操作仅在游戏区域生效，方向键不会再带动网页滚动。</p>
+      </aside>
     </section>
   </main>
   <script>
-  const c=document.getElementById("game"),x=c.getContext("2d"),w=10,h=20,z=30,scoreEl=document.getElementById("score");
-  const shapes=[[[1,1,1,1]],[[1,1],[1,1]],[[0,1,0],[1,1,1]],[[1,0,0],[1,1,1]],[[0,0,1],[1,1,1]],[[1,1,0],[0,1,1]],[[0,1,1],[1,1,0]]];
-  let board,piece,lines,last=0,drop=680;
-  const clone=o=>JSON.parse(JSON.stringify(o)), spawn=()=>piece={m:clone(shapes[Math.floor(Math.random()*shapes.length)]),x:3,y:0};
-  const reset=()=>{board=Array.from({length:h},()=>Array(w).fill(0));lines=0;spawn();};
-  const hit=(px=piece.x,py=piece.y,m=piece.m)=>m.some((r,y)=>r.some((v,x)=>v&&(board[py+y]?.[px+x]!==0||px+x<0||px+x>=w||py+y>=h)));
-  const merge=()=>{piece.m.forEach((r,y)=>r.forEach((v,x)=>{if(v)board[piece.y+y][piece.x+x]=1;})); board=board.filter(r=>r.some(v=>!v)); const cleared=h-board.length; lines+=cleared; while(board.length<h)board.unshift(Array(w).fill(0)); spawn(); if(hit()) reset();};
-  const rot=m=>m[0].map((_,i)=>m.map(r=>r[i]).reverse());
-  const cell=(px,py,a=.72)=>{x.fillStyle=`rgba(236,242,236,${a})`;x.shadowColor="rgba(132,170,150,.8)";x.shadowBlur=10;x.fillRect(px*z+2,py*z+2,z-4,z-4);x.shadowBlur=0;};
-  const draw=()=>{x.clearRect(0,0,c.width,c.height);board.forEach((r,y)=>r.forEach((v,px)=>v&&cell(px,y,.46)));piece.m.forEach((r,y)=>r.forEach((v,px)=>v&&cell(piece.x+px,piece.y+y,.9)));scoreEl.textContent=`Lines ${lines}`;};
-  const step=t=>{if(t-last>drop){piece.y++;if(hit()){piece.y--;merge();}last=t;}draw();requestAnimationFrame(step);};
-  addEventListener("keydown",e=>{
-    if(!["ArrowLeft","ArrowRight","ArrowDown","ArrowUp"," "].includes(e.key)) return;
-    e.preventDefault();
-    if(e.key==="ArrowLeft"&&!hit(piece.x-1))piece.x--;
-    if(e.key==="ArrowRight"&&!hit(piece.x+1))piece.x++;
-    if((e.key==="ArrowDown"||e.key===" ")&&!hit(piece.x,piece.y+1))piece.y++;
-    if(e.key==="ArrowUp"){const m=rot(piece.m); if(!hit(piece.x,piece.y,m))piece.m=m;}
-  }, { passive: false });
-  document.getElementById("new").onclick=reset; reset(); requestAnimationFrame(step);
+  (() => {
+    const canvas=document.getElementById("game"),ctx=canvas.getContext("2d"),cols=10,rows=20,size=30;
+    const scoreEl=document.getElementById("score"),statusEl=document.getElementById("status"),startBtn=document.getElementById("start"),pauseBtn=document.getElementById("pause");
+    const shapes=[[[1,1,1,1]],[[1,1],[1,1]],[[0,1,0],[1,1,1]],[[1,0,0],[1,1,1]],[[0,0,1],[1,1,1]],[[1,1,0],[0,1,1]],[[0,1,1],[1,1,0]]];
+    let board,piece,lines,last=0,running=false,paused=false,ended=false;
+    const copy=value=>JSON.parse(JSON.stringify(value));
+    const spawn=()=>{piece={m:copy(shapes[Math.floor(Math.random()*shapes.length)]),x:3,y:0};if(hit())gameOver();};
+    const reset=()=>{board=Array.from({length:rows},()=>Array(cols).fill(0));lines=0;running=false;paused=false;ended=false;last=0;piece={m:copy(shapes[0]),x:3,y:0};sync();draw();};
+    const hit=(px=piece.x,py=piece.y,m=piece.m)=>m.some((row,y)=>row.some((v,x)=>v&&(px+x<0||px+x>=cols||py+y>=rows||(py+y>=0&&board[py+y][px+x]))));
+    const merge=()=>{piece.m.forEach((row,y)=>row.forEach((v,x)=>{if(v&&piece.y+y>=0)board[piece.y+y][piece.x+x]=1;}));const kept=board.filter(row=>row.some(v=>!v));lines+=rows-kept.length;while(kept.length<rows)kept.unshift(Array(cols).fill(0));board=kept;spawn();};
+    const rotate=m=>m[0].map((_,i)=>m.map(row=>row[i]).reverse());
+    const cell=(x,y,active)=>{ctx.fillStyle=active?"#f6f3ec":"#73877a";ctx.fillRect(x*size+2,y*size+2,size-4,size-4);};
+    const draw=()=>{ctx.clearRect(0,0,canvas.width,canvas.height);ctx.strokeStyle="rgba(246,243,236,.06)";for(let i=1;i<cols;i++){ctx.beginPath();ctx.moveTo(i*size,0);ctx.lineTo(i*size,canvas.height);ctx.stroke();}board.forEach((row,y)=>row.forEach((v,x)=>v&&cell(x,y,false)));piece.m.forEach((row,y)=>row.forEach((v,x)=>v&&cell(piece.x+x,piece.y+y,true)));};
+    const sync=()=>{scoreEl.textContent=lines;statusEl.textContent=ended?"Finished":paused?"Paused":running?"Playing":"Ready";startBtn.textContent=ended?"再来一局":running?"进行中":"开始";startBtn.disabled=running&&!paused;pauseBtn.disabled=!running;pauseBtn.textContent=paused?"继续":"暂停";};
+    const gameOver=()=>{running=false;paused=false;ended=true;sync();};
+    const startGame=()=>{if(ended)reset();running=true;paused=false;last=performance.now();sync();};
+    const togglePause=()=>{if(!running)return;paused=!paused;if(!paused)last=performance.now();sync();};
+    const move=action=>{if(!running||paused)return;if(action==="left"&&!hit(piece.x-1))piece.x--;if(action==="right"&&!hit(piece.x+1))piece.x++;if(action==="down"){piece.y++;if(hit()){piece.y--;merge();}}if(action==="drop"){while(!hit(piece.x,piece.y+1))piece.y++;merge();}if(action==="rotate"){const m=rotate(piece.m);if(!hit(piece.x,piece.y,m))piece.m=m;}draw();};
+    const loop=time=>{if(running&&!paused&&time-last>680){move("down");last=time;}draw();requestAnimationFrame(loop);};
+    addEventListener("keydown",event=>{const actions={ArrowLeft:"left",ArrowRight:"right",ArrowDown:"down",ArrowUp:"rotate"," ":"drop"};const action=actions[event.key];if(!action)return;event.preventDefault();move(action);},{passive:false});
+    document.querySelectorAll("[data-move]").forEach(button=>button.addEventListener("pointerdown",event=>{event.preventDefault();move(button.dataset.move);}));
+    startBtn.addEventListener("click",()=>paused?togglePause():startGame());pauseBtn.addEventListener("click",togglePause);document.getElementById("new").addEventListener("click",reset);
+    reset();requestAnimationFrame(loop);
+  })();
   </script>
 </body>
 </html>

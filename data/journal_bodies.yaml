@@ -1,3 +1,79 @@
+building-floscas:
+  en: |
+    <p>Floscas did not begin with a complete product brief. At first, I simply wanted a place that truly belonged to my writing and photography: somewhere independent of recommendation algorithms, free from a uniform template, and under no obligation to keep making noise for attention.</p>
+    <p>So I began building this website.</p>
+    <h2>How I built it</h2>
+    <p>The site uses Hugo as its content framework. Articles remain in Markdown, keeping the writing separate from the visual system: however often the design changes, the text itself remains intact. Layout, interaction, and multilingual support are developed through Hugo templates, CSS, and JavaScript. Git manages the code; after a push to GitHub, Cloudflare Pages builds and publishes the site automatically.</p>
+    <p>Codex has been an important collaborator throughout. I usually begin with a feeling, a reference, or a precise problem, then ask Codex to read the existing project, edit the code, start the local server, and inspect the result. It did not generate the entire site in a single attempt. Instead, it has taken part in many concrete iterations: adjusting typography, repairing mobile layouts, organizing images, adding translations, checking links, building pages, and committing versions once they are ready.</p>
+    <p>Floscas is therefore not a template with different colors. It has grown through conversation, trial, error, and choice.</p>
+    <h2>My workflow</h2>
+    <p>My usual workflow has six parts:</p>
+    <ol><li><strong>Define the content.</strong> I begin with an article, a set of photographs, or the real problem that needs solving.</li><li><strong>Find a visual direction.</strong> I look at magazines, film posters, independent publications, artists' websites, and typography without copying a single page.</li><li><strong>Work with Codex.</strong> I provide writing, screenshots, images, and constraints, asking it to understand the current structure before making focused changes.</li><li><strong>Preview locally.</strong> Hugo runs the site while I check desktop and mobile typography, spacing, image ratios, language switching, and article links.</li><li><strong>Keep removing.</strong> Design is often completed by subtraction. Removing repeated decoration, excessive motion, and unnecessary interface is usually more valuable than adding another layer.</li><li><strong>Build, commit, publish.</strong> Once Hugo builds successfully, I commit and push through Git, and Cloudflare Pages handles deployment.</li></ol>
+    <p>This process is not linear. Once a page is online, real devices reveal new problems, and I return to the local version. The site behaves more like a magazine that is continually being rearranged than an object declared permanently finished.</p>
+    <h2>The design idea</h2>
+    <p>The heart of Floscas is not the label “minimalism,” but restraint.</p>
+    <p>I want writing to have enough space, images to retain their original mood, and the interface not to demand attention before the reading begins. Black, white, and gray create the basic order; blue-green lines and photographic color enter the page like incidental light. Headlines may feel editorial, but body text must remain quiet, clear, and comfortable over time.</p>
+    <p>The site deliberately keeps a sense of being unfinished. Unequal image sizes, slightly displaced grids, and the juxtaposition of films and writing make it feel less like a standardized commercial product and more like a personal archive, an independent magazine, and a growing worktable.</p>
+    <p>Motion follows the same principle. It should clarify hierarchy and state, not merely prove that a page can move. The best interactions are light: content appears gently, images answer a hover, language changes preserve context, and mobile reading never pays the price for an effect.</p>
+    <h2>Why this website exists</h2>
+    <p>I want to preserve things that disappear easily into time: written thoughts, photographed light, films watched, music heard, and feelings that were real in a particular season.</p>
+    <p>But Floscas is more than a private storehouse. It will also be a place to share methods and resources. I want to explain how I write, organize inspiration, collaborate with AI, and turn an indistinct aesthetic judgment into a working web page.</p>
+    <h2>Next: Design Studio</h2>
+    <p>A new <strong>Design Studio</strong> is currently being built. It will connect to the blog while serving a different purpose: the blog preserves experience and feeling; the studio will focus on design experiments, visual systems, interface studies, and work in progress.</p>
+    <p>I will share both decisions and failures from the design process, alongside reusable templates, references, and tools. Practical <strong>skills</strong> will also be released gradually to help with content organization, image processing, multilingual publishing, site checks, and other repetitive but necessary work.</p>
+    <p>I will continue sharing resources I have actually found useful: perhaps a typeface, a design archive, an open-source project, a working method, or simply a page worth revisiting.</p>
+    <p>Floscas is still being built. Its purpose is not to become a “finished website” as quickly as possible, but to give ideas somewhere to stay, to record practice, and to leave a trace of whatever happens next.</p>
+    <p>If possible, it will keep becoming better.</p>
+  fr: |
+    <p>Floscas n’est pas né d’un cahier des charges complet. Au départ, je voulais simplement offrir à mes textes et à mes photographies un lieu qui leur appartienne vraiment : un espace indépendant des algorithmes de recommandation, libéré des modèles uniformes et de l’obligation de faire du bruit pour attirer l’attention.</p>
+    <p>J’ai donc commencé à construire ce site.</p>
+    <h2>Comment je l’ai construit</h2>
+    <p>Le site utilise Hugo comme ossature éditoriale. Les articles restent enregistrés en Markdown ; l’écriture demeure ainsi indépendante de l’apparence du site. Même si le système visuel change, les textes restent intacts. La mise en page, les interactions et le multilinguisme sont développés dans les modèles Hugo, le CSS et le JavaScript. Git organise le code ; après chaque envoi vers GitHub, Cloudflare Pages construit et publie automatiquement le site.</p>
+    <p>Codex est un collaborateur important de ce processus. Je pars généralement d’une sensation, d’une référence ou d’un problème précis, puis je lui demande de lire le projet existant, de modifier le code, de lancer le serveur local et de vérifier le résultat. Le site n’a pas été généré d’un seul coup. Il s’est formé à travers des tâches concrètes et répétées : ajuster les caractères, réparer la version mobile, organiser les images, compléter les traductions, vérifier les liens, construire les pages, puis valider les versions avec Git.</p>
+    <p>Floscas n’est donc pas un modèle auquel on aurait simplement changé les couleurs. Il grandit au fil des conversations, des essais, des erreurs et des choix.</p>
+    <h2>Ma méthode de travail</h2>
+    <p>Mon travail suit généralement six étapes :</p>
+    <ol><li><strong>Définir le contenu.</strong> Je commence par un texte, une série de photographies ou le problème réel à résoudre.</li><li><strong>Trouver une direction visuelle.</strong> J’observe des magazines, des affiches de cinéma, des éditions indépendantes, des sites d’artistes et des compositions typographiques, sans reproduire une page particulière.</li><li><strong>Travailler avec Codex.</strong> Je lui confie textes, captures, images et contraintes, en lui demandant de comprendre la structure avant toute modification.</li><li><strong>Prévisualiser en local.</strong> Hugo fait fonctionner le site pendant que je vérifie sur ordinateur et mobile les tailles, les espaces, les formats d’image, les langues et les accès aux articles.</li><li><strong>Continuer à retirer.</strong> Le design se termine souvent par la soustraction. Supprimer les ornements répétés, les animations excessives et les interfaces inutiles compte davantage qu’ajouter une couche.</li><li><strong>Construire, valider, publier.</strong> Lorsque Hugo termine correctement la construction, je crée un commit Git, je l’envoie, puis Cloudflare Pages assure le déploiement.</li></ol>
+    <p>Ce processus n’est pas linéaire. Une fois la page en ligne, les appareils réels révèlent de nouveaux problèmes. Je retourne alors à la version locale. Le site ressemble davantage à un magazine sans cesse recomposé qu’à un objet déclaré définitivement terminé.</p>
+    <h2>L’idée graphique</h2>
+    <p>Le cœur de Floscas n’est pas le mot « minimalisme », mais la retenue.</p>
+    <p>Je veux laisser de l’espace aux mots, préserver l’émotion propre aux images et empêcher l’interface de voler l’attention avant la lecture. Le noir, le blanc et le gris établissent l’ordre principal ; les lignes bleu-vert et les couleurs des photographies entrent dans la page comme une lumière imprévue. Les titres peuvent évoquer une mise en page éditoriale, mais le texte courant doit rester calme, lisible et confortable.</p>
+    <p>Le site conserve volontairement une impression d’inachèvement. Les formats d’image variables, les grilles légèrement décalées et la proximité entre cinéma et écriture le rapprochent d’une archive personnelle, d’une revue indépendante et d’une table de travail en mouvement.</p>
+    <p>Les animations suivent le même principe. Elles doivent expliquer une hiérarchie ou un état, jamais seulement prouver que la page sait bouger. Le contenu apparaît doucement, l’image répond discrètement au survol, le changement de langue conserve le contexte, et la lecture mobile ne doit pas payer le prix d’un effet visuel.</p>
+    <h2>Pourquoi ce site existe</h2>
+    <p>Je veux préserver ce qui disparaît facilement dans le temps : une pensée écrite, une lumière photographiée, un film regardé, une musique entendue, ou une émotion réellement vécue à un moment précis.</p>
+    <p>Mais Floscas n’est pas seulement une réserve personnelle. Il deviendra aussi un lieu de partage des méthodes et des ressources : comment j’écris, comment j’organise l’inspiration, comment je collabore avec l’IA, et comment une intuition esthétique encore floue devient une page fonctionnelle.</p>
+    <h2>La suite : Design Studio</h2>
+    <p>Un nouveau <strong>Design Studio</strong> est actuellement en construction. Il sera relié au blog, tout en ayant une autre fonction : le blog conserve les expériences et les sensations ; le studio rassemblera les expérimentations graphiques, les systèmes visuels, les recherches d’interface et les projets en cours.</p>
+    <p>Je partagerai les choix, mais aussi les échecs du processus, ainsi que des modèles réutilisables, des références et des outils. Des <strong>skills</strong> réellement utiles seront publiés progressivement pour faciliter l’organisation des contenus, le traitement des images, la publication multilingue, la vérification des sites et d’autres tâches répétitives mais nécessaires.</p>
+    <p>Je continuerai également à partager les ressources que j’utilise réellement : une police, une archive de design, un projet open source, une méthode de travail ou simplement une page qui mérite d’être revue.</p>
+    <p>Floscas reste en construction. Son but n’est pas de devenir au plus vite un « site terminé », mais de donner un lieu aux idées, de garder une trace du travail et de rendre visible ce qui viendra ensuite.</p>
+    <p>Si cela est possible, il continuera à s’améliorer.</p>
+  ja: |
+    <p>Floscasは、完成された企画書から始まったわけではない。最初にあったのは、自分の文章と写真が本当に居られる場所をつくりたい、という思いだった。推薦アルゴリズムに左右されず、画一的なテンプレートに縛られず、注目を得るために絶えず騒がなくてもよい場所。</p>
+    <p>そうして、このウェブサイトをつくり始めた。</p>
+    <h2>どのようにつくったか</h2>
+    <p>サイトのコンテンツ基盤にはHugoを使っている。記事はMarkdownで保存されるため、文章とデザインを切り離して扱える。見た目が何度変わっても、文章そのものは壊れない。レイアウト、インタラクション、多言語機能はHugoのテンプレート、CSS、JavaScriptで少しずつ実装した。コードはGitで管理し、GitHubへプッシュするとCloudflare Pagesが自動でビルドと公開を行う。</p>
+    <p>Codexはこの過程における大切な協働者だ。私はまず、感覚や参考資料、あるいは具体的な問題を言葉にする。Codexは既存のプロジェクトを読み、コードを直し、ローカルサーバーを起動して結果を確認する。サイト全体を一度に生成したのではない。文字サイズの調整、モバイル表示の修正、画像の整理、翻訳の追加、リンクの確認、ページのビルド、Gitへの記録という具体的な作業を何度も重ねてきた。</p>
+    <p>つまりFloscasは、既成のテンプレートの色を変えただけのものではない。対話と試行錯誤、そして選択を通して、少しずつ育ってきた。</p>
+    <h2>普段のワークフロー</h2>
+    <p>制作はおおよそ六つの段階で進む。</p>
+    <ol><li><strong>内容を決める。</strong> まず記事を書く、写真を整理する、あるいは今回解決すべき本当の問題を明確にする。</li><li><strong>視覚的な方向を探す。</strong> 雑誌、映画ポスター、インディペンデント出版、アーティストのサイト、好きな組版を参照する。ただし特定のページをそのまま写すことはしない。</li><li><strong>Codexと作業する。</strong> 原稿、スクリーンショット、画像、制約を渡し、現在の構造を理解してから局所的に変更してもらう。</li><li><strong>ローカルで確認する。</strong> Hugoでサイトを立ち上げ、デスクトップとモバイルの文字、余白、画像比率、言語切替、記事への導線を確認する。</li><li><strong>削り続ける。</strong> デザインは加えることより、取り除くことで完成する場合が多い。重複した装飾、過剰な動き、不要なUIを消すことは、新しい要素を足すこと以上に重要だ。</li><li><strong>ビルドし、記録し、公開する。</strong> Hugoのビルド成功を確認したらGitでコミットしてプッシュし、Cloudflare Pagesで公開する。</li></ol>
+    <p>この流れは一直線ではない。公開後、実機で新しい問題を見つければ再びローカルへ戻る。だからこのサイトは、完成を宣言して動かなくなる作品というより、何度も組み直される一冊の雑誌に近い。</p>
+    <h2>中心にあるデザイン思想</h2>
+    <p>Floscasの中心にあるのは、「ミニマル」というラベルではなく、抑制である。</p>
+    <p>文章には十分な余白を与え、写真が持つ感情を残し、読む前にインターフェースが注意を奪わないようにしたい。黒、白、グレーが基本の秩序をつくり、青緑の線と写真の色は、紙面へ偶然差し込んだ光のように現れる。見出しには編集的な強さがあっても、本文は静かで明快で、長く読めるものでなければならない。</p>
+    <p>このサイトには意図的に未完成の感覚も残している。異なる大きさの写真、わずかにずれたグリッド、映画と文章の並置。それらによって、標準化された商業製品ではなく、個人のアーカイブ、独立雑誌、成長を続ける作業机に近づけたい。</p>
+    <p>動きも同じ原則に従う。階層や状態を理解するために使い、ページが動けることを誇示するためには使わない。内容は静かに現れ、画像はホバーにわずかに応え、言語を変えても文脈は保たれ、モバイルの読みやすさを視覚効果のために犠牲にしない。</p>
+    <h2>このサイトをつくる理由</h2>
+    <p>時間の中から消えやすいものを残したい。書いた考え、撮影した光、観た映画、聴いた音楽、そしてある時期に確かに存在した感情。</p>
+    <p>しかしFloscasは個人的な倉庫だけではない。方法や資料を共有する場所にもなる。どのように書き、ひらめきを整理し、AIと協働し、曖昧な美意識を実際に動くウェブページへ変えていくのか。それを少しずつ、ほかの人にも使える形にしたい。</p>
+    <h2>次に始まるDesign Studio</h2>
+    <p>現在、新しい<strong>Design Studio</strong>も制作している。ブログとつながりながら、異なる役割を担う場所だ。ブログが経験や感情を保存するのに対し、Design Studioではデザイン実験、ビジュアルシステム、インターフェース研究、制作中のプロジェクトをより集中的に紹介する。</p>
+    <p>これからは、制作における判断だけでなく失敗も共有し、再利用できるテンプレート、参考資料、ツールを整理していく。また、コンテンツ整理、画像処理、多言語公開、サイト検査など、繰り返し必要になる作業を助ける実用的な<strong>skills</strong>も段階的に公開する予定だ。</p>
+    <p>実際に見つけ、使ってきた資料も引き続き共有したい。フォント、デザインアーカイブ、オープンソースのプロジェクト、作業方法、あるいは何度でも見返す価値のある一つのページかもしれない。</p>
+    <p>Floscasは今も建設中だ。早く「完成したサイト」になることが目的ではない。考えが留まる場所をつくり、実践を記録し、これから起こることの跡を残すためにある。</p>
+    <p>できることなら、これからもより良くなっていく。</p>
 first-post:
   en: |
     <h1>Hello World</h1>

@@ -1,0 +1,20 @@
+<button class="quick-message-trigger" type="button" data-message-open aria-haspopup="dialog" aria-controls="quick-message-dialog">
+  <img src="{{ "/icons/mail.svg" | relURL }}" alt="" aria-hidden="true">
+  <span data-i18n="message.trigger">Leave a note</span>
+</button>
+
+<dialog class="quick-message-dialog" id="quick-message-dialog" data-message-dialog>
+  <form class="quick-message-form" data-message-form>
+    <header>
+      <div><p class="cinema-meta" data-i18n="message.kicker">A short line</p><h2 data-i18n="message.title">Leave a note for Floscas</h2></div>
+      <button type="button" class="quick-message-close" data-message-close aria-label="Close" data-i18n-aria-label="action.close">×</button>
+    </header>
+    <p data-i18n="message.description">Your note will arrive privately by email.</p>
+    <label><span data-i18n="message.name">Name</span><input type="text" name="name" maxlength="80" required autocomplete="name"></label>
+    <label><span data-i18n="message.email">Email (optional)</span><input type="email" name="email" maxlength="160" autocomplete="email"></label>
+    <label><span data-i18n="message.body">Message</span><textarea name="message" maxlength="2000" required rows="6"></textarea></label>
+    <label class="message-honeypot" aria-hidden="true">Website<input type="text" name="website" tabindex="-1" autocomplete="off"></label>
+    <div data-message-turnstile></div>
+    <footer><p data-message-status aria-live="polite"></p><button class="cinema-text-link" type="submit" data-i18n="message.send">Send note</button></footer>
+  </form>
+</dialog>

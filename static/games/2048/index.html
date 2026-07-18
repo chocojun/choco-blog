@@ -1,49 +1,31 @@
 <!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Floscas 2048</title>
-  <link rel="stylesheet" href="../floscas-games.css">
-</head>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Floscas 2048</title><link rel="stylesheet" href="../floscas-games.css"></head>
 <body>
   <main class="game-shell">
-    <nav class="game-nav"><a href="/">Floscas</a><span>Offline game</span></nav>
-    <h1 class="game-title">2048</h1>
-    <section class="game-panel">
-      <p class="muted">Use arrow keys or swipe. Glass tiles, quiet arithmetic.</p>
-      <div class="game-actions"><button id="new">New game</button><strong id="score">0</strong></div>
-      <div id="grid" class="grid-2048" aria-label="2048 board"></div>
+    <nav class="game-nav"><a href="/">Floscas</a><span>Offline room / 01</span></nav>
+    <header class="game-header"><h1 class="game-title">2048</h1><p class="muted">用方向键或滑动合并数字。安静地把相同的事物放在一起。</p></header>
+    <section class="game-panel game-layout">
+      <div class="game-stage"><div id="grid" class="grid-2048" aria-label="2048 棋盘"></div></div>
+      <aside class="game-sidebar">
+        <h2>Quiet arithmetic</h2>
+        <div class="game-score"><span>Score</span><strong id="score">0</strong></div>
+        <div class="game-actions"><button class="primary" id="new" type="button">新游戏</button></div>
+        <div class="touch-controls" aria-label="触屏控制"><button data-dir="2">↑</button><button data-dir="0">←</button><button data-dir="1">→</button><button data-dir="3">↓</button></div>
+        <p class="muted">在棋盘内滑动，或使用方向键。游戏可以离线继续。</p>
+      </aside>
     </section>
   </main>
   <script>
-  const grid = document.getElementById("grid"), scoreEl = document.getElementById("score");
-  let board, score, start;
-  const empty = () => board.flatMap((row,y)=>row.map((v,x)=>v?null:[x,y])).filter(Boolean);
-  const add = () => { const e = empty(); if (!e.length) return; const [x,y] = e[Math.floor(Math.random()*e.length)]; board[y][x] = Math.random() > .88 ? 4 : 2; };
-  const draw = () => { grid.innerHTML = ""; board.flat().forEach(v => { const d=document.createElement("div"); d.className="tile"; d.textContent=v||""; d.style.opacity=v?1:.34; grid.append(d); }); scoreEl.textContent = `Score ${score}`; };
-  const reset = () => { board = Array.from({length:4},()=>Array(4).fill(0)); score = 0; add(); add(); draw(); };
-  const slide = row => { let a=row.filter(Boolean); for(let i=0;i<a.length-1;i++) if(a[i]===a[i+1]) { a[i]*=2; score+=a[i]; a.splice(i+1,1); } return [...a, ...Array(4-a.length).fill(0)]; };
-  const move = dir => {
-    const before = JSON.stringify(board);
-    for(let i=0;i<4;i++) {
-      let row = dir<2 ? board[i] : board.map(r=>r[i]);
-      if(dir===1 || dir===3) row = row.reverse();
-      row = slide(row);
-      if(dir===1 || dir===3) row = row.reverse();
-      for(let j=0;j<4;j++) dir<2 ? board[i][j]=row[j] : board[j][i]=row[j];
-    }
-    if (before !== JSON.stringify(board)) { add(); draw(); }
-  };
-  addEventListener("keydown", e => {
-    const dir = {ArrowLeft:0,ArrowRight:1,ArrowUp:2,ArrowDown:3}[e.key];
-    if (dir === undefined) return;
-    e.preventDefault();
-    move(dir);
-  }, { passive: false });
-  addEventListener("touchstart", e => start=[e.touches[0].clientX,e.touches[0].clientY], {passive:true});
-  addEventListener("touchend", e => { if(!start) return; const dx=e.changedTouches[0].clientX-start[0], dy=e.changedTouches[0].clientY-start[1]; Math.abs(dx)>Math.abs(dy)?move(dx>0?1:0):move(dy>0?3:2); }, {passive:true});
-  document.getElementById("new").onclick = reset; reset();
+  (()=>{const grid=document.getElementById("grid"),scoreEl=document.getElementById("score");let board,score,start;
+  const empty=()=>board.flatMap((row,y)=>row.map((v,x)=>v?null:[x,y])).filter(Boolean);
+  const add=()=>{const cells=empty();if(!cells.length)return;const [x,y]=cells[Math.floor(Math.random()*cells.length)];board[y][x]=Math.random()>.88?4:2;};
+  const draw=()=>{grid.innerHTML="";board.flat().forEach(v=>{const cell=document.createElement("div");cell.className="tile";cell.textContent=v||"";cell.style.opacity=v?1:.22;grid.append(cell);});scoreEl.textContent=score;};
+  const reset=()=>{board=Array.from({length:4},()=>Array(4).fill(0));score=0;add();add();draw();};
+  const slide=row=>{const values=row.filter(Boolean);for(let i=0;i<values.length-1;i++)if(values[i]===values[i+1]){values[i]*=2;score+=values[i];values.splice(i+1,1);}return values.concat(Array(4-values.length).fill(0));};
+  const move=dir=>{const before=JSON.stringify(board);for(let i=0;i<4;i++){let row=dir<2?board[i]:board.map(r=>r[i]);if(dir===1||dir===3)row=row.reverse();row=slide(row);if(dir===1||dir===3)row=row.reverse();for(let j=0;j<4;j++)dir<2?board[i][j]=row[j]:board[j][i]=row[j];}if(before!==JSON.stringify(board)){add();draw();}};
+  addEventListener("keydown",e=>{const dir={ArrowLeft:0,ArrowRight:1,ArrowUp:2,ArrowDown:3}[e.key];if(dir===undefined)return;e.preventDefault();move(dir);},{passive:false});
+  grid.addEventListener("touchstart",e=>start=[e.touches[0].clientX,e.touches[0].clientY],{passive:true});grid.addEventListener("touchend",e=>{if(!start)return;const dx=e.changedTouches[0].clientX-start[0],dy=e.changedTouches[0].clientY-start[1];if(Math.max(Math.abs(dx),Math.abs(dy))>18)move(Math.abs(dx)>Math.abs(dy)?(dx>0?1:0):(dy>0?3:2));start=null;},{passive:true});
+  document.querySelectorAll("[data-dir]").forEach(button=>button.onclick=()=>move(Number(button.dataset.dir)));document.getElementById("new").onclick=reset;reset();})();
   </script>
-</body>
-</html>
+</body></html>
