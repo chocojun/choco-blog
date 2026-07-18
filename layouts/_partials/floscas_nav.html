@@ -5,7 +5,11 @@
     <a href="{{ "" | relURL }}" data-i18n="nav.home">Index</a>
     <a href="{{ "posts/" | relURL }}" data-i18n="nav.posts">Journal</a>
     <a href="{{ "gallery/" | relURL }}" data-i18n="nav.gallery">Images</a>
+    <a href="{{ "games/" | relURL }}" data-i18n="nav.games">Games</a>
     <a href="{{ "about/" | relURL }}" data-i18n="nav.about">About</a>
+  </nav>
+
+  <div class="cinema-header-actions">
     <div class="floscas-lang cinema-language" data-lang-menu>
       <button class="floscas-lang-button" type="button" aria-expanded="false" aria-haspopup="true" data-i18n-aria-label="language.toggle">
         <span data-lang-current>EN</span>
@@ -17,28 +21,18 @@
         <button type="button" role="menuitem" data-lang-option="ja">日</button>
       </div>
     </div>
-  </nav>
 
-  <details class="cinema-mobile-menu">
-    <summary data-i18n="nav.menu">Menu</summary>
-    <div class="cinema-mobile-panel">
-      <nav class="floscas-navlinks" aria-label="Mobile primary">
-        <a href="{{ "" | relURL }}" data-i18n="nav.home">Index</a>
-        <a href="{{ "posts/" | relURL }}" data-i18n="nav.posts">Journal</a>
-        <a href="{{ "gallery/" | relURL }}" data-i18n="nav.gallery">Images</a>
-        <a href="{{ "about/" | relURL }}" data-i18n="nav.about">About</a>
-      </nav>
-      <div class="floscas-lang cinema-language" data-lang-menu>
-        <button class="floscas-lang-button" type="button" aria-expanded="false" aria-haspopup="true" data-i18n-aria-label="language.toggle">
-          <span data-lang-current>EN</span>
-        </button>
-        <div class="floscas-lang-panel" role="menu">
-          <button type="button" role="menuitem" data-lang-option="zh-Hans">中文</button>
-          <button type="button" role="menuitem" data-lang-option="en">English</button>
-          <button type="button" role="menuitem" data-lang-option="fr">Français</button>
-          <button type="button" role="menuitem" data-lang-option="ja">日本語</button>
-        </div>
+    <details class="cinema-mobile-menu">
+      <summary data-i18n="nav.menu">Menu</summary>
+      <div class="cinema-mobile-panel">
+        <nav class="floscas-navlinks" aria-label="Mobile primary">
+          <a href="{{ "" | relURL }}" data-i18n="nav.home">Index</a>
+          <a href="{{ "posts/" | relURL }}" data-i18n="nav.posts">Journal</a>
+          <a href="{{ "gallery/" | relURL }}" data-i18n="nav.gallery">Images</a>
+          <a href="{{ "games/" | relURL }}" data-i18n="nav.games">Games</a>
+          <a href="{{ "about/" | relURL }}" data-i18n="nav.about">About</a>
+        </nav>
       </div>
-    </div>
-  </details>
+    </details>
+  </div>
 </header>

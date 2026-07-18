@@ -178,6 +178,17 @@ body.cinema-section-gallery {
   gap: clamp(24px, 3vw, 48px);
 }
 
+.cinema-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cinema-header-actions .cinema-language {
+  position: relative;
+  z-index: 43;
+}
+
 .cinema-nav > a {
   position: relative;
   display: inline-flex;
@@ -1296,6 +1307,25 @@ body.cinema-section-gallery {
     display: block;
   }
 
+  .cinema-header-actions {
+    gap: 4px;
+  }
+
+  .cinema-header-actions .cinema-language .floscas-lang-button {
+    width: 44px;
+    min-width: 44px;
+  }
+
+  .cinema-header-actions .cinema-language .floscas-lang-panel {
+    position: fixed;
+    top: 70px;
+    right: 20px;
+    left: 20px;
+    grid-template-columns: repeat(4, 1fr);
+    width: auto;
+    min-width: 0;
+  }
+
   .cinema-mobile-menu summary {
     display: grid;
     min-width: 52px;
@@ -1346,15 +1376,6 @@ body.cinema-section-gallery {
     font-weight: 400;
     letter-spacing: 0;
     text-decoration: none;
-  }
-
-  .cinema-mobile-panel .cinema-language {
-    margin-top: 36px;
-  }
-
-  .cinema-mobile-panel .floscas-lang-button {
-    width: auto;
-    padding-inline: 0;
   }
 
   .cinema-film-title {

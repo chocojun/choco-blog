@@ -106,6 +106,7 @@
   let selected = -1;
   let noteMode = false;
   let history = [];
+  let messageKey = "sudoku.select";
 
   const board = document.getElementById("board");
   const message = document.getElementById("message");
@@ -115,6 +116,8 @@
   const penButton = document.getElementById("pen-mode");
   const highlightToggle = document.getElementById("highlight-toggle");
   const autoRemoveToggle = document.getElementById("auto-remove-toggle");
+  const t = (key, values) => window.FloscasGames?.t(key, values) || key;
+  const setMessage = (key) => { messageKey = key; message.textContent = t(key); };
 
   const persist = () => localStorage.setItem(storageKey, JSON.stringify({ values, notes, elapsed }));
   const snapshot = () => history.push({ values: [...values], notes: notes.map((item) => [...item]) });
@@ -129,7 +132,7 @@
     noteButton.setAttribute("aria-pressed", String(noteMode));
     penButton.classList.toggle("is-active", !noteMode);
     penButton.setAttribute("aria-pressed", String(!noteMode));
-    message.textContent = noteMode ? "笔记模式：数字会以候选数写入格子。" : "填数模式：数字会作为答案写入格子。";
+    setMessage(noteMode ? "sudoku.noteMode" : "sudoku.penMode");
   };
 
   const cleanPeerNotes = (index, value) => {
@@ -147,7 +150,8 @@
       button.type = "button";
       button.className = "sudoku-cell";
       button.setAttribute("role", "gridcell");
-      button.setAttribute("aria-label", `第 ${Math.floor(index / 9) + 1} 行，第 ${index % 9 + 1} 列${value ? `，数字 ${value}` : "，空格"}`);
+      const cellValue = value ? t("sudoku.number", { number: value }) : t("sudoku.empty");
+      button.setAttribute("aria-label", t("sudoku.rowcol", { row: Math.floor(index / 9) + 1, col: index % 9 + 1, value: cellValue }));
 
       if (value) {
         const digit = document.createElement("span");
@@ -203,7 +207,7 @@
   [1, 2, 3, 4, 5, 6, 7, 8, 9, 0].forEach((value) => {
     const button = document.createElement("button");
     button.type = "button";
-    button.setAttribute("aria-label", value ? `输入 ${value}` : "擦除");
+    button.setAttribute("aria-label", value ? t("sudoku.input", { number: value }) : t("sudoku.erase"));
     button.innerHTML = value ? `<span>${value}</span>` : `<span aria-hidden="true">×</span>`;
     button.addEventListener("click", () => enter(value));
     pad.append(button);
@@ -216,7 +220,7 @@
   document.getElementById("autofill").addEventListener("click", () => {
     snapshot();
     notes = notes.map((item, index) => values[index] ? [] : candidateList(index));
-    message.textContent = "已为所有空格预填当前可用候选。继续用排除法缩小范围。";
+    setMessage("sudoku.prefilled");
     setMode(true);
     draw();
   });
@@ -231,7 +235,7 @@
     values[index] = solution[index];
     notes[index] = [];
     cleanPeerNotes(index, solution[index]);
-    message.textContent = "已填入一格提示。观察它如何改变同行、同列和同宫的候选。";
+    setMessage("sudoku.hinted");
     draw();
   });
 
@@ -240,7 +244,7 @@
     if (!previous) return;
     values = previous.values;
     notes = previous.notes;
-    message.textContent = "已撤销上一步。";
+    setMessage("sudoku.undone");
     draw();
   });
 
@@ -248,21 +252,17 @@
     const wrong = values.some((value, index) => value && value !== solution[index]);
     const complete = values.every(Boolean) && !wrong;
     board.querySelectorAll(".sudoku-cell").forEach((cell) => cell.classList.toggle("is-error", cell.dataset.wrong === "true"));
-    message.textContent = complete
-      ? "完成了。明天会有一道新的题目。"
-      : wrong
-        ? "有数字与答案冲突，已为你标出。"
-        : "目前填写正确。慢一点，继续观察。";
+    setMessage(complete ? "sudoku.complete" : wrong ? "sudoku.wrong" : "sudoku.correct");
   });
 
   document.getElementById("reset").addEventListener("click", () => {
-    if (!window.confirm("清除今天的填写与笔记记录？")) return;
+    if (!window.confirm(t("sudoku.confirm"))) return;
     values = [...puzzle];
     notes = emptyNotes();
     history = [];
     selected = -1;
     elapsed = 0;
-    message.textContent = "已重新开始今天的数独。";
+    setMessage("sudoku.resetDone");
     draw();
   });
 
@@ -291,6 +291,14 @@
   });
 
   document.getElementById("date-label").textContent = date.replaceAll("-", ".");
+  addEventListener("floscas:languagechange", () => {
+    setMessage(messageKey);
+    draw();
+    pad.querySelectorAll("button").forEach((button, index) => {
+      const value = index === 9 ? 0 : index + 1;
+      button.setAttribute("aria-label", value ? t("sudoku.input", { number: value }) : t("sudoku.erase"));
+    });
+  });
   setInterval(() => {
     elapsed += 1;
     const minutes = String(Math.floor(elapsed / 60)).padStart(2, "0");

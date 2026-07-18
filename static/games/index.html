@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f4f1ea">
+  <title>Floscas Games</title>
+  <link rel="stylesheet" href="./floscas-games.css?v=5">
+  <script src="./game-i18n.js?v=5"></script>
+</head>
+<body>
+  <main class="game-shell game-hub">
+    <nav class="game-nav">
+      <a href="/">Floscas</a>
+      <span data-game-i18n="hub.eyebrow">Offline game room</span>
+      <div class="game-nav-actions">
+        <a href="/" data-game-i18n="nav.home">首页</a>
+        <div class="game-language" data-game-language>
+          <button class="game-language-toggle" type="button" data-game-lang-toggle aria-expanded="false" data-game-i18n-aria="language.toggle"><span data-game-lang-current>中</span></button>
+          <div class="game-language-panel" data-game-lang-panel>
+            <button type="button" data-game-lang="zh-Hans">中</button><button type="button" data-game-lang="en">EN</button><button type="button" data-game-lang="fr">FR</button><button type="button" data-game-lang="ja">日</button>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <header class="game-hub-header">
+      <p class="game-kicker" data-game-i18n="hub.eyebrow">Offline game room</p>
+      <h1 class="game-hub-title" data-game-i18n="hub.title">休息一下</h1>
+      <p class="muted game-hub-intro" data-game-i18n="hub.intro">四个安静的小练习。</p>
+    </header>
+    <section class="game-catalogue" aria-label="Games">
+      <a class="game-card" href="./2048/"><span class="game-card-index">01 / 2048</span><h2>2048</h2><p data-game-i18n="hub.2048">合并相同数字</p><span class="game-card-action" data-game-i18n="hub.open">开始</span></a>
+      <a class="game-card" href="./snake/"><span class="game-card-index">02 / SNAKE</span><h2>Snake</h2><p data-game-i18n="hub.snake">穿过深绿棋盘</p><span class="game-card-action" data-game-i18n="hub.open">开始</span></a>
+      <a class="game-card" href="./tetris/"><span class="game-card-index">03 / TETRIS</span><h2>Tetris</h2><p data-game-i18n="hub.tetris">让几何缓慢落下</p><span class="game-card-action" data-game-i18n="hub.open">开始</span></a>
+      <a class="game-card" href="./sudoku/"><span class="game-card-index">04 / SUDOKU</span><h2>Sudoku</h2><p data-game-i18n="hub.sudoku">每日一题，保留思路</p><span class="game-card-action" data-game-i18n="hub.open">开始</span></a>
+    </section>
+  </main>
+</body>
+</html>

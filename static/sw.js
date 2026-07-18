@@ -1,6 +1,9 @@
-const CACHE_NAME = "choco-games-v4";
+const CACHE_NAME = "choco-games-v5";
 const CORE_ASSETS = [
+  "/games/",
+  "/games/index.html",
   "/games/floscas-games.css",
+  "/games/game-i18n.js",
   "/games/2048/",
   "/games/2048/index.html",
   "/games/snake/",
@@ -46,7 +49,7 @@ self.addEventListener("fetch", (event) => {
           caches.open(CACHE_NAME).then((cache) => cache.put(event.request, copy));
           return response;
         })
-        .catch(() => caches.match(event.request).then((cached) => cached || caches.match("/games/sudoku/")))
+        .catch(() => caches.match(event.request).then((cached) => cached || caches.match("/games/")))
     );
     return;
   }

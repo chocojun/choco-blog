@@ -46,6 +46,35 @@ button { font: inherit; }
   text-transform: uppercase;
 }
 .game-nav a { font-weight: 700; }
+.game-nav-actions { display: flex; align-items: center; gap: 10px; }
+.game-nav-actions > a { min-height: 42px; display: inline-flex; align-items: center; }
+.game-language { position: relative; }
+.game-language-toggle {
+  display: inline-flex;
+  width: 44px;
+  min-height: 42px;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .12em;
+}
+.game-language-panel {
+  position: absolute;
+  z-index: 20;
+  top: calc(100% + 7px);
+  right: 0;
+  display: none;
+  grid-template-columns: repeat(4, 44px);
+  padding: 5px;
+  border: 1px solid var(--ink);
+  background: rgba(244,241,234,.96);
+  backdrop-filter: blur(18px);
+}
+.game-language.is-open .game-language-panel { display: grid; }
+.game-language-panel button { min-height: 42px; padding: 0; border: 0; font-size: 10px; }
+.game-language-panel button.is-active { color: var(--paper); background: var(--ink); }
 .game-header {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
@@ -138,9 +167,40 @@ canvas {
 .game-layout--tetris .game-stage { min-height: min(72svh, 720px); }
 .game-layout--tetris canvas { width: auto; height: min(68svh, 680px); aspect-ratio: 1 / 2; }
 .game-layout--square canvas { width: min(100%, 620px); aspect-ratio: 1; }
-.touch-controls { display: grid; grid-template-columns: repeat(3, 1fr); gap: 7px; }
-.touch-controls button { min-width: 0; padding: 0; font-size: 18px; }
-.touch-controls .wide { grid-column: span 3; font-size: 12px; letter-spacing: .1em; text-transform: uppercase; }
+.touch-controls { display: grid; justify-content: center; }
+.touch-controls--dpad {
+  grid-template: repeat(3, 54px) / repeat(3, 54px);
+  grid-template-areas: ". up ." "left center right" ". down .";
+  gap: 3px;
+  touch-action: none;
+}
+.touch-controls--dpad button { min-width: 0; min-height: 54px; padding: 0; font-size: 20px; line-height: 1; }
+.dpad-up { grid-area: up; }
+.dpad-left { grid-area: left; }
+.dpad-right { grid-area: right; }
+.dpad-down { grid-area: down; }
+.dpad-center {
+  grid-area: center;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--line);
+  background: rgba(21,37,27,.06);
+}
+.dpad-center::after { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--forest); opacity: .55; }
+.touch-secondary { width: 165px; justify-self: center; margin-top: 8px; font-size: 10px; letter-spacing: .12em; text-transform: uppercase; }
+
+.game-hub { padding-bottom: 80px; }
+.game-hub-header { max-width: 900px; padding: clamp(68px, 10vw, 140px) 0 clamp(40px, 7vw, 88px); }
+.game-hub-title { max-width: 8ch; margin: 10px 0 24px; font: 400 clamp(4rem, 11vw, 9.5rem)/.82 Georgia, serif; }
+.game-hub-intro { max-width: 45ch; }
+.game-catalogue { display: grid; grid-template-columns: repeat(12, 1fr); border-top: 1px solid var(--ink); }
+.game-card { grid-column: span 6; display: grid; min-height: 320px; padding: clamp(24px, 4vw, 54px); border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); transition: background 360ms var(--ease), transform 360ms var(--ease); }
+.game-card:nth-child(even) { border-right: 0; }
+.game-card:hover { background: rgba(255,255,255,.32); transform: translateY(-3px); }
+.game-card-index { color: var(--muted); font-size: 10px; letter-spacing: .16em; }
+.game-card h2 { align-self: end; margin: 40px 0 12px; font: 400 clamp(2.6rem, 6vw, 5rem)/.88 Georgia, serif; }
+.game-card p { margin: 0; color: var(--muted); font-size: 13px; }
+.game-card-action { align-self: end; justify-self: start; margin-top: 32px; padding-bottom: 5px; border-bottom: 1px solid currentColor; font-size: 10px; letter-spacing: .13em; text-transform: uppercase; }
 
 .sudoku-board {
   display: grid;
@@ -323,6 +383,17 @@ kbd { padding: 1px 4px; border: 1px solid var(--line); font: inherit; }
   .game-layout--tetris .game-stage { min-height: 0; }
   .game-layout--tetris canvas { height: min(62svh, 590px); }
   .game-panel { padding: 12px; }
+  .game-nav { gap: 10px; }
+  .game-nav > span { display: none; }
+  .game-nav-actions { margin-left: auto; }
+  .game-language-panel { position: fixed; top: 62px; right: 12px; left: 12px; grid-template-columns: repeat(4, 1fr); }
+  .game-layout:not(.sudoku-workspace) .game-sidebar { padding: 4px 8px 12px; }
+  .touch-controls--dpad { grid-template-rows: repeat(3, 58px); grid-template-columns: repeat(3, 58px); }
+  .touch-controls--dpad button { min-height: 58px; }
+  .game-hub-header { padding-top: 58px; }
+  .game-hub-title { font-size: clamp(4.2rem, 21vw, 6.4rem); }
+  .game-catalogue { grid-template-columns: 1fr; }
+  .game-card { grid-column: 1; min-height: 250px; border-right: 0; }
   .sudoku-board { width: calc(100vw - 72px); max-width: 610px; }
   .sudoku-shell { width: calc(100% - 20px); }
   .sudoku-header .game-title { font-size: clamp(3.5rem, 18vw, 5.8rem); }
@@ -345,6 +416,7 @@ kbd { padding: 1px 4px; border: 1px solid var(--line); font: inherit; }
   .game-shell { width: calc(100% - 16px); }
   .game-nav { font-size: 9px; }
   .game-stage { padding: 8px; }
+  .game-language-toggle { width: 40px; min-height: 40px; }
   .sudoku-cell { font-size: 1.1rem; }
 }
 @media (prefers-reduced-motion: reduce) {

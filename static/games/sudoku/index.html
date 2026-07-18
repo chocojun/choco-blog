@@ -5,29 +5,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#15251b">
   <title>Floscas Daily Sudoku</title>
-  <link rel="stylesheet" href="../floscas-games.css?v=4">
+  <link rel="stylesheet" href="../floscas-games.css?v=5">
+  <script src="../game-i18n.js?v=5"></script>
 </head>
 <body class="sudoku-page">
   <main class="game-shell sudoku-shell">
     <nav class="game-nav">
-      <a href="/" aria-label="返回 Floscas 首页">Floscas</a>
+      <a href="/" aria-label="Floscas">Floscas</a>
       <span>Daily room / 04</span>
+      <div class="game-nav-actions"><a href="/games/" data-game-i18n="nav.games">游戏</a><div class="game-language" data-game-language><button class="game-language-toggle" type="button" data-game-lang-toggle aria-expanded="false" data-game-i18n-aria="language.toggle"><span data-game-lang-current>中</span></button><div class="game-language-panel" data-game-lang-panel><button type="button" data-game-lang="zh-Hans">中</button><button type="button" data-game-lang="en">EN</button><button type="button" data-game-lang="fr">FR</button><button type="button" data-game-lang="ja">日</button></div></div></div>
     </nav>
 
     <header class="game-header sudoku-header">
       <div>
-        <p class="game-kicker">A quiet practice</p>
-        <h1 class="game-title">Daily<br>Sudoku</h1>
+        <p class="game-kicker" data-game-i18n="sudoku.kicker">A quiet practice</p>
+        <h1 class="game-title" data-game-i18n="sudoku.title">Daily Sudoku</h1>
       </div>
-      <p class="muted">每天一题。先观察，再落笔；需要时，让候选数替你保留思路。</p>
+      <p class="muted" data-game-i18n="sudoku.intro">每天一题。</p>
     </header>
 
     <section class="sudoku-workspace" aria-label="每日数独">
       <div class="sudoku-play-area">
         <div class="sudoku-statusbar">
-          <div><span>Today</span><strong id="date-label"></strong></div>
-          <div><span>Progress</span><strong id="progress">0 / 81</strong></div>
-          <div><span>Time</span><strong id="timer">00:00</strong></div>
+          <div><span data-game-i18n="sudoku.today">Today</span><strong id="date-label"></strong></div>
+          <div><span data-game-i18n="sudoku.progress">Progress</span><strong id="progress">0 / 81</strong></div>
+          <div><span data-game-i18n="sudoku.time">Time</span><strong id="timer">00:00</strong></div>
         </div>
 
         <div class="game-stage sudoku-stage">
@@ -35,107 +37,107 @@
         </div>
 
         <div class="sudoku-message" id="message" role="status" aria-live="polite">
-          选择一个空格，再输入数字。你的进度会保存在这台设备上。
+          <span data-game-i18n="sudoku.select">选择一个空格，再输入数字。你的进度会保存在这台设备上。</span>
         </div>
       </div>
 
       <aside class="sudoku-tools" aria-label="数独工具">
         <div class="tool-heading">
-          <span>Paper tools</span>
-          <strong>纸笔模式</strong>
+          <span data-game-i18n="sudoku.tools">Paper tools</span>
+          <strong data-game-i18n="sudoku.paper">纸笔模式</strong>
         </div>
 
         <div class="number-pad" id="number-pad" aria-label="数字键盘"></div>
 
         <div class="mode-row" role="group" aria-label="输入模式">
           <button class="mode-button is-active" id="pen-mode" type="button" aria-pressed="true">
-            <span class="tool-icon" aria-hidden="true">1</span><span>填数</span>
+            <span class="tool-icon" aria-hidden="true">1</span><span data-game-i18n="sudoku.pen">填数</span>
           </button>
           <button class="mode-button" id="note-mode" type="button" aria-pressed="false">
-            <span class="tool-icon tool-icon--notes" aria-hidden="true">123</span><span>笔记</span>
+            <span class="tool-icon tool-icon--notes" aria-hidden="true">123</span><span data-game-i18n="sudoku.notes">笔记</span>
           </button>
         </div>
 
         <div class="assist-list">
           <label class="assist-toggle">
             <input id="highlight-toggle" type="checkbox" checked>
-            <span><strong>同数高亮</strong><small>突出相同数字与关联区域</small></span>
+            <span><strong data-game-i18n="sudoku.highlight">同数高亮</strong><small data-game-i18n="sudoku.highlight.help">突出相同数字与关联区域</small></span>
           </label>
           <label class="assist-toggle">
             <input id="auto-remove-toggle" type="checkbox" checked>
-            <span><strong>自动清理笔记</strong><small>填数后移除同行、同列、同宫候选</small></span>
+            <span><strong data-game-i18n="sudoku.clean">自动清理笔记</strong><small data-game-i18n="sudoku.clean.help">填数后移除同行、同列、同宫候选</small></span>
           </label>
         </div>
 
         <div class="game-actions sudoku-actions">
-          <button id="autofill" type="button">预填候选</button>
-          <button id="hint" type="button">提示一格</button>
-          <button id="undo" type="button">撤销</button>
-          <button id="check" class="primary" type="button">检查</button>
-          <button id="reset" type="button">重新开始</button>
+          <button id="autofill" type="button" data-game-i18n="sudoku.autofill">预填候选</button>
+          <button id="hint" type="button" data-game-i18n="sudoku.hint">提示一格</button>
+          <button id="undo" type="button" data-game-i18n="sudoku.undo">撤销</button>
+          <button id="check" class="primary" type="button" data-game-i18n="sudoku.check">检查</button>
+          <button id="reset" type="button" data-game-i18n="sudoku.restart">重新开始</button>
         </div>
 
-        <p class="tool-shortcuts">键盘：<kbd>1–9</kbd> 填写 · <kbd>N</kbd> 切换笔记 · <kbd>Backspace</kbd> 擦除</p>
+        <p class="tool-shortcuts" data-game-i18n="sudoku.shortcuts">键盘：1–9 填写 · N 切换笔记 · Backspace 擦除</p>
       </aside>
 
       <aside class="sudoku-guide" aria-labelledby="guide-title">
         <div class="guide-intro">
-          <span>Learn the grid</span>
-          <h2 id="guide-title">如何更好地玩数独</h2>
-          <p>数独不是猜数字，而是不断排除不可能。每一行、每一列、每一宫都只能出现一次 1–9。</p>
+          <span data-game-i18n="sudoku.learn">Learn the grid</span>
+          <h2 id="guide-title" data-game-i18n="sudoku.guide">如何更好地玩数独</h2>
+          <p data-game-i18n="sudoku.guide.intro">数独不是猜数字，而是不断排除不可能。</p>
         </div>
 
         <ol class="technique-list">
           <li>
             <button class="technique-button" type="button" aria-expanded="true">
-              <span>01</span><strong>先扫看</strong><small>Scanning</small>
+              <span>01</span><strong data-game-i18n="sudoku.scan">先扫看</strong><small data-game-i18n="sudoku.scan">Scanning</small>
             </button>
             <div class="technique-detail">
-              <p>先找快要填满的行、列和宫。观察缺少哪些数字，再用交叉方向排除位置。</p>
+              <p data-game-i18n="sudoku.scan.detail">先找快要填满的行、列和宫。</p>
             </div>
           </li>
           <li>
             <button class="technique-button" type="button" aria-expanded="false">
-              <span>02</span><strong>寻找唯一候选</strong><small>Single candidate</small>
+              <span>02</span><strong data-game-i18n="sudoku.single">寻找唯一候选</strong><small data-game-i18n="sudoku.single">Single candidate</small>
             </button>
             <div class="technique-detail" hidden>
-              <p>如果一个空格的其他八个数字都被同行、同列或同宫排除，剩下的数字就是答案。</p>
+              <p data-game-i18n="sudoku.single.detail">如果一个空格的其他八个数字都被排除。</p>
             </div>
           </li>
           <li>
             <button class="technique-button" type="button" aria-expanded="false">
-              <span>03</span><strong>用笔记保留可能</strong><small>Pencil marks</small>
+              <span>03</span><strong data-game-i18n="sudoku.pencil">用笔记保留可能</strong><small data-game-i18n="sudoku.pencil">Pencil marks</small>
             </button>
             <div class="technique-detail" hidden>
-              <p>遇到不能立即确定的格子，记录候选数。每次落笔后重新清理候选，避免旧信息干扰判断。</p>
+              <p data-game-i18n="sudoku.pencil.detail">遇到不能立即确定的格子，记录候选数。</p>
             </div>
           </li>
           <li>
             <button class="technique-button" type="button" aria-expanded="false">
-              <span>04</span><strong>识别显性与隐性数对</strong><small>Pairs</small>
+              <span>04</span><strong data-game-i18n="sudoku.pairs">识别显性与隐性数对</strong><small data-game-i18n="sudoku.pairs">Pairs</small>
             </button>
             <div class="technique-detail" hidden>
-              <p>同一单位中，若两个格子只能放同一对数字，这两个数字就能从其他格子的候选中排除。</p>
+              <p data-game-i18n="sudoku.pairs.detail">同一单位中，若两个格子只能放同一对数字。</p>
             </div>
           </li>
           <li>
             <button class="technique-button" type="button" aria-expanded="false">
-              <span>05</span><strong>卡住时暂停</strong><small>Reset your view</small>
+              <span>05</span><strong data-game-i18n="sudoku.pause">卡住时暂停</strong><small data-game-i18n="sudoku.pause">Reset your view</small>
             </button>
             <div class="technique-detail" hidden>
-              <p>不要盯着一个宫硬推。换到数字较多的区域重新扫看，通常会发现新的唯一位置。</p>
+              <p data-game-i18n="sudoku.pause.detail">不要盯着一个宫硬推。</p>
             </div>
           </li>
         </ol>
 
         <a class="guide-source" href="https://www.conceptispuzzles.com/zh/index.aspx?uri=puzzle/sudoku/techniques" target="_blank" rel="noopener noreferrer">
-          阅读完整技巧指南 <span aria-hidden="true">↗</span>
+          <span data-game-i18n="sudoku.source">阅读完整技巧指南</span> <span aria-hidden="true">↗</span>
         </a>
       </aside>
     </section>
   </main>
 
-  <script src="./sudoku.js?v=4"></script>
+  <script src="./sudoku.js?v=5"></script>
   <script>
     if ("serviceWorker" in navigator) {
       navigator.serviceWorker.getRegistration().then((registration) => registration?.update());

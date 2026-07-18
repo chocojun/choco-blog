@@ -4,28 +4,29 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Floscas Tetris</title>
-  <link rel="stylesheet" href="../floscas-games.css">
+  <link rel="stylesheet" href="../floscas-games.css?v=5">
+  <script src="../game-i18n.js?v=5"></script>
 </head>
 <body>
   <main class="game-shell">
-    <nav class="game-nav"><a href="/">Floscas</a><span>Offline room / 03</span></nav>
-    <header class="game-header"><h1 class="game-title">Tetris</h1><p class="muted">让几何缓慢落下。开始后方向键移动，上键旋转，空格直落。</p></header>
+    <nav class="game-nav"><a href="/">Floscas</a><span>Offline room / 03</span><div class="game-nav-actions"><a href="/games/" data-game-i18n="nav.games">Games</a><div class="game-language" data-game-language><button class="game-language-toggle" type="button" data-game-lang-toggle aria-expanded="false" data-game-i18n-aria="language.toggle"><span data-game-lang-current>中</span></button><div class="game-language-panel" data-game-lang-panel><button type="button" data-game-lang="zh-Hans">中</button><button type="button" data-game-lang="en">EN</button><button type="button" data-game-lang="fr">FR</button><button type="button" data-game-lang="ja">日</button></div></div></div></nav>
+    <header class="game-header"><h1 class="game-title">Tetris</h1><p class="muted" data-game-i18n="tetris.intro">让几何缓慢落下。</p></header>
     <section class="game-panel game-layout game-layout--tetris">
-      <div class="game-stage"><canvas id="game" width="300" height="600" aria-label="俄罗斯方块棋盘"></canvas></div>
+      <div class="game-stage"><canvas id="game" width="300" height="600" data-game-i18n-aria="tetris.board" aria-label="俄罗斯方块棋盘"></canvas></div>
       <aside class="game-sidebar">
-        <h2>Falling geometry</h2>
-        <div class="game-score"><span>Status</span><strong id="status">Ready</strong></div>
-        <div class="game-score"><span>Lines</span><strong id="score">0</strong></div>
+        <h2 data-game-i18n="tetris.side">Falling geometry</h2>
+        <div class="game-score"><span data-game-i18n="common.status">Status</span><strong id="status">Ready</strong></div>
+        <div class="game-score"><span data-game-i18n="common.lines">Lines</span><strong id="score">0</strong></div>
         <div class="game-actions">
-          <button class="primary" id="start" type="button">开始</button>
-          <button id="pause" type="button" disabled>暂停</button>
-          <button id="new" type="button">重新开始</button>
+          <button class="primary" id="start" type="button" data-game-i18n="common.start">开始</button>
+          <button id="pause" type="button" disabled data-game-i18n="common.pause">暂停</button>
+          <button id="new" type="button" data-game-i18n="common.restart">重新开始</button>
         </div>
-        <div class="touch-controls" aria-label="触屏控制">
-          <button data-move="left" aria-label="向左">←</button><button data-move="rotate" aria-label="旋转">↻</button><button data-move="right" aria-label="向右">→</button>
-          <button data-move="down" aria-label="向下">↓</button><button data-move="drop" class="wide">Drop</button>
+        <div class="touch-controls touch-controls--dpad" data-game-i18n-aria="common.touch">
+          <button class="dpad-up" data-move="rotate" data-game-i18n-aria="tetris.rotate">↑</button><button class="dpad-left" data-move="left" aria-label="Left">←</button><span class="dpad-center" aria-hidden="true"></span><button class="dpad-right" data-move="right" aria-label="Right">→</button><button class="dpad-down" data-move="down" aria-label="Down">↓</button>
         </div>
-        <p class="muted">操作仅在游戏区域生效，方向键不会再带动网页滚动。</p>
+        <button data-move="drop" class="touch-secondary" data-game-i18n="tetris.drop">Drop</button>
+        <p class="muted" data-game-i18n="tetris.help">操作仅在游戏区域生效。</p>
       </aside>
     </section>
   </main>
@@ -34,7 +35,7 @@
     const canvas=document.getElementById("game"),ctx=canvas.getContext("2d"),cols=10,rows=20,size=30;
     const scoreEl=document.getElementById("score"),statusEl=document.getElementById("status"),startBtn=document.getElementById("start"),pauseBtn=document.getElementById("pause");
     const shapes=[[[1,1,1,1]],[[1,1],[1,1]],[[0,1,0],[1,1,1]],[[1,0,0],[1,1,1]],[[0,0,1],[1,1,1]],[[1,1,0],[0,1,1]],[[0,1,1],[1,1,0]]];
-    let board,piece,lines,last=0,running=false,paused=false,ended=false;
+    let board,piece,lines,last=0,running=false,paused=false,ended=false;const tr=(key)=>window.FloscasGames?.t(key)||key;
     const copy=value=>JSON.parse(JSON.stringify(value));
     const spawn=()=>{piece={m:copy(shapes[Math.floor(Math.random()*shapes.length)]),x:3,y:0};if(hit())gameOver();};
     const reset=()=>{board=Array.from({length:rows},()=>Array(cols).fill(0));lines=0;running=false;paused=false;ended=false;last=0;piece={m:copy(shapes[0]),x:3,y:0};sync();draw();};
@@ -43,7 +44,7 @@
     const rotate=m=>m[0].map((_,i)=>m.map(row=>row[i]).reverse());
     const cell=(x,y,active)=>{ctx.fillStyle=active?"#f6f3ec":"#73877a";ctx.fillRect(x*size+2,y*size+2,size-4,size-4);};
     const draw=()=>{ctx.clearRect(0,0,canvas.width,canvas.height);ctx.strokeStyle="rgba(246,243,236,.06)";for(let i=1;i<cols;i++){ctx.beginPath();ctx.moveTo(i*size,0);ctx.lineTo(i*size,canvas.height);ctx.stroke();}board.forEach((row,y)=>row.forEach((v,x)=>v&&cell(x,y,false)));piece.m.forEach((row,y)=>row.forEach((v,x)=>v&&cell(piece.x+x,piece.y+y,true)));};
-    const sync=()=>{scoreEl.textContent=lines;statusEl.textContent=ended?"Finished":paused?"Paused":running?"Playing":"Ready";startBtn.textContent=ended?"再来一局":running?"进行中":"开始";startBtn.disabled=running&&!paused;pauseBtn.disabled=!running;pauseBtn.textContent=paused?"继续":"暂停";};
+    const sync=()=>{scoreEl.textContent=lines;statusEl.textContent=tr(ended?"common.finished":paused?"common.paused":running?"common.playing":"common.ready");startBtn.textContent=tr(ended?"common.new":running?"common.playing":"common.start");startBtn.disabled=running&&!paused;pauseBtn.disabled=!running;pauseBtn.textContent=tr(paused?"common.continue":"common.pause");};
     const gameOver=()=>{running=false;paused=false;ended=true;sync();};
     const startGame=()=>{if(ended)reset();running=true;paused=false;last=performance.now();sync();};
     const togglePause=()=>{if(!running)return;paused=!paused;if(!paused)last=performance.now();sync();};
@@ -52,7 +53,7 @@
     addEventListener("keydown",event=>{const actions={ArrowLeft:"left",ArrowRight:"right",ArrowDown:"down",ArrowUp:"rotate"," ":"drop"};const action=actions[event.key];if(!action)return;event.preventDefault();move(action);},{passive:false});
     document.querySelectorAll("[data-move]").forEach(button=>button.addEventListener("pointerdown",event=>{event.preventDefault();move(button.dataset.move);}));
     startBtn.addEventListener("click",()=>paused?togglePause():startGame());pauseBtn.addEventListener("click",togglePause);document.getElementById("new").addEventListener("click",reset);
-    reset();requestAnimationFrame(loop);
+    addEventListener("floscas:languagechange",sync);reset();requestAnimationFrame(loop);
   })();
   </script>
 </body>

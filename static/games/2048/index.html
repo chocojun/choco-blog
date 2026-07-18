@@ -1,18 +1,18 @@
 <!doctype html>
 <html lang="zh-CN">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Floscas 2048</title><link rel="stylesheet" href="../floscas-games.css"></head>
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Floscas 2048</title><link rel="stylesheet" href="../floscas-games.css?v=5"><script src="../game-i18n.js?v=5"></script></head>
 <body>
   <main class="game-shell">
-    <nav class="game-nav"><a href="/">Floscas</a><span>Offline room / 01</span></nav>
-    <header class="game-header"><h1 class="game-title">2048</h1><p class="muted">用方向键或滑动合并数字。安静地把相同的事物放在一起。</p></header>
+    <nav class="game-nav"><a href="/">Floscas</a><span>Offline room / 01</span><div class="game-nav-actions"><a href="/games/" data-game-i18n="nav.games">Games</a><div class="game-language" data-game-language><button class="game-language-toggle" type="button" data-game-lang-toggle aria-expanded="false" data-game-i18n-aria="language.toggle"><span data-game-lang-current>中</span></button><div class="game-language-panel" data-game-lang-panel><button type="button" data-game-lang="zh-Hans">中</button><button type="button" data-game-lang="en">EN</button><button type="button" data-game-lang="fr">FR</button><button type="button" data-game-lang="ja">日</button></div></div></div></nav>
+    <header class="game-header"><h1 class="game-title">2048</h1><p class="muted" data-game-i18n="2048.intro">用方向键或滑动合并数字。</p></header>
     <section class="game-panel game-layout">
-      <div class="game-stage"><div id="grid" class="grid-2048" aria-label="2048 棋盘"></div></div>
+      <div class="game-stage"><div id="grid" class="grid-2048" data-game-i18n-aria="2048.board" aria-label="2048 棋盘"></div></div>
       <aside class="game-sidebar">
-        <h2>Quiet arithmetic</h2>
-        <div class="game-score"><span>Score</span><strong id="score">0</strong></div>
-        <div class="game-actions"><button class="primary" id="new" type="button">新游戏</button></div>
-        <div class="touch-controls" aria-label="触屏控制"><button data-dir="2">↑</button><button data-dir="0">←</button><button data-dir="1">→</button><button data-dir="3">↓</button></div>
-        <p class="muted">在棋盘内滑动，或使用方向键。游戏可以离线继续。</p>
+        <h2 data-game-i18n="2048.side">Quiet arithmetic</h2>
+        <div class="game-score"><span data-game-i18n="common.score">Score</span><strong id="score">0</strong></div>
+        <div class="game-actions"><button class="primary" id="new" type="button" data-game-i18n="common.new">新游戏</button></div>
+        <div class="touch-controls touch-controls--dpad" data-game-i18n-aria="common.touch" aria-label="触屏控制"><button class="dpad-up" data-dir="2" aria-label="Up">↑</button><button class="dpad-left" data-dir="0" aria-label="Left">←</button><span class="dpad-center" aria-hidden="true"></span><button class="dpad-right" data-dir="1" aria-label="Right">→</button><button class="dpad-down" data-dir="3" aria-label="Down">↓</button></div>
+        <p class="muted" data-game-i18n="2048.help">在棋盘内滑动，或使用方向键。</p>
       </aside>
     </section>
   </main>
